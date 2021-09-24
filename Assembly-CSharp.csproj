@@ -64,6 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\2D SD Character Human Pack\Scripts\Acting.cs" />
+    <Compile Include="Assets\2D SD Character Human Pack\Scripts\CharacterAnimation.cs" />
+    <Compile Include="Assets\2D SD Character Human Pack\Scripts\HumanoidAnimation.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\AnchorManager.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\CustomGrid.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\Demo.cs" />
@@ -76,6 +79,7 @@
     <Compile Include="Assets\FantasyMonsters\Scripts\StateHandler.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\Tweens\ScaleSpring.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\Tweens\TweenBase.cs" />
+    <Compile Include="Assets\NGarden\nGardenMonsterPack03\UnityAnimation\script\AniPlay.cs" />
     <Compile Include="Assets\Scripts\AStarSearching.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
