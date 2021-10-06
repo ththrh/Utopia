@@ -5,6 +5,8 @@ using UnityEngine;
 public class MOVE : MonoBehaviour
 {
     public float Speed;
+    public float Speed2;
+    public float timer = 0f;
 
     Rigidbody2D rigid;
     float h;
@@ -25,6 +27,7 @@ public class MOVE : MonoBehaviour
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
+        
 
         bool hdown =  Input.GetButtonDown("Horizontal");
         bool hUP = Input.GetButtonUp("Horizontal");
@@ -32,8 +35,22 @@ public class MOVE : MonoBehaviour
         bool vUP = Input.GetButtonUp("Vertical");
 
 
-        anim.SetInteger("hAxisRaw",(int)h);
-        anim.SetInteger("vAxisRaw",(int)v);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("isdashed", true);
+
+        }
+        else if(Input.GetKeyUp(KeyCode.Space))
+        {
+            anim.SetBool("isdashed", false);
+        }
+
+         anim.SetInteger("hAxisRaw", (int)h);
+         anim.SetInteger("vAxisRaw", (int)v);
+
+
+
+  
 
         if(Input.GetKey(KeyCode.RightArrow))
         {
@@ -46,8 +63,19 @@ public class MOVE : MonoBehaviour
 
     }
 
+
+
     void FixedUpdate()
     {
-        rigid.velocity = new Vector2(h, v) * Speed;
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            rigid.velocity = new Vector2(h, v) * Speed2;
+
+        }
+        else
+        {
+            rigid.velocity = new Vector2(h, v) * Speed;
+        }
+
     }
 }
