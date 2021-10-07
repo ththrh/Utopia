@@ -50,24 +50,25 @@ public class MOVE : MonoBehaviour
 
 
 
-  
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
+        }
 
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             rend.flipX = true;
         }
-        else if(Input.GetKey(KeyCode.LeftArrow))
+        else if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             rend.flipX = false;
         }
 
-    }
-
-
-
-    void FixedUpdate()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rigid.velocity = new Vector2(h, v) * Speed2;
 
@@ -76,6 +77,12 @@ public class MOVE : MonoBehaviour
         {
             rigid.velocity = new Vector2(h, v) * Speed;
         }
+    }
+
+
+
+    void FixedUpdate()
+    {
 
     }
 }
