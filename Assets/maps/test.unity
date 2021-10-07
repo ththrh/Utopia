@@ -716,6 +716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1923986997}
+  slots: []
+  slotHolder: {fileID: 161559229}
 --- !u!224 &140738223 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8791969120390256679, guid: 5d14493be6349e240b8ecaaa49720dd3,
@@ -1096,6 +1098,8 @@ GameObject:
   - component: {fileID: 568502072}
   - component: {fileID: 568502071}
   - component: {fileID: 568502075}
+  - component: {fileID: 568502077}
+  - component: {fileID: 568502076}
   m_Layer: 0
   m_Name: hold_0
   m_TagString: Untagged
@@ -1223,6 +1227,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &568502076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568502070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccebb70d0e5f63549b082dca37d04ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+--- !u!61 &568502077
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568502070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: 0.72473896}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.1}
+    oldSize: {x: 2.7692308, y: 2.3076923}
+    newSize: {x: 2.7692308, y: 2.3076923}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1825304, y: 1.5473955}
+  m_EdgeRadius: 0
 --- !u!1 &647912028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2924,6 +2967,66 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 992690923}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1998277941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998277943}
+  - component: {fileID: 1998277942}
+  m_Layer: 0
+  m_Name: ItemDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1998277942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998277941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec3e5b345c76444490d942ce0596685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDB:
+  - itemType: 1
+    itemName: stone
+    itemImage: {fileID: 21300000, guid: 108ca3e7dda90d945b0914bf9259ec94, type: 3}
+  - itemType: 0
+    itemName: armor
+    itemImage: {fileID: 21300000, guid: 719c2201c2f5f6c4aafffaeb5abdf5f9, type: 3}
+  - itemType: 0
+    itemName: exe
+    itemImage: {fileID: 21300000, guid: d659f7396cd57754eba78763cf986c51, type: 3}
+  fieldItemPrefab: {fileID: 1016609965937817126, guid: e75ad5773150af441a219b58fa18288f,
+    type: 3}
+  pos:
+  - {x: 1, y: 2, z: 0}
+  - {x: -1, y: 4, z: 0}
+  - {x: -4, y: 2, z: 0}
+  - {x: 3, y: -5, z: 0}
+--- !u!4 &1998277943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998277941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8835462, y: -1.0867498, z: -495.79395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8791969120847500662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2931,6 +3034,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 161559229}
     m_Modifications:
+    - target: {fileID: 8791969120390256677, guid: 5d14493be6349e240b8ecaaa49720dd3,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8791969120390256678, guid: 5d14493be6349e240b8ecaaa49720dd3,
         type: 3}
       propertyPath: m_Name
