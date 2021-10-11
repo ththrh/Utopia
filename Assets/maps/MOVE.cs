@@ -6,8 +6,9 @@ public class MOVE : MonoBehaviour
 {
     public float Speed;
     public float Speed2;
-    public float timer = 0f;
+    public float timer = 0.2f;
 
+    bool isDash = false;
     Rigidbody2D rigid;
     float h;
     float v;
@@ -25,8 +26,6 @@ public class MOVE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
         
 
         bool hdown =  Input.GetButtonDown("Horizontal");
@@ -34,15 +33,19 @@ public class MOVE : MonoBehaviour
         bool vdown =  Input.GetButtonDown("Vertical");
         bool vUP = Input.GetButtonUp("Vertical");
 
+        if (!isDash)
+        {
+            h = Input.GetAxisRaw("Horizontal");
+            v = Input.GetAxisRaw("Vertical");
+            rigid.velocity = new Vector2(h, v) * Speed;
+        }
+        else
+        {
+            rigid.velocity = Vector2.zero;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            anim.SetBool("isdashed", true);
-
-        }
-        else if(Input.GetKeyUp(KeyCode.Space))
-        {
-            anim.SetBool("isdashed", false);
         }
 
          anim.SetInteger("hAxisRaw", (int)h);
@@ -67,15 +70,27 @@ public class MOVE : MonoBehaviour
         {
             rend.flipX = false;
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rigid.velocity = new Vector2(h, v) * Speed2;
-
+            if(!isDash)
+            {
+                isDash = true;
+                anim.SetTrigger("isDashed");
+            }
         }
-        else
+        if (isDash)
         {
-            rigid.velocity = new Vector2(h, v) * Speed;
+            transform.Translate(new Vector3(h * Speed2, v * Speed2, 0) * Time.deltaTime);
+        }
+        if (isDash && timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        if (timer <= 0)
+        {
+            timer = 0.2f;
+            isDash = false;
         }
     }
 
