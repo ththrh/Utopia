@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+static class Dir
+{
+    public const int up = 1;
+    public const int down = 2;
+    public const int left = 3;
+    public const int right = 4;
+}
+
 public class MOVE : MonoBehaviour
 {
     public float Speed;
@@ -9,6 +17,7 @@ public class MOVE : MonoBehaviour
     public float timer = 0.2f;
 
     bool isDash = false;
+    int dir;
     Rigidbody2D rigid;
     float h;
     float v;
@@ -27,11 +36,6 @@ public class MOVE : MonoBehaviour
     void Update()
     {
         
-
-        bool hdown =  Input.GetButtonDown("Horizontal");
-        bool hUP = Input.GetButtonUp("Horizontal");
-        bool vdown =  Input.GetButtonDown("Vertical");
-        bool vUP = Input.GetButtonUp("Vertical");
 
         if (!isDash)
         {
@@ -64,13 +68,23 @@ public class MOVE : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
+            dir = Dir.right;
             rend.flipX = true;
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            dir = Dir.left;
             rend.flipX = false;
         }
-        
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            dir = Dir.up;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            dir = Dir.down;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if(!isDash)
@@ -91,6 +105,24 @@ public class MOVE : MonoBehaviour
         {
             timer = 0.2f;
             isDash = false;
+        }
+
+        transform.gameObject.GetComponentInChildren<Weapon>().dir = dir;
+        if (Input.GetMouseButtonDown(0))
+        {
+            switch (dir)
+            {
+                case Dir.up:
+                    anim.Play("sword_up");
+                    break;
+                case Dir.down:
+                    anim.Play("sword_down");
+                    break;
+                case Dir.left:
+                case Dir.right:
+                    anim.Play("sword_side");
+                    break;
+            }
         }
     }
 

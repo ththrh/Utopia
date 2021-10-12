@@ -89,6 +89,7 @@
     <Compile Include="Assets\geonwoo\ItemDatabase.cs" />
     <Compile Include="Assets\geonwoo\Slot.cs" />
     <Compile Include="Assets\maps\MOVE.cs" />
+    <Compile Include="Assets\maps\Weapon.cs" />
     <Compile Include="Assets\utopia\camera.cs" />
     <Compile Include="Assets\utopia\monstermove.cs" />
     <Compile Include="Assets\utopia\monstermove2.cs" />
