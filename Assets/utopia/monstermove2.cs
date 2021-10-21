@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class monstermove2 : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class monstermove2 : MonoBehaviour
     Vector3 movement;
     int movementflag = 0;
     public string dist = "";
+    public Transform target;
+    NavMeshAgent nav;
 
     public bool isTracing = false;
     public GameObject traceTarget;
@@ -17,7 +20,7 @@ public class monstermove2 : MonoBehaviour
     void Start()
     {
         StartCoroutine("ChangeMovement");
-
+        nav = GetComponent<NavMeshAgent>();
     }
 
     IEnumerator ChangeMovement()
@@ -33,8 +36,11 @@ public class monstermove2 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        move();
+        
+        if(!isTracing)
+            move();
     }
+
 
     void OnTriggerEnter2D (Collider2D other)
     {
@@ -54,6 +60,7 @@ public class monstermove2 : MonoBehaviour
         if(other.tag == "Player")
         {
             isTracing = true;
+            nav.SetDestination(traceTarget.transform.position);
 
         }
     }
@@ -75,30 +82,18 @@ public class monstermove2 : MonoBehaviour
         Vector3 movevelo = Vector3.zero;
 
 
-        if(isTracing)
-        {
 
-            this.transform.position = Vector3.MoveTowards(this.transform.position, traceTarget.transform.position, 0.01f);
-            Vector3 playerpos = traceTarget.transform.position;
+        
 
-            if (playerpos.x < transform.position.x)
-                transform.localScale = new Vector3(1, 1, 1); 
-            else if (playerpos.x > transform.position.x)
-                transform.localScale = new Vector3(-1, 1, 1); 
-
-        }
-        else
-        {
-            if (movementflag == 0)
+        if (movementflag == 0)
                 dist = "left";
-            else if (movementflag == 1)
+        else if (movementflag == 1)
                 dist = "right";
-            else if (movementflag == 2)
+        else if (movementflag == 2)
                 dist = "up";
-            else if (movementflag == 3)
+        else if (movementflag == 3)
                 dist = "down";
 
-        }
 
         if (dist=="left")
         {
