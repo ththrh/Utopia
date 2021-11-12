@@ -83,9 +83,10 @@
      <Compile Include="Assets\maps\MOVE.cs" />
      <Compile Include="Assets\maps\Weapon.cs" />
      <Compile Include="Assets\utopia\SimpleTrap.cs" />
+     <Compile Include="Assets\utopia\bullet.cs" />
      <Compile Include="Assets\utopia\camera.cs" />
+     <Compile Include="Assets\utopia\monsterattack.cs" />
      <Compile Include="Assets\utopia\monstermove.cs" />
-     <Compile Include="Assets\utopia\monstermove2.cs" />
      <None Include="Assets\File\Sprites\Info.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
