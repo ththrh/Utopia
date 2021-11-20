@@ -12,6 +12,11 @@ static class Dir
 
 public class MOVE : MonoBehaviour
 {
+
+    Vector3 dirVec;
+    GameObject scanobj;
+    public GameManager manager;
+
     public float Speed;
     public float Speed2;
     public float timer = 0.2f;
@@ -68,20 +73,24 @@ public class MOVE : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
+            dirVec = Vector3.right;
             dir = Dir.right;
             rend.flipX = true;
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            dirVec = Vector3.left;
             dir = Dir.left;
             rend.flipX = false;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            dirVec = Vector3.up;
             dir = Dir.up;
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            dirVec = Vector3.down;
             dir = Dir.down;
         }
 
@@ -124,12 +133,30 @@ public class MOVE : MonoBehaviour
                     break;
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.E)&&scanobj!=null)
+        {
+            manager.Action(scanobj);
+        }
+
+
     }
 
 
 
     void FixedUpdate()
     {
+        Debug.DrawRay(rigid.position, dirVec * 1f, new Color(0,1,0));
+        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 1f,LayerMask.GetMask("obj" ));
+
+        if (rayHit.collider != null)
+        {
+            scanobj = rayHit.collider.gameObject;
+        }
+        else
+            scanobj = null;
 
     }
+
+
 }
