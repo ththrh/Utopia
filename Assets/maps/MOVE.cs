@@ -21,7 +21,9 @@ public class MOVE : MonoBehaviour
     public float Speed2;
     public float timer = 0.2f;
 
+    public bool isAttack = false;
     bool isDash = false;
+    public float atktimer=0.7f;
     int dir;
     Rigidbody2D rigid;
     float h;
@@ -40,9 +42,9 @@ public class MOVE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
-        if (!isDash)
+
+        if (!isDash && !manager.isAction && !isAttack)
         {
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
@@ -52,17 +54,14 @@ public class MOVE : MonoBehaviour
         {
             rigid.velocity = Vector2.zero;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-        }
+        
 
          anim.SetInteger("hAxisRaw", (int)h);
          anim.SetInteger("vAxisRaw", (int)v);
 
 
-
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow))
+        
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W)) && !isAttack)
         {
             anim.SetBool("isRunning", true);
         }
@@ -71,30 +70,32 @@ public class MOVE : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if(Input.GetKeyDown(KeyCode.D) && !isAttack)
         {
             dirVec = Vector3.right;
             dir = Dir.right;
             rend.flipX = true;
         }
-        else if(Input.GetKeyDown(KeyCode.LeftArrow))
+        else if(Input.GetKeyDown(KeyCode.A) && !isAttack)
         {
             dirVec = Vector3.left;
             dir = Dir.left;
             rend.flipX = false;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.W) && !isAttack)
         {
+            rend.flipX = false;
             dirVec = Vector3.up;
             dir = Dir.up;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.S) && !isAttack)
         {
+            rend.flipX = false;
             dirVec = Vector3.down;
             dir = Dir.down;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isAttack)
         {
             if(!isDash)
             {
@@ -117,8 +118,10 @@ public class MOVE : MonoBehaviour
         }
 
         transform.gameObject.GetComponentInChildren<Weapon>().dir = dir;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !manager.isAction)
         {
+            isAttack = true;
+            anim.SetBool("isRunning", false);
             switch (dir)
             {
                 case Dir.up:
@@ -131,6 +134,15 @@ public class MOVE : MonoBehaviour
                 case Dir.right:
                     anim.Play("sword_side");
                     break;
+            }
+        }
+        if (isAttack)
+        {
+            atktimer -= Time.deltaTime;
+            if (atktimer <= 0)
+            {
+                isAttack = false;
+                atktimer = 0.7f;
             }
         }
 
