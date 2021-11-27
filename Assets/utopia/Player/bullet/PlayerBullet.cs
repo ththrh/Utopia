@@ -26,6 +26,7 @@ public class PlayerBullet : MonoBehaviour
             if(Time.time >= shotTime)
             {
                 Instantiate(bullet, transform.position, Quaternion.AngleAxis(angle-90, Vector3.forward));
+                GetComponent<AudioSource>().Play();
             }
         }
     }

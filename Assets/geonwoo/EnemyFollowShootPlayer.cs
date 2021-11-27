@@ -33,44 +33,44 @@ public class EnemyFollowShootPlayer : MonoBehaviour
         else if (distanceFromPlayer <= shootingRange && nextFireTime < Time.time)
         {
             //원형 발사 후 추적
-            var bl = new List<Transform>();
+            //var bl = new List<Transform>();
 
-            for (int i = 0; i < 360; i += 13)
-            {
-                //총알 생성
-                var temp = Instantiate(bullet);
-
-                //2초후 삭제
-                Destroy(temp, 2f);
-
-                //총알 생성 위치를 (0,0) 좌표로 한다.
-                temp.transform.position = bulletParent.transform.position;
-
-                //?초후에 Target에게 날아갈 오브젝트 수록
-                bl.Add(temp.transform);
-
-                //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
-                temp.transform.rotation = Quaternion.Euler(0, 0, i);
-            }
-            //총알을 Target 방향으로 이동시킨다.
-            StartCoroutine(BulletToTarget(bl));
-
-
-            //원형 발사
             //for (int i = 0; i < 360; i += 13)
             //{
             //    //총알 생성
-            //    GameObject temp = Instantiate(bullet);
+            //    var temp = Instantiate(bullet);
 
-            //    //2초마다 삭제
+            //    //2초후 삭제
             //    Destroy(temp, 2f);
 
             //    //총알 생성 위치를 (0,0) 좌표로 한다.
             //    temp.transform.position = bulletParent.transform.position;
 
+            //    //?초후에 Target에게 날아갈 오브젝트 수록
+            //    bl.Add(temp.transform);
+
             //    //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
             //    temp.transform.rotation = Quaternion.Euler(0, 0, i);
             //}
+            ////총알을 Target 방향으로 이동시킨다.
+            //StartCoroutine(BulletToTarget(bl));
+
+
+            //원형 발사
+            for (int i = 0; i < 360; i += 13)
+            {
+                //총알 생성
+                GameObject temp = Instantiate(bullet);
+
+                //2초마다 삭제
+                Destroy(temp, 2f);
+
+                //총알 생성 위치를 (0,0) 좌표로 한다.
+                temp.transform.position = bulletParent.transform.position;
+
+                //z에 값이 변해야 회전이 이루어지므로, z에 i를 대입한다.
+                temp.transform.rotation = Quaternion.Euler(0, 0, i);
+            }
 
 
 
