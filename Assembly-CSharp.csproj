@@ -98,6 +98,7 @@
     <Compile Include="Assets\utopia\GameManager.cs" />
     <Compile Include="Assets\utopia\MonsterStatus.cs" />
     <Compile Include="Assets\utopia\ObjData.cs" />
+    <Compile Include="Assets\utopia\Player\HpBar.cs" />
     <Compile Include="Assets\utopia\Player\Status.cs" />
     <Compile Include="Assets\utopia\Player\bullet\PlayerBullet.cs" />
     <Compile Include="Assets\utopia\Player\bullet\tang.cs" />

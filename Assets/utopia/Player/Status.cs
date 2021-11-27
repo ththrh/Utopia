@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Status : MonoBehaviour
 {
+    public int MaxHp = 5;
     public int hp = 5;
     public bool isDamage;
     public float Dtimer=1.0f;
     float timer;
+    SpriteRenderer rend;
     // Start is called before the first frame update
     void Start()
     {
         timer = Dtimer;
+        rend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -38,10 +41,31 @@ public class Status : MonoBehaviour
         {
             isDamage = true;
             hp -= 1;
+            StartCoroutine(UnBeatTime());
         }
         if (collision.CompareTag("Bullet"))
         {
-            Destroy(collision);
+            Destroy(collision.gameObject);
         }
+    }
+
+    IEnumerator UnBeatTime()
+    {
+        int cnt = 0;
+        for(cnt=0; cnt<=10; cnt++)
+        {
+            if (cnt % 2 == 0)
+            {
+                rend.color = new Color32(255, 255, 255, 90);
+            }
+            else
+            {
+                rend.color = new Color32(255, 255, 255, 180);
+            }
+            yield return new WaitForSeconds(0.1f);
+
+        }
+        rend.color = new Color32(255, 255, 255, 255);
+        yield return null;
     }
 }

@@ -87,14 +87,17 @@ public class EnemyFollowShootPlayer : MonoBehaviour
 
         for (int i = 0; i < bl.Count; i++)
         {
-            //현재 총알의 위치에서 플레이의 위치의 벡터값을 뻴셈하여 방향을 구함
-            var target_dir = target.transform.position - bl[i].position;
+            if(bl[i] != null)
+            {
+                //현재 총알의 위치에서 플레이의 위치의 벡터값을 뻴셈하여 방향을 구함
+                var target_dir = target.transform.position - bl[i].position;
 
-            //x,y의 값을 조합하여 Z방향 값으로 변형함. -> ~도 단위로 변형
-            var angle = Mathf.Atan2(target_dir.y, target_dir.x) * Mathf.Rad2Deg;
+                //x,y의 값을 조합하여 Z방향 값으로 변형함. -> ~도 단위로 변형
+                var angle = Mathf.Atan2(target_dir.y, target_dir.x) * Mathf.Rad2Deg;
 
-            //Target 방향으로 이동
-            bl[i].rotation = Quaternion.Euler(0, 0, angle);
+                //Target 방향으로 이동
+                bl[i].rotation = Quaternion.Euler(0, 0, angle);
+            }
         }
 
         //데이터 해제
