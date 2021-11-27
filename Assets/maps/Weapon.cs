@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public int dir;
+    public int dir=2;
     public float timer = 0.5f;
     public bool isHead;
     SpriteRenderer rend;
@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     {
         if (!isHead)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
                 timer = 0.5f;
                 rend.color = new Color(0.75f, 0.75f, 0.75f, 1f);
@@ -65,7 +65,7 @@ public class Weapon : MonoBehaviour
             {
                 dir = 0;
             }
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(1))
             {
                 timer = 0.5f;
                 if (dir == 2)

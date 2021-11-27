@@ -24,7 +24,7 @@ public class MOVE : MonoBehaviour
     public bool isAttack = false;
     bool isDash = false;
     public float atktimer=0.7f;
-    int dir;
+    int dir = 2;
     Rigidbody2D rigid;
     float h;
     float v;
@@ -118,7 +118,7 @@ public class MOVE : MonoBehaviour
         }
 
         transform.gameObject.GetComponentInChildren<Weapon>().dir = dir;
-        if (Input.GetMouseButtonDown(0) && !manager.isAction)
+        if ((Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) && !manager.isAction)
         {
             isAttack = true;
             anim.SetBool("isRunning", false);

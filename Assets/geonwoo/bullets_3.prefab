@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8590049431784321340}
   - component: {fileID: 4787981021839991009}
   - component: {fileID: 5051659159381022163}
+  - component: {fileID: 7212164356406199516}
   m_Layer: 0
   m_Name: bullets_3
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3822865515963751773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6, y: -0.39, z: 0}
+  m_LocalPosition: {x: 1.515, y: -0.452, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,3 +119,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!68 &7212164356406199516
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822865515963751773}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.012669325, y: 0.27200982}
+  - {x: 0.08184159, y: 0.22733197}
+  - {x: 0.1312294, y: 0.13431665}
+  - {x: 0.15324986, y: 0.009691089}
+  - {x: 0.14429379, y: -0.099974066}
+  - {x: 0.10303676, y: -0.20485547}
+  - {x: 0.07486677, y: -0.26441327}
+  - {x: 0.011636257, y: -0.2911003}
+  - {x: -0.06536889, y: -0.24473968}
+  - {x: -0.09654307, y: -0.16153976}
+  - {x: -0.1215893, y: -0.05235058}
+  - {x: -0.1097815, y: 0.04026243}
+  - {x: -0.085980296, y: 0.17290077}
+  - {x: -0.06321812, y: 0.22789066}
+  - {x: 0.012220502, y: 0.27556542}
