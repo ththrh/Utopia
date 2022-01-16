@@ -23,20 +23,21 @@ public class MOVE : MonoBehaviour
 
     public bool isAttack = false;
     bool isDash = false;
-    public float atktimer=0.7f;
+    public float atktimer = 0.7f;
     int dir = 2;
     Rigidbody2D rigid;
     float h;
     float v;
     Animator anim;
     SpriteRenderer rend;
-
+    Status stat;
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
+        stat = GetComponent<Status>();
     }
 
     // Update is called once per frame
@@ -94,11 +95,12 @@ public class MOVE : MonoBehaviour
             dirVec = Vector3.down;
             dir = Dir.down;
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && !isAttack)
+        //대쉬
+        if (Input.GetKeyDown(KeyCode.Space) && !isAttack && stat.Stamina > 0)
         {
             if(!isDash)
             {
+                stat.Stamina -= 1;
                 isDash = true;
                 anim.SetTrigger("isDashed");
             }

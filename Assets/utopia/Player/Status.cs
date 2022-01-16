@@ -6,36 +6,23 @@ public class Status : MonoBehaviour
 {
     public int MaxHp = 5;
     public int hp = 5;
+    public int MaxStamina = 5;
+    public int Stamina;
+    public int MaxMp = 5;
+    public int Mp;
     public bool isDamage;
     public float Dtimer=1.0f;
     float timer;
     SpriteRenderer rend;
+    float StaminaRestore = 5.0f;
     // Start is called before the first frame update
-    float h;
-    float v;
-
-    Rigidbody2D rigid;
-
-    void Awake()
-    {
-        rigid = GetComponent,Rigidbody2D.();
-    }
-
-    void Update()
-    {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-    }
-
-    void FixedUpdate()
-    {
-        rigid.velocity = new Vector2(h, v);
-    }
-
     void Start()
     {
         timer = Dtimer;
         rend = GetComponent<SpriteRenderer>();
+        hp = MaxHp;
+        Stamina = MaxStamina;
+        Mp = MaxMp;
     }
 
     // Update is called once per frame
@@ -49,6 +36,15 @@ public class Status : MonoBehaviour
         {
             Dtimer = timer;
             isDamage = false;
+        }
+        if (StaminaRestore > 0)
+        {
+            StaminaRestore -= Time.deltaTime;
+        }
+        else
+        {
+            StaminaRestore = 5.0f;
+            Stamina += 1;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
