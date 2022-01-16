@@ -11,6 +11,27 @@ public class Status : MonoBehaviour
     float timer;
     SpriteRenderer rend;
     // Start is called before the first frame update
+    float h;
+    float v;
+
+    Rigidbody2D rigid;
+
+    void Awake()
+    {
+        rigid = GetComponent,Rigidbody2D.();
+    }
+
+    void Update()
+    {
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+    }
+
+    void FixedUpdate()
+    {
+        rigid.velocity = new Vector2(h, v);
+    }
+
     void Start()
     {
         timer = Dtimer;
