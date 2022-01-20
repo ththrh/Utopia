@@ -93,6 +93,7 @@
     <Compile Include="Assets\geonwoo\ItemDatabase.cs" />
     <Compile Include="Assets\geonwoo\Slot.cs" />
     <Compile Include="Assets\maps\MOVE.cs" />
+    <Compile Include="Assets\maps\PlayerAnimation.cs" />
     <Compile Include="Assets\maps\Weapon.cs" />
     <Compile Include="Assets\utopia\GameManager.cs" />
     <Compile Include="Assets\utopia\MonsterStatus.cs" />

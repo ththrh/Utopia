@@ -55,21 +55,7 @@ public class MOVE : MonoBehaviour
         {
             rigid.velocity = Vector2.zero;
         }
-        
 
-         anim.SetInteger("hAxisRaw", (int)h);
-         anim.SetInteger("vAxisRaw", (int)v);
-
-
-        
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W)) && !isAttack)
-        {
-            anim.SetBool("isRunning", true);
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
-        }
 
         if(Input.GetKeyDown(KeyCode.D) && !isAttack)
         {
@@ -102,7 +88,6 @@ public class MOVE : MonoBehaviour
             {
                 stat.Stamina -= 1;
                 isDash = true;
-                anim.SetTrigger("isDashed");
             }
         }
         if (isDash)
@@ -123,20 +108,6 @@ public class MOVE : MonoBehaviour
         if ((Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) && !manager.isAction)
         {
             isAttack = true;
-            anim.SetBool("isRunning", false);
-            switch (dir)
-            {
-                case Dir.up:
-                    anim.Play("sword_up");
-                    break;
-                case Dir.down:
-                    anim.Play("sword_down");
-                    break;
-                case Dir.left:
-                case Dir.right:
-                    anim.Play("sword_side");
-                    break;
-            }
         }
         if (isAttack)
         {
