@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public bool isHead;
     SpriteRenderer rend;
     Animator anim;
+    Animator Panim;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,27 @@ public class Weapon : MonoBehaviour
     void Update()
     {
         if (!isHead)
-        {
+        { 
+            if (Input.GetKey(KeyCode.A))
+            {
+                dir = 3;
+                rend.flipX = false;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                dir = 3;
+                rend.flipX = true;
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                dir = 1;
+                rend.flipX = false;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                dir = 2;
+                rend.flipX = false;
+            }
             if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
                 timer = 0.5f;
@@ -28,22 +49,14 @@ public class Weapon : MonoBehaviour
                 switch (dir)
                 {
                     case 1:
-                        rend.flipX = false;
                         anim.Play("sword_up");
                         rend.sortingOrder = 8;
                         break;
                     case 2:
-                        rend.flipX = false;
                         anim.Play("sword_down");
                         rend.sortingOrder = 11;
                         break;
                     case 3:
-                        rend.flipX = false;
-                        anim.Play("sword_side");
-                        rend.sortingOrder = 11;
-                        break;
-                    case 4:
-                        rend.flipX = true;
                         anim.Play("sword_side");
                         rend.sortingOrder = 11;
                         break;
@@ -54,16 +67,17 @@ public class Weapon : MonoBehaviour
             {
                 rend.color = new Color(0.75f, 0.75f, 0.75f, 0f);
             }
+
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                dir = 2;
-            }
-            else if(Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {
                 dir = 0;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                dir = 2;
             }
             if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(1))
             {
@@ -80,5 +94,6 @@ public class Weapon : MonoBehaviour
                 rend.color = new Color(0.75f, 0.75f, 0.75f, 0f);
             }
         }
+
     }
 }

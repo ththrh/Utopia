@@ -61,23 +61,19 @@ public class MOVE : MonoBehaviour
         {
             dirVec = Vector3.right;
             dir = Dir.right;
-            rend.flipX = true;
         }
         else if(Input.GetKeyDown(KeyCode.A) && !isAttack)
         {
             dirVec = Vector3.left;
             dir = Dir.left;
-            rend.flipX = false;
         }
         else if (Input.GetKeyDown(KeyCode.W) && !isAttack)
         {
-            rend.flipX = false;
             dirVec = Vector3.up;
             dir = Dir.up;
         }
         else if (Input.GetKeyDown(KeyCode.S) && !isAttack)
         {
-            rend.flipX = false;
             dirVec = Vector3.down;
             dir = Dir.down;
         }
@@ -104,7 +100,6 @@ public class MOVE : MonoBehaviour
             isDash = false;
         }
 
-        transform.gameObject.GetComponentInChildren<Weapon>().dir = dir;
         if ((Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) && !manager.isAction)
         {
             isAttack = true;
