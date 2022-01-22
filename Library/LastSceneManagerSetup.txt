@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/maps/test.unity
+- path: Assets/Bitgem/Top_Down_Pixel_Dungeon_Level_01/Scenes/example-room.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
