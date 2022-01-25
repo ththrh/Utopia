@@ -85,6 +85,7 @@
      <Compile Include="Assets\geonwoo\NormalBullet.cs" />
      <Compile Include="Assets\geonwoo\NormalShot.cs" />
      <Compile Include="Assets\geonwoo\Slot.cs" />
+     <Compile Include="Assets\geonwoo\SpinShots.cs" />
      <Compile Include="Assets\maps\MOVE.cs" />
      <Compile Include="Assets\maps\PlayerAnimation.cs" />
      <Compile Include="Assets\maps\Weapon.cs" />

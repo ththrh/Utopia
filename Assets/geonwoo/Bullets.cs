@@ -4,23 +4,7 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    //GameObject target;
-    //public float speed;
-    //Rigidbody2D bulletRB;
-
-    //void Start()
-    //{
-    //    bulletRB = GetComponent<Rigidbody2D>();
-
-    //    target = GameObject.FindGameObjectWithTag("Player");
-    //    Vector3 Dir = new Vector3(1, 1,1);
-    //    Vector2 moveDir = (target.transform.position - transform.position + Dir).normalized* speed;
-
-    //    bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
-
-    //    Destroy(this.gameObject, 2);
-
-    //}
+    
     public float speed = 10f;
 
     private void Start()
