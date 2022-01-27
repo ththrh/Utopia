@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
      <Compile Include="Assets\geonwoo\Bullets.cs" />
+     <Compile Include="Assets\geonwoo\EnemyFollowDash.cs" />
      <Compile Include="Assets\geonwoo\EnemyFollowPlayer.cs" />
      <Compile Include="Assets\geonwoo\EnemyFollowShootPlayer.cs" />
      <Compile Include="Assets\geonwoo\FieldItems.cs" />
