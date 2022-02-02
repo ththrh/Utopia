@@ -15,6 +15,14 @@ public class Status : MonoBehaviour
     float timer;
     SpriteRenderer rend;
     float StaminaRestore = 5.0f;
+
+    public int SkillPoint;
+    public bool islearnskill_1;
+    public bool islearnskill_2;
+    public bool islearnskill_3;
+
+
+
     // Start is called before the first frame update
     void Start()
     {

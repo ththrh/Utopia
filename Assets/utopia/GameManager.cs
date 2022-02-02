@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
     public Text questtalk;
     public GameObject Player;
 
+    public GameObject skillpanel;
+    public Image skillimage;
+    public skill skill;
+    public Status stat;
+    public int skillname;
 
     void Start()
     {
@@ -70,6 +75,38 @@ public class GameManager : MonoBehaviour
                 menuset.SetActive(true);
         }
 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (skillpanel.activeSelf)
+                skillpanel.SetActive(false);
+            else
+                skillpanel.SetActive(true);
+        }
+
+        if (!stat.islearnskill_1 && !stat.islearnskill_2 && !stat.islearnskill_3)
+        {
+            skillname = 0;
+        }
+        else if (stat.islearnskill_1)
+        {
+            skillname = 1;
+        }
+        else if (stat.islearnskill_2)
+        {
+            skillname = 2;
+        }
+        else if (stat.islearnskill_3)
+        {
+            skillname = 3;
+        }
+        else
+            return;
+        skillport(skillname);
+
+    }
+    void skillport(int skillindex)
+    {
+        skillimage.sprite = skill.Getskillimage(skillindex);
     }
 
     public void GameSave()

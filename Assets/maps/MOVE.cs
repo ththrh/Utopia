@@ -119,6 +119,30 @@ public class MOVE : MonoBehaviour
             manager.Action(scanobj);
         }
 
+        //김민우스킬test
+
+        if (stat.islearnskill_1)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("스킬사용1");
+            }
+        }
+        else if (stat.islearnskill_2)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("스킬사용2");
+            }
+        }
+        else if (stat.islearnskill_3)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("스킬사용3");
+            }
+        }
+
 
     }
 
