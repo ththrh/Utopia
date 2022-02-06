@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Set1_Ourdoor_Tiles_48
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -6735570562366709551, guid: a329d70a2327d3a4ea80c3cf3f8883b4,
+  m_Sprite: {fileID: -6735570562366709551, guid: daed72996b0f9724babf7f341773e7b6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
