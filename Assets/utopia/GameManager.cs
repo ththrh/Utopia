@@ -101,13 +101,13 @@ public class GameManager : MonoBehaviour
         }
         else
             return;
-        skillport(skillname);
+       // skillport(skillname);
 
     }
-    void skillport(int skillindex)
-    {
-        skillimage.sprite = skill.Getskillimage(skillindex);
-    }
+   // void skillport(int skillindex)
+   //{
+   //     skillimage.sprite = skill.Getskillimage(skillindex);
+   // }
 
     public void GameSave()
     {

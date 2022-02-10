@@ -87,8 +87,8 @@ public class skill : MonoBehaviour
 
     }
 
-    public Sprite Getskillimage(int skillIndex)
-    {
-        return skilldata[skillIndex];
-    }
+    //public Sprite Getskillimage(int skillIndex)
+    //{
+       // return skilldata[skillIndex];
+    //}
 }
