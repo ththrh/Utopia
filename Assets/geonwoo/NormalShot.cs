@@ -12,12 +12,17 @@ public class NormalShot : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletParent;
     private Transform player;
+   // private SpriteRenderer spriterenderer;
    
     // Start is called before the first frame update
     void Start()
     {
+        //spriterenderer.GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
+
+
+
 
     // Update is called once per frame
     void Update()
