@@ -22,6 +22,18 @@ public class GameManager : MonoBehaviour
     public Status stat;
     public int skillname;
 
+
+    public click_skill click_Skill;
+    public shift_skill shift_Skill;
+    public q_skill q_Skill;
+
+    public int click_skillname;
+    public int shift_skillname;
+    public int q_skillname;
+
+    public Image click_skillimage;
+    public Image shift_skillimage;
+    public Image q_skillimage;
     void Start()
     {
         GameLoad();
@@ -82,32 +94,88 @@ public class GameManager : MonoBehaviour
             else
                 skillpanel.SetActive(true);
         }
-
-        if (!stat.islearnskill_1 && !stat.islearnskill_2 && !stat.islearnskill_3)
+        if (!stat.click_islearnskill_1 && !stat.click_islearnskill_2 && !stat.click_islearnskill_3 && !stat.click_islearnskill_4)
         {
-            skillname = 0;
+            click_skillname = 0;
         }
-        else if (stat.islearnskill_1)
+        else if (stat.click_islearnskill_1)
         {
-            skillname = 1;
+            click_skillname = 1;
         }
-        else if (stat.islearnskill_2)
+        else if (stat.click_islearnskill_2)
         {
-            skillname = 2;
+            click_skillname = 2;
         }
-        else if (stat.islearnskill_3)
+        else if (stat.click_islearnskill_3)
         {
-            skillname = 3;
+            click_skillname = 3;
+        }
+        else if (stat.click_islearnskill_4)
+        {
+            click_skillname = 4;
         }
         else
             return;
-       // skillport(skillname);
+
+        if (!stat.shift_islearnskill_1 && !stat.shift_islearnskill_2 && !stat.shift_islearnskill_3 && !stat.shift_islearnskill_4)
+        {
+            shift_skillname = 0;
+        }
+        else if (stat.shift_islearnskill_1)
+        {
+            shift_skillname = 1;
+        }
+        else if (stat.shift_islearnskill_2)
+        {
+            shift_skillname = 2;
+        }
+        else if (stat.shift_islearnskill_3)
+        {
+            shift_skillname = 3;
+        }
+        else if (stat.shift_islearnskill_4)
+        {
+            shift_skillname = 4;
+        }
+        else
+            return;
+
+        if (!stat.q_islearnskill_1 && !stat.q_islearnskill_2 && !stat.q_islearnskill_3 && !stat.q_islearnskill_4)
+        {
+            q_skillname = 0;
+        }
+        else if (stat.q_islearnskill_1)
+        {
+            q_skillname = 1;
+        }
+        else if (stat.q_islearnskill_2)
+        {
+            q_skillname = 2;
+        }
+        else if (stat.q_islearnskill_3)
+        {
+            q_skillname = 3;
+        }
+        else if (stat.q_islearnskill_4)
+        {
+            q_skillname = 4;
+        }
+        else
+            return;
+        skillport(click_skillname, shift_skillname, q_skillname);
+
+
+
+        // skillport(skillname);
 
     }
-   // void skillport(int skillindex)
-   //{
-   //     skillimage.sprite = skill.Getskillimage(skillindex);
-   // }
+    void skillport(int click_skillindex, int shift_skillinedx, int q_skillindex)
+    {
+        click_skillimage.sprite = click_Skill.Getskillimage(click_skillindex);
+        shift_skillimage.sprite = shift_Skill.Getskillimage(shift_skillinedx);
+        q_skillimage.sprite = q_Skill.Getskillimage(q_skillindex);
+    }
+
 
     public void GameSave()
     {

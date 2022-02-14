@@ -120,27 +120,40 @@ public class MOVE : MonoBehaviour
         }
 
         //김민우스킬test
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (stat.click_islearnskill_1)
+                Debug.Log("클릭 스킬사용1");
+            else if (stat.click_islearnskill_2)
+                Debug.Log("클릭 스킬사용2");
+            else if (stat.click_islearnskill_3)
+                Debug.Log("클릭 스킬사용3");
+            else if (stat.click_islearnskill_4)
+                Debug.Log("클릭 스킬사용4");
+        }
 
-        if (stat.islearnskill_1)
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log("스킬사용1");
-            }
+            if (stat.shift_islearnskill_1)
+                Debug.Log("쉬프트 스킬사용1");
+            else if (stat.shift_islearnskill_2)
+                Debug.Log("쉬프트 스킬사용2");
+            else if (stat.shift_islearnskill_3)
+                Debug.Log("쉬프트 스킬사용3");
+            else if (stat.shift_islearnskill_4)
+                Debug.Log("쉬프트 스킬사용4");
         }
-        else if (stat.islearnskill_2)
+
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log("스킬사용2");
-            }
-        }
-        else if (stat.islearnskill_3)
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log("스킬사용3");
-            }
+            if (stat.q_islearnskill_1)
+                Debug.Log("큐 스킬사용1");
+            else if (stat.q_islearnskill_2)
+                Debug.Log("큐 스킬사용2");
+            else if (stat.q_islearnskill_3)
+                Debug.Log("큐 스킬사용3");
+            else if (stat.q_islearnskill_4)
+                Debug.Log("큐 스킬사용4");
         }
 
 

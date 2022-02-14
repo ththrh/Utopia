@@ -26996,7 +26996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1013011962
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28479,6 +28479,15 @@ MonoBehaviour:
   skill: {fileID: 1013011963}
   stat: {fileID: 2078563453}
   skillname: 0
+  click_Skill: {fileID: 0}
+  shift_Skill: {fileID: 0}
+  q_Skill: {fileID: 0}
+  click_skillname: 0
+  shift_skillname: 0
+  q_skillname: 0
+  click_skillimage: {fileID: 0}
+  shift_skillimage: {fileID: 0}
+  q_skillimage: {fileID: 0}
 --- !u!1001 &1275528136
 PrefabInstance:
   m_ObjectHideFlags: 0

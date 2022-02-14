@@ -17,9 +17,21 @@ public class Status : MonoBehaviour
     float StaminaRestore = 5.0f;
 
     public int SkillPoint;
-    public bool islearnskill_1;
-    public bool islearnskill_2;
-    public bool islearnskill_3;
+
+    public bool click_islearnskill_1;
+    public bool click_islearnskill_2;
+    public bool click_islearnskill_3;
+    public bool click_islearnskill_4;
+
+    public bool shift_islearnskill_1;
+    public bool shift_islearnskill_2;
+    public bool shift_islearnskill_3;
+    public bool shift_islearnskill_4;
+
+    public bool q_islearnskill_1;
+    public bool q_islearnskill_2;
+    public bool q_islearnskill_3;
+    public bool q_islearnskill_4;
 
 
 
