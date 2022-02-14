@@ -19,7 +19,7 @@ public class MOVE : MonoBehaviour
 
     public float Speed;
     public float Speed2;
-    public float timer = 0.2f;
+    public float timer = 0.5f;
 
     public bool isAttack = false;
     bool isDash = false;
@@ -80,7 +80,7 @@ public class MOVE : MonoBehaviour
         //대쉬
         if (Input.GetKeyDown(KeyCode.Space) && !isAttack && stat.Stamina > 0)
         {
-            if(!isDash)
+            if (!isDash && timer == 0.5f)
             {
                 stat.Stamina -= 1;
                 isDash = true;
@@ -96,7 +96,7 @@ public class MOVE : MonoBehaviour
         }
         if (timer <= 0)
         {
-            timer = 0.2f;
+            timer = 0.5f;
             isDash = false;
         }
 
