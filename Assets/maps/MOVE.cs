@@ -120,7 +120,7 @@ public class MOVE : MonoBehaviour
         }
 
         //김민우스킬test
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             if (stat.click_islearnskill_1)
                 Debug.Log("클릭 스킬사용1");

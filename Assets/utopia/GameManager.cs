@@ -17,10 +17,9 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
 
     public GameObject skillpanel;
-    public Image skillimage;
-    public skill skill;
+
+    public skill1 skill;
     public Status stat;
-    public int skillname;
 
 
     public click_skill click_Skill;
@@ -36,8 +35,18 @@ public class GameManager : MonoBehaviour
     public Image q_skillimage;
     void Start()
     {
+        click_skillname = 0;
+        shift_skillname = 0;
+        q_skillname = 0;
         GameLoad();
         questtalk.text = QuestManager.checkquest();
+
+ 
+    }
+
+    void Awake()
+    {
+
     }
     public void Action(GameObject scanobj)
     {
@@ -164,9 +173,6 @@ public class GameManager : MonoBehaviour
             return;
         skillport(click_skillname, shift_skillname, q_skillname);
 
-
-
-        // skillport(skillname);
 
     }
     void skillport(int click_skillindex, int shift_skillinedx, int q_skillindex)

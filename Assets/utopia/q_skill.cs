@@ -19,7 +19,7 @@ public class q_skill : MonoBehaviour
         q_skilldata.Add(1, SkillImage[1]);
         q_skilldata.Add(2, SkillImage[2]);
         q_skilldata.Add(3, SkillImage[3]);
-        q_skilldata.Add(4, SkillImage[3]);
+        q_skilldata.Add(4, SkillImage[4]);
 
     }
     public void Learn_q_Skill_1()

@@ -19,7 +19,7 @@ public class shift_skill : MonoBehaviour
         shift_skilldata.Add(1, SkillImage[1]);
         shift_skilldata.Add(2, SkillImage[2]);
         shift_skilldata.Add(3, SkillImage[3]);
-        shift_skilldata.Add(4, SkillImage[3]);
+        shift_skilldata.Add(4, SkillImage[4]);
 
     }
     public void Learn_shift_Skill_1()

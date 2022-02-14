@@ -19,7 +19,7 @@ public class click_skill : MonoBehaviour
         click_skilldata.Add(1, SkillImage[1]);
         click_skilldata.Add(2, SkillImage[2]);
         click_skilldata.Add(3, SkillImage[3]);
-        click_skilldata.Add(4, SkillImage[3]);
+        click_skilldata.Add(4, SkillImage[4]);
 
     }
     public void Learn_click_Skill_1()

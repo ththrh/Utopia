@@ -116,7 +116,6 @@
      <Compile Include="Assets\utopia\q_skill.cs" />
      <Compile Include="Assets\utopia\shift_skill.cs" />
      <Compile Include="Assets\utopia\skill1.cs" />
-     <Compile Include="Assets\utopia\skill2.cs" />
      <None Include="Assets\jiwon\grass\Info.txt" />
      <None Include="Assets\File\Sprites\Info.txt" />
  <Reference Include="UnityEngine">
