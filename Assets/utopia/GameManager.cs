@@ -40,8 +40,6 @@ public class GameManager : MonoBehaviour
         q_skillname = 0;
         GameLoad();
         questtalk.text = QuestManager.checkquest();
-
- 
     }
 
     void Awake()
@@ -103,69 +101,69 @@ public class GameManager : MonoBehaviour
             else
                 skillpanel.SetActive(true);
         }
-        if (!stat.click_islearnskill_1 && !stat.click_islearnskill_2 && !stat.click_islearnskill_3 && !stat.click_islearnskill_4)
+        if (!stat.click_isactiveskill_1 && !stat.click_isactiveskill_2 && !stat.click_isactiveskill_3 && !stat.click_isactiveskill_4)
         {
             click_skillname = 0;
         }
-        else if (stat.click_islearnskill_1)
+        else if (stat.click_isactiveskill_1)
         {
             click_skillname = 1;
         }
-        else if (stat.click_islearnskill_2)
+        else if (stat.click_isactiveskill_2)
         {
             click_skillname = 2;
         }
-        else if (stat.click_islearnskill_3)
+        else if (stat.click_isactiveskill_3)
         {
             click_skillname = 3;
         }
-        else if (stat.click_islearnskill_4)
+        else if (stat.click_isactiveskill_4)
         {
             click_skillname = 4;
         }
         else
             return;
 
-        if (!stat.shift_islearnskill_1 && !stat.shift_islearnskill_2 && !stat.shift_islearnskill_3 && !stat.shift_islearnskill_4)
+        if (!stat.shift_isactiveskill_1 && !stat.shift_isactiveskill_2 && !stat.shift_isactiveskill_3 && !stat.shift_isactiveskill_4)
         {
             shift_skillname = 0;
         }
-        else if (stat.shift_islearnskill_1)
+        else if (stat.shift_isactiveskill_1)
         {
             shift_skillname = 1;
         }
-        else if (stat.shift_islearnskill_2)
+        else if (stat.shift_isactiveskill_2)
         {
             shift_skillname = 2;
         }
-        else if (stat.shift_islearnskill_3)
+        else if (stat.shift_isactiveskill_3)
         {
             shift_skillname = 3;
         }
-        else if (stat.shift_islearnskill_4)
+        else if (stat.shift_isactiveskill_4)
         {
             shift_skillname = 4;
         }
         else
             return;
 
-        if (!stat.q_islearnskill_1 && !stat.q_islearnskill_2 && !stat.q_islearnskill_3 && !stat.q_islearnskill_4)
+        if (!stat.q_isactiveskill_1 && !stat.q_isactiveskill_2 && !stat.q_isactiveskill_3 && !stat.q_isactiveskill_4)
         {
             q_skillname = 0;
         }
-        else if (stat.q_islearnskill_1)
+        else if (stat.q_isactiveskill_1)
         {
             q_skillname = 1;
         }
-        else if (stat.q_islearnskill_2)
+        else if (stat.q_isactiveskill_2)
         {
             q_skillname = 2;
         }
-        else if (stat.q_islearnskill_3)
+        else if (stat.q_isactiveskill_3)
         {
             q_skillname = 3;
         }
-        else if (stat.q_islearnskill_4)
+        else if (stat.q_isactiveskill_4)
         {
             q_skillname = 4;
         }

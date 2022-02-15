@@ -34,6 +34,24 @@ public class Status : MonoBehaviour
     public bool q_islearnskill_4;
 
 
+    public bool click_isactiveskill_1;
+    public bool click_isactiveskill_2;
+    public bool click_isactiveskill_3;
+    public bool click_isactiveskill_4;
+
+    public bool shift_isactiveskill_1;
+    public bool shift_isactiveskill_2;
+    public bool shift_isactiveskill_3;
+    public bool shift_isactiveskill_4;
+
+    public bool q_isactiveskill_1;
+    public bool q_isactiveskill_2;
+    public bool q_isactiveskill_3;
+    public bool q_isactiveskill_4;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
