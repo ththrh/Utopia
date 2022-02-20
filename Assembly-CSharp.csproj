@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\UI\SceneMove.cs" />
      <Compile Include="Assets\Scripts\UI\SoundToggle.cs" />
      <Compile Include="Assets\SoundMaster.cs" />
+     <Compile Include="Assets\geonwoo\BearMove.cs" />
      <Compile Include="Assets\geonwoo\Bullets.cs" />
      <Compile Include="Assets\geonwoo\DogMove.cs" />
      <Compile Include="Assets\geonwoo\EnemyFollowPlayer.cs" />
