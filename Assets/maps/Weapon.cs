@@ -85,7 +85,6 @@ public class Weapon : MonoBehaviour
                 if (dir == 2)
                 {
                     rend.color = new Color(1f, 1f, 1f, 1f);
-                    anim.Play("sword_down_cover");
                 }
             }
             timer -= Time.deltaTime;
