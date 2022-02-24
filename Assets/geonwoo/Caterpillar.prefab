@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 6635427343449823483}
   - component: {fileID: 7866831954052168317}
   - component: {fileID: 8509657237674931710}
+  - component: {fileID: -615578976437014065}
   m_Layer: 0
   m_Name: Caterpillar
   m_TagString: Untagged
@@ -543,6 +544,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.25, y: 1.07}
   m_Size: {x: 4, y: 3}
   m_Direction: 1
+--- !u!114 &-615578976437014065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917009958388616473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f865a0a3cf4344187697eb1a71b40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  lineOfSite: 6
 --- !u!1 &6878911156448842165
 GameObject:
   m_ObjectHideFlags: 0
