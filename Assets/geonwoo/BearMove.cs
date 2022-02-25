@@ -48,6 +48,7 @@ public class BearMove : MonoBehaviour
             flip();
         }
 
+        
         if (distanceFromPlayer < AttackRange)
         {
             anim.SetTrigger("Attack");
