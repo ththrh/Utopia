@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 1649193305662368824}
   - component: {fileID: 2871681839078051518}
   - component: {fileID: 4390651996860481853}
+  - component: {fileID: -2637754021487514495}
   m_Layer: 0
   m_Name: Scarab
   m_TagString: Untagged
@@ -257,6 +258,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.3, y: 1.3}
   m_Size: {x: 5.1, y: 4}
   m_Direction: 1
+--- !u!114 &-2637754021487514495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795717599598442970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0043c0119d799142aab629dcfa865bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  lineOfSite: 5
+  shootingRange: 0
+  fireRate: 1
+  bullet: {fileID: 0}
+  bulletParent: {fileID: 0}
 --- !u!1 &2229965725299690562
 GameObject:
   m_ObjectHideFlags: 0
