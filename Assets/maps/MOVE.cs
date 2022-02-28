@@ -32,19 +32,30 @@ public class MOVE : MonoBehaviour
     SpriteRenderer rend;
     Status stat;
 
+    float shield_cooltimer = 8;
+    public GameObject shield;
+    bool isshield = false;
+
+    float darksight_cooltimer = 6;
+    bool isdarksight = false;
+    SpriteRenderer sprite;
+
+    float heal_cooltimer = 10;
+    bool isheal = false;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
         stat = GetComponent<Status>();
+
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
         if (!isDash && !manager.isAction && !isAttack)
         {
             h = Input.GetAxisRaw("Horizontal");
@@ -134,14 +145,46 @@ public class MOVE : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (stat.shift_islearnskill_1)
-                Debug.Log("쉬프트 스킬사용1");
-            else if (stat.shift_islearnskill_2)
-                Debug.Log("쉬프트 스킬사용2");
-            else if (stat.shift_islearnskill_3)
+            if (stat.shift_isactiveskill_1)
+            {
+                if(heal_cooltimer == 10)
+                {
+                    isheal = true;
+                    heal_effect();
+                    Debug.Log("쉬프트 스킬사용1");
+                }
+                else
+                    Debug.Log("쉬프트 쿨타임1");
+
+            }
+
+            else if (stat.shift_isactiveskill_2)
+            {
+                if (darksight_cooltimer == 6)
+                {
+                    isdarksight = true;
+                    Debug.Log("쉬프트 스킬사용2");
+                }
+                else
+                    Debug.Log("쉬프트 쿨타임2");
+  
+            }
+
+            else if (stat.shift_isactiveskill_3)
                 Debug.Log("쉬프트 스킬사용3");
-            else if (stat.shift_islearnskill_4)
-                Debug.Log("쉬프트 스킬사용4");
+            else if (stat.shift_isactiveskill_4)
+            {
+                if (shield_cooltimer == 8)
+                {
+                    isshield = true;
+                    Instantiate(shield);
+                    Debug.Log("쉬프트 스킬사용4");
+                }
+                else
+                    Debug.Log("쉬프트4 쿨타임");
+            }
+        
+
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -156,10 +199,48 @@ public class MOVE : MonoBehaviour
                 Debug.Log("큐 스킬사용4");
         }
 
+        if (isshield)
+        {
+            shield_cooltimer -= Time.deltaTime;
+            if (shield_cooltimer < 0)
+            {
+                isshield = false;
+                shield_cooltimer = 8;
+            }
+        }
+
+        if(isdarksight)
+        {
+            darksight_cooltimer -= Time.deltaTime;
+            sprite.color = new Color(1, 1, 1, 0.5f);
+            if(darksight_cooltimer < 3)
+            {
+                sprite.color = new Color(1, 1, 1, 1);
+            }
+            if(darksight_cooltimer<0)
+            {
+                isdarksight = false;
+                darksight_cooltimer = 6;
+            }
+           
+        }
+        if(isheal)
+        {
+            heal_cooltimer -= Time.deltaTime;
+            if(heal_cooltimer<0)
+            {
+                isheal = false;
+                heal_cooltimer = 10;
+            }
+        }
 
     }
 
 
+    void heal_effect()
+    {
+        GetComponent<ParticleSystem>().Play();
+    }
 
     void FixedUpdate()
     {
