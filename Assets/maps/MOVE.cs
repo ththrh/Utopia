@@ -43,6 +43,9 @@ public class MOVE : MonoBehaviour
     float heal_cooltimer = 10;
     bool isheal = false;
 
+    float wall_cooltimer = 15;
+    bool iswall = false;
+    public GameObject wall;
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -171,7 +174,18 @@ public class MOVE : MonoBehaviour
             }
 
             else if (stat.shift_isactiveskill_3)
-                Debug.Log("쉬프트 스킬사용3");
+            {
+                GameObject player = GameObject.Find("TestPlayer");
+                if (wall_cooltimer == 15)
+                {
+                    iswall = true;
+                    Instantiate(wall,player.transform.position, Quaternion.identity);
+                    Debug.Log("쉬프트 스킬사용3");
+                }
+                else
+                    Debug.Log("쉬프트3 쿨타임");
+            }
+   
             else if (stat.shift_isactiveskill_4)
             {
                 if (shield_cooltimer == 8)
@@ -231,6 +245,16 @@ public class MOVE : MonoBehaviour
             {
                 isheal = false;
                 heal_cooltimer = 10;
+            }
+        }
+        if (iswall)
+        {
+            wall_cooltimer -= Time.deltaTime;
+            if (wall_cooltimer < 0)
+            {
+
+                iswall = false;
+                wall_cooltimer = 15;
             }
         }
 

@@ -58,6 +58,7 @@
      <Compile Include="Assets\2D SD Character Human Pack\Scripts\Acting.cs" />
      <Compile Include="Assets\2D SD Character Human Pack\Scripts\CharacterAnimation.cs" />
      <Compile Include="Assets\2D SD Character Human Pack\Scripts\HumanoidAnimation.cs" />
+     <Compile Include="Assets\Blink\wall.cs" />
      <Compile Include="Assets\FantasyMonsters\Scripts\AnchorManager.cs" />
      <Compile Include="Assets\FantasyMonsters\Scripts\CustomGrid.cs" />
      <Compile Include="Assets\FantasyMonsters\Scripts\Demo.cs" />
