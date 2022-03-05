@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 2321812810167940188}
   m_Layer: 0
   m_Name: MeatBug
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

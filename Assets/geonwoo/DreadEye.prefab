@@ -267,8 +267,7 @@ GameObject:
   - component: {fileID: 2022371875403197654}
   - component: {fileID: 5146823450509540181}
   - component: {fileID: 7425771246898698087}
-  - component: {fileID: 6889598360659137852}
-  - component: {fileID: 2282733474766967806}
+  - component: {fileID: -3968365335482073011}
   m_Layer: 0
   m_Name: DreadEye
   m_TagString: Enemy
@@ -397,7 +396,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 4}
   m_Size: {x: 5, y: 4}
   m_Direction: 1
---- !u!114 &6889598360659137852
+--- !u!114 &-3968365335482073011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406,32 +405,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 984286436463662956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 003c108d9e2d91d46a22ba3fb2e0648c, type: 3}
+  m_Script: {fileID: 11500000, guid: 795dd36b6407d554c9fa99e53e45f423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  lineOfSite: 6
+  speed: 6
+  lineOfSite: 7
   shootingRange: 4
   fireRate: 1
-  bullet: {fileID: 3822865515963751773, guid: 13f00078a5306d748b1b7571c025281a, type: 3}
-  bulletParent: {fileID: 6889598361015976758}
-  patternIndex: 0
-  rot_Speed: 0
-  pos: {fileID: 0}
-  target: {fileID: 0}
---- !u!114 &2282733474766967806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984286436463662956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 006dfa4e475661342b69d36ad0752eee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 3
+  bullet: {fileID: 8526081328499704025, guid: d5f497059d66c304e9e5fb0eb75f32bb, type: 3}
+  bulletParent: {fileID: 759578643259822223}
 --- !u!1 &1166745715485779836
 GameObject:
   m_ObjectHideFlags: 0
