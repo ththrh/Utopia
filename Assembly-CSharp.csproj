@@ -83,10 +83,9 @@
      <Compile Include="Assets\geonwoo\BearMove.cs" />
      <Compile Include="Assets\geonwoo\BugQueen.cs" />
      <Compile Include="Assets\geonwoo\Bullets.cs" />
-     <Compile Include="Assets\geonwoo\DogMove.cs" />
      <Compile Include="Assets\geonwoo\DoubleShot.cs" />
+     <Compile Include="Assets\geonwoo\EnemyFollowBite.cs" />
      <Compile Include="Assets\geonwoo\EnemyFollowPlayer.cs" />
-     <Compile Include="Assets\geonwoo\EnemyFollowShootPlayer.cs" />
      <Compile Include="Assets\geonwoo\FieldItems.cs" />
      <Compile Include="Assets\geonwoo\Inventory.cs" />
      <Compile Include="Assets\geonwoo\InventoryUI.cs" />
@@ -94,7 +93,6 @@
      <Compile Include="Assets\geonwoo\ItemDatabase.cs" />
      <Compile Include="Assets\geonwoo\NormalBullet.cs" />
      <Compile Include="Assets\geonwoo\NormalShot.cs" />
-     <Compile Include="Assets\geonwoo\RatMove.cs" />
      <Compile Include="Assets\geonwoo\ShapeShot.cs" />
      <Compile Include="Assets\geonwoo\Slot.cs" />
      <Compile Include="Assets\geonwoo\SpinShots.cs" />

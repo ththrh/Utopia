@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NormalShot : MonoBehaviour
 {
+    bool facingLeft = true;
     public float speed;
     public float lineOfSite;
     public float shootingRange;
@@ -38,6 +39,15 @@ public class NormalShot : MonoBehaviour
             Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
         }
+
+        if (player.position.x > transform.position.x && facingLeft == true)
+        {
+            flip();
+        }
+        if (player.position.x < transform.position.x && facingLeft == false)
+        {
+            flip();
+        }
     }
    
 
@@ -47,5 +57,11 @@ public class NormalShot : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, lineOfSite);
         Gizmos.DrawWireSphere(transform.position, shootingRange);
+    }
+
+    void flip()
+    {
+        facingLeft = !facingLeft;
+        transform.Rotate(0, 180, 0);
     }
 }
