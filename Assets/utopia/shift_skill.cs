@@ -7,10 +7,12 @@ public class shift_skill : MonoBehaviour
     public Status stat;
     public Sprite[] SkillImage;
     Dictionary<int, Sprite> shift_skilldata;
+    public tooltip_manager tooltip_;
 
     void Awake()
     {
         shift_skilldata = new Dictionary<int, Sprite>();
+
         makedata();
     }
     void makedata()
@@ -122,6 +124,26 @@ public class shift_skill : MonoBehaviour
             stat.shift_isactiveskill_4 = true;
         }
 
+    }
+    public void tooltip_zero()
+    {
+        tooltip_.trigger = 0;
+    }
+    public void tooltip_1()
+    {
+        tooltip_.trigger = 1;
+    }
+    public void tooltip_2()
+    {
+        tooltip_.trigger = 2;
+    }
+    public void tooltip_3()
+    {
+        tooltip_.trigger = 3;
+    }
+    public void tooltip_4()
+    {
+        tooltip_.trigger = 4;
     }
     public Sprite Getskillimage(int skillIndex)
     {
