@@ -32,18 +32,18 @@ public class MOVE : MonoBehaviour
     SpriteRenderer rend;
     Status stat;
 
-    float shield_cooltimer = 8;
+    public float shield_cooltimer = 8;
     public GameObject shield;
     bool isshield = false;
 
-    float darksight_cooltimer = 6;
+    public float darksight_cooltimer = 6;
     bool isdarksight = false;
     SpriteRenderer sprite;
 
-    float heal_cooltimer = 10;
+    public float heal_cooltimer = 10;
     bool isheal = false;
 
-    float wall_cooltimer = 15;
+    public float wall_cooltimer = 15;
     bool iswall = false;
     public GameObject wall;
     void Awake()
