@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 2871681839078051518}
   - component: {fileID: 4390651996860481853}
   - component: {fileID: -2637754021487514495}
+  - component: {fileID: 9112849741348935469}
   m_Layer: 0
   m_Name: Scarab
   m_TagString: Untagged
@@ -272,10 +273,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   lineOfSite: 5
-  shootingRange: 0
+  shootingRange: 4
   fireRate: 1
-  bullet: {fileID: 0}
-  bulletParent: {fileID: 0}
+  bullet: {fileID: 5068602522549674434, guid: ac3803452ea9d9241a116efc77dc5e7d, type: 3}
+  bulletParent1: {fileID: 8364392066449599888}
+  bulletParent2: {fileID: 3068644354250975947}
+--- !u!50 &9112849741348935469
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795717599598442970}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &2229965725299690562
 GameObject:
   m_ObjectHideFlags: 0
