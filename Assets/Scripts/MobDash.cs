@@ -27,7 +27,7 @@ public class MobDash : MonoBehaviour
         }
         if (!canDash)
         {
-            transform.position += (Vector3)Dir * speed * Time.deltaTime;
+            transform.position += (Vector3)Dir.normalized * speed * Time.deltaTime;
             dashTime -= Time.deltaTime;
         }
         if (dashTime <= 0)

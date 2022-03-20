@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject arrow;
     public GameObject bullet;
+    public GameObject bomb;
     public float ShotSpeed = 3.0f;
     public float shotTime;
     Status stat;
@@ -24,10 +26,28 @@ public class PlayerBullet : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && stat.Mp > 0)
         {
-            if(Time.time >= shotTime)
+            if (stat.click_isactiveskill_1)
+            {
+                if (Time.time >= shotTime)
+                {
+                    stat.Mp -= 1;
+                    Instantiate(bullet, transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
+                    GetComponent<AudioSource>().Play();
+                }
+            }
+            else if (stat.click_isactiveskill_2)
             {
                 stat.Mp -= 1;
-                Instantiate(bullet, transform.position, Quaternion.AngleAxis(angle-90, Vector3.forward));
+                Instantiate(bomb, new Vector3(transform.position.x, transform.position.y-1, transform.position.z), Quaternion.AngleAxis(0, Vector3.forward));
+                GetComponent<AudioSource>().Play();
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Time.time >= shotTime)
+            {
+                Instantiate(arrow, transform.position, Quaternion.AngleAxis(angle-90, Vector3.forward));
                 GetComponent<AudioSource>().Play();
             }
         }

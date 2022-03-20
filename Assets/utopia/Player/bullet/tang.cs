@@ -22,7 +22,7 @@ public class tang : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<MonsterStatus>().HP -= 1;
+            Debug.Log(1);
             Destroy(gameObject);
         }
     }
