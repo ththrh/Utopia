@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1703224972176818771}
   - component: {fileID: 2781621407219032277}
   - component: {fileID: 4444688061445648214}
-  - component: {fileID: -351355489748451840}
+  - component: {fileID: -3794178919042747713}
   m_Layer: 0
   m_Name: BugQueen
   m_TagString: BugQueen
@@ -228,7 +228,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 1.75}
   m_Size: {x: 6, y: 5}
   m_Direction: 1
---- !u!114 &-351355489748451840
+--- !u!114 &-3794178919042747713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,11 +237,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849753632482973617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f865a0a3cf4344187697eb1a71b40c, type: 3}
+  m_Script: {fileID: 11500000, guid: c9ba6aeab6acd80429a9fb5f3268bd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
   lineOfSite: 7
+  bullet: {fileID: 5468913634735556909, guid: 689e8c531d2308842b425d32365421f9, type: 3}
 --- !u!1 &2283994095964742185
 GameObject:
   m_ObjectHideFlags: 0

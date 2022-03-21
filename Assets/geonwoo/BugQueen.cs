@@ -4,37 +4,100 @@ using UnityEngine;
 
 public class BugQueen : MonoBehaviour
 {
-    public GameObject Bug1;
-    public GameObject Bug2;
-    public GameObject Bug3;
+    public float speed;
+    public float lineOfSite;
+    private Transform player;
+    bool facingLeft = true;
+    Animator anim;
+    public GameObject bullet;
+    public GameObject bulletParent;
+    private float nextFireTime;
+    public float fireRate = 1f;
 
-
-    void SpawnEnemy()
+    void Awake()
     {
-
-        Vector2 QueenPosition = GameObject.FindWithTag("BugQueen").transform.position; //플레이어 포지션을 가져오는 부분
-
-        float randomX1 = Random.Range(-2.5f, 2.5f);
-        float randomX2 = Random.Range(-4.5f, 4.5f);
-        float randomX3 = Random.Range(-6.5f, 6.5f);
-        float randomY1 = Random.Range(-2.5f, 2.5f); 
-        float randomY2 = Random.Range(-4.5f, 4.5f); 
-        float randomY3 = Random.Range(-6.5f, 6.5f); 
-
-        GameObject enemy1 = (GameObject)Instantiate(Bug1, new Vector2(QueenPosition.x + randomX1, QueenPosition.y + randomY1), Quaternion.identity);
-        GameObject enemy2 = (GameObject)Instantiate(Bug2, new Vector2(QueenPosition.x + randomX2, QueenPosition.y + randomY2), Quaternion.identity);
-        GameObject enemy3 = (GameObject)Instantiate(Bug3, new Vector2(QueenPosition.x + randomX3, QueenPosition.y + randomY3), Quaternion.identity);
-
+        anim = GetComponent<Animator>();
     }
-        // Start is called before the first frame update
+
+    // Start is called before the first frame update
     void Start()
     {
-            InvokeRepeating("SpawnEnemy", 3f, 2f); //3초후 부터, SpawnEnemy함수를 2초마다 반복해서 실행 시킵니다.
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
+
+        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+        if (distanceFromPlayer < lineOfSite)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+            anim.SetBool("Running", true);
+        }
+        else
+        {
+            anim.SetBool("Running", false);
+        }
+
+        if (player.position.x > transform.position.x && facingLeft == true)
+        {
+            flip();
+        }
+        if (player.position.x < transform.position.x && facingLeft == false)
+        {
+            flip();
+        }
+
+        if (nextFireTime < Time.time)
+        {
+            shot();
+            nextFireTime = Time.time + fireRate;
+        }
+
+
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, lineOfSite);
+    }
+
+
+    void flip()
+    {
+        facingLeft = !facingLeft;
+        transform.Rotate(0, 180, 0);
+    }
+
+    void shot()
+    {
+        //360번 반복
+        for (int i = 0; i < 360; i += 13)
+        {
+            
+            
+            if (nextFireTime < Time.time)
+            {
+                //총알 생성
+                GameObject temp = Instantiate(bullet);
+                
+
+                Destroy(temp, 2f);
+
+                //총알 생성 위치를 (0,0) 좌표로 한다.
+                temp.transform.position = bulletParent.transform.position;
+
+                //Z에 값이 변해야 회전이 이루어지므로, Z에 i를 대입한다.
+                temp.transform.rotation = Quaternion.Euler(0, 0, i);
+
+                
+            }
+         
+        }
+    }
+
 }
+
