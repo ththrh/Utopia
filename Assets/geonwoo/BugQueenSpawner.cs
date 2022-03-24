@@ -29,7 +29,7 @@ public class BugQueenSpawner : MonoBehaviour
         // Start is called before the first frame update
     void Start()
     {
-            InvokeRepeating("SpawnEnemy", 3f, 2f); //3초후 부터, SpawnEnemy함수를 2초마다 반복해서 실행 시킵니다.
+            InvokeRepeating("SpawnEnemy", 3f, 10f); //3초후 부터, SpawnEnemy함수를 2초마다 반복해서 실행 시킵니다.
     }
 
     // Update is called once per frame

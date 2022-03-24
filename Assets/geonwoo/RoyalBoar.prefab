@@ -240,9 +240,7 @@ GameObject:
   - component: {fileID: 7266988692278153710}
   - component: {fileID: 5738278236574742137}
   - component: {fileID: -6620912596836846062}
-  - component: {fileID: 1275195568453136150}
   - component: {fileID: 1817765205351753382}
-  - component: {fileID: -2221273066739330854}
   m_Layer: 0
   m_Name: RoyalBoar
   m_TagString: Untagged
@@ -408,20 +406,6 @@ MonoBehaviour:
   fireRate: 1
   bullet: {fileID: 278571872786676374, guid: ee90d067b6918c447ad38e1b62356d70, type: 3}
   bulletParent: {fileID: 7266988693442693056}
---- !u!114 &1275195568453136150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7266988692278153707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f865a0a3cf4344187697eb1a71b40c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  lineOfSite: 6
 --- !u!50 &1817765205351753382
 Rigidbody2D:
   serializedVersion: 4
@@ -443,25 +427,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &-2221273066739330854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7266988692278153707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0043c0119d799142aab629dcfa865bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  lineOfSite: 5
-  shootingRange: 4
-  fireRate: 1
-  bullet: {fileID: 278571872786676374, guid: ee90d067b6918c447ad38e1b62356d70, type: 3}
-  bulletParent1: {fileID: 0}
-  bulletParent2: {fileID: 0}
 --- !u!1 &7266988692551715147
 GameObject:
   m_ObjectHideFlags: 0

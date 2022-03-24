@@ -411,7 +411,7 @@ MonoBehaviour:
   speed: 6
   lineOfSite: 7
   shootingRange: 4
-  fireRate: 1
+  fireRate: 0.4
   bullet: {fileID: 8526081328499704025, guid: d5f497059d66c304e9e5fb0eb75f32bb, type: 3}
   bulletParent: {fileID: 759578643259822223}
 --- !u!1 &1166745715485779836

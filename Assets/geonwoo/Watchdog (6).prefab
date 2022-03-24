@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce63eca5b356204f8b5f4ccff41b62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1.3
   lineOfSite: 5
   AttackRange: 2
 --- !u!1 &4273606131329867413
