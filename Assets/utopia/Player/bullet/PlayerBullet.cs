@@ -8,6 +8,7 @@ public class PlayerBullet : MonoBehaviour
     public GameObject arrow;
     public GameObject bullet;
     public GameObject bomb;
+    public GameObject UCB;
     public float ShotSpeed = 3.0f;
     public float shotTime;
     Status stat;
