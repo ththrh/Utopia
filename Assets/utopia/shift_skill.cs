@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class shift_skill : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class shift_skill : MonoBehaviour
     public Sprite[] SkillImage;
     Dictionary<int, Sprite> shift_skilldata;
     public tooltip_manager tooltip_;
+
+    public GameObject learn_mark_1;
+    public GameObject learn_mark_2;
+    public GameObject learn_mark_3;
+    public GameObject learn_mark_4;
 
     void Awake()
     {
@@ -38,6 +44,8 @@ public class shift_skill : MonoBehaviour
                 stat.shift_isactiveskill_3 = false;
                 stat.shift_isactiveskill_4 = false;
                 stat.SkillPoint -= 1;
+
+                learn_mark_1.SetActive(true);
             }
         }
         else if (stat.shift_islearnskill_1)
@@ -64,6 +72,8 @@ public class shift_skill : MonoBehaviour
                 stat.shift_isactiveskill_3 = false;
                 stat.shift_isactiveskill_4 = false;
                 stat.SkillPoint -= 1;
+
+                learn_mark_2.SetActive(true);
             }
         }
         else if (stat.shift_islearnskill_2)
@@ -89,6 +99,8 @@ public class shift_skill : MonoBehaviour
                 stat.shift_isactiveskill_3 = true;
                 stat.shift_isactiveskill_4 = false;
                 stat.SkillPoint -= 1;
+
+                learn_mark_3.SetActive(true);
             }
         }
         else if (stat.shift_islearnskill_3)
@@ -114,6 +126,8 @@ public class shift_skill : MonoBehaviour
                 stat.shift_isactiveskill_3 = false;
                 stat.shift_isactiveskill_4 = true;
                 stat.SkillPoint -= 1;
+
+                learn_mark_4.SetActive(true);
             }
         }
         else if (stat.shift_islearnskill_4)
