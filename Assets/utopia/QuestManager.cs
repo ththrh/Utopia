@@ -22,7 +22,7 @@ public class QuestManager : MonoBehaviour
     void makedata()
     {
         questlist.Add(10, new QuestData("마을사람 만나기", new int[] { 200,300,400}));
-        questlist.Add(20, new QuestData("던전 클리어하기", new int[] { 200, 400, 200 }));
+        questlist.Add(20, new QuestData("마을의 보물 찾아오기", new int[] { 200, 400, 1000, 400 }));
         questlist.Add(30, new QuestData("엔드퀘스트", new int[] { 0 }));
 
     }
@@ -77,7 +77,7 @@ public class QuestManager : MonoBehaviour
             case 20:
                 if (questActionIndex == 0)
                     gameObjects[0].SetActive(true);
-                if (questActionIndex == 0)
+                if (questActionIndex == 3)
                     gameObjects[0].SetActive(false);
                 break;
         }
