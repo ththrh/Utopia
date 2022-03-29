@@ -42,6 +42,12 @@ public class tooltip_manager : MonoBehaviour
             case 4:
                 tool = ("잠시동안 어떤 피해도 받지 않는다.");
                 return tool;
+            case 5:
+                tool = ("폭발하는 화살을 전방으로 발사한다.");
+                return tool;
+            case 6:
+                tool = ("강력한 폭발을 일으키는 폭탄을 제자리에 내려 놓는다.");
+                return tool;
         }
         return ("");
         /*

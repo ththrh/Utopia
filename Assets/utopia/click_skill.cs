@@ -7,6 +7,7 @@ public class click_skill : MonoBehaviour
     public Status stat;
     public Sprite[] SkillImage;
     Dictionary<int, Sprite> click_skilldata;
+    public tooltip_manager tooltip_;
 
     void Awake()
     {
@@ -130,5 +131,17 @@ public class click_skill : MonoBehaviour
     public Sprite Getskillimage(int skillIndex)
     {
         return click_skilldata[skillIndex];
+    }
+    public void tooltip_zero()
+    {
+        tooltip_.trigger = 0;
+    }
+    public void tooltip_5()
+    {
+        tooltip_.trigger = 5;
+    }
+    public void tooltip_6()
+    {
+        tooltip_.trigger = 6;
     }
 }
