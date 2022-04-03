@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3198313544001396877}
   - component: {fileID: 3198313544001396866}
   - component: {fileID: 3198313544001396867}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: uzi_2_purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3198313544001396864}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 104, y: -24.7, z: -25.174994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: -10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4763,6 +4763,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

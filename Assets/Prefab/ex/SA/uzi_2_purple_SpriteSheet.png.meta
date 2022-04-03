@@ -1,9 +1,33 @@
 fileFormatVersion: 2
 guid: b6832fa2caf32d247832157b7441cc1b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7937299627252109058
+    second: uzi_2_purple_SpriteSheet_0
+  - first:
+      213: 7329530809257237282
+    second: uzi_2_purple_SpriteSheet_1
+  - first:
+      213: -6675175567105567709
+    second: uzi_2_purple_SpriteSheet_2
+  - first:
+      213: -3691924505169031412
+    second: uzi_2_purple_SpriteSheet_3
+  - first:
+      213: -8022206395305256087
+    second: uzi_2_purple_SpriteSheet_4
+  - first:
+      213: -8816786677349576899
+    second: uzi_2_purple_SpriteSheet_5
+  - first:
+      213: -1304146822746085850
+    second: uzi_2_purple_SpriteSheet_6
+  - first:
+      213: 3825319620713799516
+    second: uzi_2_purple_SpriteSheet_7
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,6 +81,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -70,9 +95,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 590
+        width: 496
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fc33615f3f62e60800000000000000
+      internalID: 7937299627252109058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 644
+        width: 495
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b1f000079b7b560800000000000000
+      internalID: 7329530809257237282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 644
+        width: 440
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3245e4530330d53a0800000000000000
+      internalID: -6675175567105567709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 649
+        width: 402
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f07d32936a3ccc0800000000000000
+      internalID: -3691924505169031412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 137
+        width: 423
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b96f479c56ba090800000000000000
+      internalID: -8022206395305256087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 123
+        width: 370
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f8e24fa3b74a580800000000000000
+      internalID: -8816786677349576899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 144
+        width: 338
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626e347df5db6ede0800000000000000
+      internalID: -1304146822746085850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uzi_2_purple_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 137
+        width: 423
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f5af87de3461530800000000000000
+      internalID: 3825319620713799516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
