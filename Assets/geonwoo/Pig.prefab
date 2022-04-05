@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: -7417260427793340996}
   m_Layer: 0
   m_Name: Pig
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -844,7 +844,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 1}
-  m_Size: {x: 4, y: 3}
+  m_Size: {x: 3, y: 2}
   m_Direction: 1
 --- !u!114 &1248936237826134834
 MonoBehaviour:
