@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Set1_Ourdoor_Decoration_Fence_7
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -8535310859960560871, guid: c2e4c2426c22eb548a56e28e2c887cd1,
+  m_Sprite: {fileID: -8535310859960560871, guid: fd4c4dbac1113324096c36a5bbf31f92,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
