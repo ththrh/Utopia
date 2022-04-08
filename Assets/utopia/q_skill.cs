@@ -5,23 +5,7 @@ using UnityEngine;
 public class q_skill : MonoBehaviour
 {
     public Status stat;
-    public Sprite[] SkillImage;
-    Dictionary<int, Sprite> q_skilldata;
 
-    void Awake()
-    {
-        q_skilldata = new Dictionary<int, Sprite>();
-        makedata();
-    }
-    void makedata()
-    {
-        q_skilldata.Add(0, SkillImage[0]);
-        q_skilldata.Add(1, SkillImage[1]);
-        q_skilldata.Add(2, SkillImage[2]);
-        q_skilldata.Add(3, SkillImage[3]);
-        q_skilldata.Add(4, SkillImage[4]);
-
-    }
     public void Learn_q_Skill_1()
     {
         if (!stat.q_islearnskill_1)
@@ -127,8 +111,5 @@ public class q_skill : MonoBehaviour
         else
             return;
     }
-    public Sprite Getskillimage(int skillIndex)
-    {
-        return q_skilldata[skillIndex];
-    }
+
 }

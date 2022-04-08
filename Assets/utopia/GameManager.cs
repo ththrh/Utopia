@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject menuset;
     public Text questtalk;
     public GameObject Player;
+    public skill_image_manager skill_Image_Manager;
+
 
     public GameObject skillpanel;
 
@@ -169,15 +171,16 @@ public class GameManager : MonoBehaviour
         }
         else
             return;
+
         skillport(click_skillname, shift_skillname, q_skillname);
 
 
     }
     void skillport(int click_skillindex, int shift_skillinedx, int q_skillindex)
     {
-        click_skillimage.sprite = click_Skill.Getskillimage(click_skillindex);
-        shift_skillimage.sprite = shift_Skill.Getskillimage(shift_skillinedx);
-        q_skillimage.sprite = q_Skill.Getskillimage(q_skillindex);
+        click_skillimage.sprite = skill_Image_Manager.click_Getskillimage(click_skillindex);
+        shift_skillimage.sprite = skill_Image_Manager.shift_Getskillimage(shift_skillinedx);
+        q_skillimage.sprite = skill_Image_Manager.q_Getskillimage(q_skillindex);
     }
 
 

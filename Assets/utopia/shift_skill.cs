@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class shift_skill : MonoBehaviour
 {
     public Status stat;
-    public Sprite[] SkillImage;
-    Dictionary<int, Sprite> shift_skilldata;
     public tooltip_manager tooltip_;
 
     public GameObject learn_mark_1;
@@ -15,21 +13,7 @@ public class shift_skill : MonoBehaviour
     public GameObject learn_mark_3;
     public GameObject learn_mark_4;
 
-    void Awake()
-    {
-        shift_skilldata = new Dictionary<int, Sprite>();
 
-        makedata();
-    }
-    void makedata()
-    {
-        shift_skilldata.Add(0, SkillImage[0]);
-        shift_skilldata.Add(1, SkillImage[1]);
-        shift_skilldata.Add(2, SkillImage[2]);
-        shift_skilldata.Add(3, SkillImage[3]);
-        shift_skilldata.Add(4, SkillImage[4]);
-
-    }
     public void Learn_shift_Skill_1()
     {
         if (!stat.shift_islearnskill_1)
@@ -159,8 +143,5 @@ public class shift_skill : MonoBehaviour
     {
         tooltip_.trigger = 4;
     }
-    public Sprite Getskillimage(int skillIndex)
-    {
-        return shift_skilldata[skillIndex];
-    }
+
 }

@@ -5,24 +5,13 @@ using UnityEngine;
 public class click_skill : MonoBehaviour
 {
     public Status stat;
-    public Sprite[] SkillImage;
-    Dictionary<int, Sprite> click_skilldata;
     public tooltip_manager tooltip_;
 
-    void Awake()
-    {
-        click_skilldata = new Dictionary<int, Sprite>();
-        makedata();
-    }
-    void makedata()
-    {
-        click_skilldata.Add(0, SkillImage[0]);
-        click_skilldata.Add(1, SkillImage[1]);
-        click_skilldata.Add(2, SkillImage[2]);
-        click_skilldata.Add(3, SkillImage[3]);
-        click_skilldata.Add(4, SkillImage[4]);
+    public GameObject learn_mark_1;
+    public GameObject learn_mark_2;
+    public GameObject learn_mark_3;
+    public GameObject learn_mark_4;
 
-    }
     public void Learn_click_Skill_1()
     {
         if (!stat.click_islearnskill_1)
@@ -37,6 +26,8 @@ public class click_skill : MonoBehaviour
                 stat.click_isactiveskill_3 = false;
                 stat.click_isactiveskill_4 = false;
                 stat.SkillPoint -= 1;
+
+                learn_mark_1.SetActive(true);
             }
         }
         else if (stat.click_islearnskill_1)
@@ -64,6 +55,8 @@ public class click_skill : MonoBehaviour
                 stat.click_isactiveskill_3 = false;
                 stat.click_isactiveskill_4 = false;
                 stat.SkillPoint -= 1;
+
+                learn_mark_2.SetActive(true);
             }
         }
         else if (stat.click_islearnskill_2)
@@ -90,6 +83,8 @@ public class click_skill : MonoBehaviour
                 stat.click_isactiveskill_3 = true;
                 stat.click_isactiveskill_4 = false;
                 stat.SkillPoint -= 1;
+
+                learn_mark_3.SetActive(true);
             }
         }
         else if (stat.click_islearnskill_3)
@@ -116,6 +111,8 @@ public class click_skill : MonoBehaviour
                 stat.click_isactiveskill_3 = false;
                 stat.click_isactiveskill_4 = true;
                 stat.SkillPoint -= 1;
+
+                learn_mark_4.SetActive(true);
             }
         }
         else if (stat.click_islearnskill_4)
@@ -128,10 +125,7 @@ public class click_skill : MonoBehaviour
         else
             return;
     }
-    public Sprite Getskillimage(int skillIndex)
-    {
-        return click_skilldata[skillIndex];
-    }
+
     public void tooltip_zero()
     {
         tooltip_.trigger = 0;
@@ -143,5 +137,13 @@ public class click_skill : MonoBehaviour
     public void tooltip_6()
     {
         tooltip_.trigger = 6;
+    }
+    public void tooltip_7()
+    {
+        tooltip_.trigger = 7;
+    }
+    public void tooltip_8()
+    {
+        tooltip_.trigger = 8;
     }
 }

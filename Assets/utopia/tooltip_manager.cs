@@ -48,6 +48,12 @@ public class tooltip_manager : MonoBehaviour
             case 6:
                 tool = ("강력한 폭발을 일으키는 폭탄을 제자리에 내려 놓는다.");
                 return tool;
+            case 7:
+                tool = ("신성한 힘을 폭발시켜 근처의 넓은 지역에 피해를 입힌다.");
+                return tool;
+            case 8:
+                tool = ("마법의 화살을 빠른 속도로 연사한다.");
+                return tool;
         }
         return ("");
         /*
