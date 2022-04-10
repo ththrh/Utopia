@@ -11,6 +11,21 @@ public class skill1 : MonoBehaviour
     public GameObject shift_skill_panel;
     public GameObject q_skill_panel;
 
+    public Text sptxt;
+
+    public Status stat;
+
+    public void Start()
+    {
+
+    }
+
+    public void Update()
+    {
+
+        sptxt.text = "남은 스킬 포인트 :"+ stat.SkillPoint.ToString();
+    }
+
 
     // Start is called before the first frame update
 
