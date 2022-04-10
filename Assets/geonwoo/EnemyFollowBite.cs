@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyFollowBite : MonoBehaviour
 {
     public float speed;
@@ -10,10 +11,12 @@ public class EnemyFollowBite : MonoBehaviour
     private Transform player;
     bool facingLeft = true;
     Animator anim;
+    UnityEngine.AI.NavMeshAgent nav;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
+       
     }
 
     // Start is called before the first frame update
@@ -25,16 +28,17 @@ public class EnemyFollowBite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlayer < lineOfSite)
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-            anim.SetBool("Running", true);
-        }
-        else
-        {
-            anim.SetBool("Running", false);
-        }
+       if (distanceFromPlayer < lineOfSite)
+         {
+             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+             anim.SetBool("Running", true);
+         }
+         else
+         {
+             anim.SetBool("Running", false);
+         }
 
         if (player.position.x > transform.position.x && facingLeft == true)
         {
@@ -49,7 +53,8 @@ public class EnemyFollowBite : MonoBehaviour
         {
             anim.SetTrigger("Attack");
         }
-
+        
+       
     }
 
     private void OnDrawGizmosSelected()
