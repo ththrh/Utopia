@@ -8,7 +8,7 @@ public class QuestManager : MonoBehaviour
     public int questid;
     public int questActionIndex;
     public GameObject[] gameObjects;
-    
+    public int death_count;
 
     Dictionary<int, QuestData> questlist;
     // Start is called before the first frame update
@@ -47,6 +47,8 @@ public class QuestManager : MonoBehaviour
 
 
         if (questActionIndex == questlist[questid].npcId.Length)
+            nextquest();
+        else if (death_count == 5)
             nextquest();
 
         return questlist[questid].questName;
