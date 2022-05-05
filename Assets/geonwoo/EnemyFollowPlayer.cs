@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class EnemyFollowPlayer : MonoBehaviour
 {
     public float speed;
@@ -9,6 +11,8 @@ public class EnemyFollowPlayer : MonoBehaviour
     private Transform player;
     bool facingLeft = true;
     Animator anim;
+   
+
 
     void Awake()
     {
@@ -19,6 +23,7 @@ public class EnemyFollowPlayer : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+       
     }
 
     // Update is called once per frame
