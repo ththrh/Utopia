@@ -28,10 +28,11 @@ public class TalkManager : MonoBehaviour
         talkData.Add(12 + 200, new string[] { "아직 마을 사람들을 다 만나지 못 한 모양이군", "흑마법사는 남쪽에 있다네" });
         talkData.Add(12 + 400, new string[] { "신비한 힘이 느껴지는 사람이군", "마을에 온 것을 환영하네", "촌장에게 돌아가보자" });
 
-        talkData.Add(20 + 200, new string[] { "흑마법사가 보석을 잃어버렸다고 하네","자네가 해결해 준다고? 정말인가?","흑마법사에게 가보게" });
-        talkData.Add(21 + 400, new string[] { "보석은 남쪽에 있어.", "성난 돼지들이 길을 막고 있지" ,"무운을 빈다네"});
-        talkData.Add(22 + 1000, new string[] { "보석을 찾았다." });
-        talkData.Add(23 + 400, new string[] { "정말 대단하군","촌장에게 가보게 자네에게 부탁할게 있다더군" });
+        talkData.Add(20 + 200, new string[] { "흑마법사가 돼지때문에 골머리라더군","자네가 해결해 준다고? 정말인가?","흑마법사에게 가보게" });
+        talkData.Add(21 + 400, new string[] { "성난 돼지들이 길을 막고 있지" ,"무운을 빈다네"});
+        talkData.Add(22 + 400, new string[] { "아직인가?" });
+        talkData.Add(23 + 400, new string[] { "정말 대단하군","촌장에게 가보게나" });
+
 
 
 
