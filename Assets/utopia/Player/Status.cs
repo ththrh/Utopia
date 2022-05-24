@@ -10,6 +10,9 @@ public class Status : MonoBehaviour
     public int Stamina;
     public int MaxMp = 5;
     public int Mp;
+    public int atk = 1;
+    public int speed = 2;
+    public int dash = 8;
     public bool isDamage;
     public float Dtimer=1.0f;
     float timer;

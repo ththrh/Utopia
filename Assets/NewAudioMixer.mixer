@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-8837811425656332388
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Effect
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 4f5ee3f67175fbd46b5dfd56c455aabd
+  m_Children: []
+  m_Volume: c44e574297858be44b89e02a2d5ee047
+  m_Pitch: 6d1f73c143d65a2438d9cfae112cd268
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -5074373742653265167}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &-5074373742653265167
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 01daa6f0650fec74c92f6f773594326b
+  m_EffectName: Attenuation
+  m_MixLevel: d8f6fb5eceb8f2142909b77cedaabe4f
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-2701025166109190985
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -32,12 +65,15 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 853a19b815a56404b8eb08a35eb18b22
     name: BGM
+  - guid: c44e574297858be44b89e02a2d5ee047
+    name: Effect
   - guid: 835eb484d787b2249a8ef3cdb2ffaa24
     name: Master
   m_AudioMixerGroupViews:
   - guids:
     - 86448fa3726625d428879414f8ebeb7a
     - 5241e777368e6844e896cbb531a56323
+    - 4f5ee3f67175fbd46b5dfd56c455aabd
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -52,6 +88,7 @@ AudioMixerGroupController:
   m_GroupID: 86448fa3726625d428879414f8ebeb7a
   m_Children:
   - {fileID: 7058255013416820389}
+  - {fileID: -8837811425656332388}
   m_Volume: 835eb484d787b2249a8ef3cdb2ffaa24
   m_Pitch: eb5efa38918d9cf4cb811882e4099e47
   m_Send: 00000000000000000000000000000000
@@ -84,7 +121,8 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: b47e6017266e9dd4d8bd151faa3bd12d
-  m_FloatValues: {}
+  m_FloatValues:
+    c44e574297858be44b89e02a2d5ee047: 0.04171297
   m_TransitionOverrides: {}
 --- !u!243 &7058255013416820389
 AudioMixerGroupController:

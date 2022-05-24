@@ -17,8 +17,8 @@ public class MOVE : MonoBehaviour
     GameObject scanobj;
     public GameManager manager;
 
-    public float Speed;
-    public float Speed2;
+    float Speed;
+    float Speed2;
     public float timer = 0.5f;
 
     public bool isAttack = false;
@@ -59,6 +59,8 @@ public class MOVE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Speed = stat.speed;
+        Speed2 = stat.dash;
         if (!isDash && !manager.isAction && !isAttack)
         {
             h = Input.GetAxisRaw("Horizontal");
