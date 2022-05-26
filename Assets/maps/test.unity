@@ -204,12 +204,12 @@ PrefabInstance:
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.34
+      value: -7.07
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -109.75
+      value: -102.41
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
@@ -6590,6 +6590,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7417260427793340996, guid: 05b5cd8446466d2489e8d5c73379565e,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
       propertyPath: m_RootOrder
@@ -6598,12 +6603,12 @@ PrefabInstance:
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.940065
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -112.42518
+      value: -102.4
       objectReference: {fileID: 0}
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
@@ -33746,6 +33751,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1174803676}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1534484552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534484553}
+  m_Layer: 0
+  m_Name: GunPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1534484553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534484552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2088604825}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542748597
 GameObject:
   m_ObjectHideFlags: 0
@@ -37395,6 +37430,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1951792373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951792375}
+  - component: {fileID: 1951792374}
+  m_Layer: 0
+  m_Name: ObjectPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1951792374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951792373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5394d90d754dc194c8e5d6b37426cef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardHorizonalBulletPrefab: {fileID: 0}
+  sphereBulletPrefab: {fileID: 0}
+  sparkPrefab: {fileID: 0}
+  bloodPrefab: {fileID: 0}
+  beam1Prefab: {fileID: 0}
+  beam2Prefab: {fileID: 102326, guid: 97bc2b310ebf2e14ab94315b9e400af9, type: 3}
+  beam3Prefab: {fileID: 0}
+  beam4Prefab: {fileID: 0}
+  beam5Prefab: {fileID: 0}
+  beam6Prefab: {fileID: 0}
+  numStandardHorizonalBulletsToSpawn: 0
+  numSphereBulletsToSpawn: 0
+  numSparksToSpawn: 0
+  numBloodParticleToSpawn: 0
+  numTurretBulletsToSpawn: 0
+  numBeam1BulletsToSpawn: 0
+  numBeam2BulletsToSpawn: 350
+  numBeam3BulletsToSpawn: 0
+  numBeam4BulletsToSpawn: 0
+  numBeam5BulletsToSpawn: 0
+  numBeam6BulletsToSpawn: 0
+  tagAsTurretBullets: 0
+  pooledObjectFolderName: InitialPooledObjects
+--- !u!4 &1951792375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951792373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.606713, y: -111.441315, z: -1.1807529}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1954238607
 GameObject:
   m_ObjectHideFlags: 0
@@ -38022,7 +38123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1998277942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43244,6 +43345,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2088604815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9125160812643701619, guid: 05b5cd8446466d2489e8d5c73379565e,
+    type: 3}
+  m_PrefabInstance: {fileID: 863083906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2088604825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
+    type: 3}
+  m_PrefabInstance: {fileID: 863083906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2088604826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088604815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ea664ca0e6f84d8942fc020272dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  bulletSpread: 0.82
+  bulletSpreadPingPongMax: 0.6
+  bulletSpreadPingPongMin: 0.62
+  spreadPingPongSpeed: 1.144
+  bulletSpacing: 0.67
+  bulletCount: 4
+  bulletRandomness: 0
+  bulletSpeed: 11.16
+  weaponFireRate: 0.1
+  weaponXOffset: 0
+  weaponYOffset: 0
+  ricochetChancePercent: 0
+  magazineChangeDelay: 0.55
+  magazineSize: 0
+  startingAmmo: 0
+  ammoUsed: 0
+  magazineRemainingBullets: 0
+  targetToTrack: {fileID: 2078563460}
+  trackingTurnRate: 0
+  lerpTurnRate: 1
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 0}
+  autoFire: 1
+  pingPongSpread: 0
+  circularFireMode: 0
+  circularFireRotationRate: 0
+  richochetsEnabled: 1
+  hitEffectEnabled: 0
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 1
+  playReloadingSfx: 0
+  playEmptySfx: 0
+  weaponRelativeToComponent: 0
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  aimAngle: 0
+  reloadSfxClip: {fileID: 0}
+  emptySfxClip: {fileID: 0}
+  shotFiredClip: {fileID: 0}
+  gunPoint: {fileID: 1534484553}
+  bulletOptionType: 4
+  shooterDirectionType: 3
+  _weaponConfigs: []
 --- !u!1001 &2115243724
 PrefabInstance:
   m_ObjectHideFlags: 0
