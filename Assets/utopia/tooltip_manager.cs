@@ -54,6 +54,18 @@ public class tooltip_manager : MonoBehaviour
             case 8:
                 tool = ("마법의 화살을 빠른 속도로 연사한다.");
                 return tool;
+            case 9:
+                tool = ("자연의 에너지를 흡수하여 마나로 변환한다.");
+                return tool;
+            case 10:
+                tool = ("용의 피를 각성시켜 강한 힘을 얻는다.");
+                return tool;
+            case 11:
+                tool = ("바람의 룬을 작동시켜 빠른 속도로 이동한다.");
+                return tool;
+            case 12:
+                tool = ("대지모신의 힘으로 상처를 천천히 치유시킨다.");
+                return tool;
         }
         return ("");
         /*
