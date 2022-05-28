@@ -199,17 +199,17 @@ PrefabInstance:
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.07
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -102.41
+      value: -103.92
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
@@ -5298,7 +5298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &568502070 stripped
 GameObject:
@@ -6129,7 +6129,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &738780493
 PrefabInstance:
@@ -6853,7 +6853,7 @@ Transform:
   - {fileID: 2014096446}
   - {fileID: 1621438970}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862350989
 GameObject:
@@ -6949,12 +6949,12 @@ PrefabInstance:
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.1
+      value: -9.91
       objectReference: {fileID: 0}
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -102.4
+      value: -109.82
       objectReference: {fileID: 0}
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
@@ -10135,7 +10135,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1274435952
 MonoBehaviour:
@@ -34151,6 +34151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1534484553}
+  - component: {fileID: 1534484554}
   m_Layer: 0
   m_Name: GunPoint
   m_TagString: Untagged
@@ -34172,6 +34173,63 @@ Transform:
   m_Father: {fileID: 2088604825}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1534484554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534484552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ea664ca0e6f84d8942fc020272dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  bulletSpread: 2.27
+  bulletSpreadPingPongMax: 2.5
+  bulletSpreadPingPongMin: 0.62
+  spreadPingPongSpeed: 1.144
+  bulletSpacing: 0.67
+  bulletCount: 4
+  bulletRandomness: 0
+  bulletSpeed: 11.16
+  weaponFireRate: 0.1
+  weaponXOffset: 0
+  weaponYOffset: 0
+  ricochetChancePercent: 0
+  magazineChangeDelay: 0.55
+  magazineSize: 0
+  startingAmmo: 0
+  ammoUsed: 0
+  magazineRemainingBullets: 0
+  targetToTrack: {fileID: 2078563460}
+  trackingTurnRate: 4.35
+  lerpTurnRate: 1
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 0}
+  autoFire: 1
+  pingPongSpread: 1
+  circularFireMode: 0
+  circularFireRotationRate: 0
+  richochetsEnabled: 1
+  hitEffectEnabled: 0
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 1
+  playReloadingSfx: 0
+  playEmptySfx: 0
+  weaponRelativeToComponent: 0
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  aimAngle: 0
+  reloadSfxClip: {fileID: 0}
+  emptySfxClip: {fileID: 0}
+  shotFiredClip: {fileID: 0}
+  gunPoint: {fileID: 1534484553}
+  bulletOptionType: 4
+  shooterDirectionType: 3
+  _weaponConfigs: []
 --- !u!1 &1542748597
 GameObject:
   m_ObjectHideFlags: 0
@@ -37916,7 +37974,7 @@ MonoBehaviour:
   numBeam4BulletsToSpawn: 0
   numBeam5BulletsToSpawn: 0
   numBeam6BulletsToSpawn: 0
-  tagAsTurretBullets: 0
+  tagAsTurretBullets: 1
   pooledObjectFolderName: InitialPooledObjects
 --- !u!4 &1951792375
 Transform:
@@ -43826,75 +43884,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2088604815 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9125160812643701619, guid: 05b5cd8446466d2489e8d5c73379565e,
-    type: 3}
-  m_PrefabInstance: {fileID: 863083906}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2088604825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
     type: 3}
   m_PrefabInstance: {fileID: 863083906}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2088604826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088604815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828ea664ca0e6f84d8942fc020272dd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: 
-  bulletSpread: 0.82
-  bulletSpreadPingPongMax: 0.6
-  bulletSpreadPingPongMin: 0.62
-  spreadPingPongSpeed: 1.144
-  bulletSpacing: 0.67
-  bulletCount: 4
-  bulletRandomness: 0
-  bulletSpeed: 11.16
-  weaponFireRate: 0.1
-  weaponXOffset: 0
-  weaponYOffset: 0
-  ricochetChancePercent: 0
-  magazineChangeDelay: 0.55
-  magazineSize: 0
-  startingAmmo: 0
-  ammoUsed: 0
-  magazineRemainingBullets: 0
-  targetToTrack: {fileID: 2078563460}
-  trackingTurnRate: 0
-  lerpTurnRate: 1
-  bulletColour: {r: 1, g: 1, b: 1, a: 1}
-  weaponIcon: {fileID: 0}
-  autoFire: 1
-  pingPongSpread: 0
-  circularFireMode: 0
-  circularFireRotationRate: 0
-  richochetsEnabled: 1
-  hitEffectEnabled: 0
-  limitedAmmo: 0
-  usesMagazines: 0
-  isFirstEquip: 1
-  playReloadingSfx: 0
-  playEmptySfx: 0
-  weaponRelativeToComponent: 0
-  mirrorX: 0
-  bulletCountsAsAmmo: 0
-  aimAngle: 0
-  reloadSfxClip: {fileID: 0}
-  emptySfxClip: {fileID: 0}
-  shotFiredClip: {fileID: 0}
-  gunPoint: {fileID: 1534484553}
-  bulletOptionType: 4
-  shooterDirectionType: 3
-  _weaponConfigs: []
 --- !u!1001 &2115243724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44473,7 +44468,7 @@ PrefabInstance:
     - target: {fileID: 2548224062822542834, guid: c4937a1f7e62a9b45a2b8746b1bcaa00,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2548224062822542834, guid: c4937a1f7e62a9b45a2b8746b1bcaa00,
         type: 3}
@@ -44750,7 +44745,7 @@ PrefabInstance:
     - target: {fileID: 8250548928550730032, guid: 784fafc1e50264c45b0587656198fbce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8250548928550730032, guid: 784fafc1e50264c45b0587656198fbce,
         type: 3}
