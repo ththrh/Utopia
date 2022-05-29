@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\UI\EndGame.cs" />
     <Compile Include="Assets\Scripts\UI\SceneMove.cs" />
+    <Compile Include="Assets\Scripts\UI\SoundOption.cs" />
     <Compile Include="Assets\Scripts\UI\SoundToggle.cs" />
     <Compile Include="Assets\geonwoo\Script\BearMove.cs" />
     <Compile Include="Assets\geonwoo\Script\Boar.cs" />

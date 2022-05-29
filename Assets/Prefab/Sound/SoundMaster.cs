@@ -9,22 +9,33 @@ public class SoundMaster : MonoBehaviour
     public AudioMixer masterMixer;
     public Slider audioSlider;
     public float sound;
+    public bool bgm = true;
 
     private void Start()
     {
-        audioSlider.value = PlayerPrefs.GetFloat("BGM", -10);
+        if (bgm)
+        {
+            audioSlider.value = PlayerPrefs.GetFloat("BGM", -10);
+        }
+        else
+        {
+            audioSlider.value = PlayerPrefs.GetFloat("Effect", -10);
+        }
     }
     public void AudioControl()
     {
         sound = audioSlider.value;
-        Debug.Log(sound);
-        if (sound == -40f) masterMixer.SetFloat("BGM", -80);
-        else masterMixer.SetFloat("BGM", sound);
-        PlayerPrefs.SetFloat("BGM", sound);
-
-        Debug.Log(sound);
-        if (sound == -40f) masterMixer.SetFloat("Effect", -80);
-        else masterMixer.SetFloat("Effect", sound);
-        Debug.Log(sound);
+        if (bgm)
+        {
+            if (sound == -40f) masterMixer.SetFloat("BGM", -80);
+            else masterMixer.SetFloat("BGM", sound);
+            PlayerPrefs.SetFloat("BGM", sound);
+        }
+        else
+        {
+            if (sound == -40f) masterMixer.SetFloat("Effect", -80);
+            else masterMixer.SetFloat("Effect", sound);
+            PlayerPrefs.SetFloat("Effect", sound);
+        }
     }
 }
