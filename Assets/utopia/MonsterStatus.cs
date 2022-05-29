@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterStatus : MonoBehaviour
+public class MonsterDeath : MonoBehaviour
 {
     public int HP=3;
-
+    Animator anim;
+    SpriteRenderer rend;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        rend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -17,10 +20,17 @@ public class MonsterStatus : MonoBehaviour
     {
         if (HP <= 0)
         {
+            anim.Play("Death");
 
+            Destroy(gameObject, 0.7f);
+        }
+    }
 
-            Destroy(gameObject);
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerAtk"))
+        {
+            HP -= Player.GetComponent<Status>().atk;
         }
     }
 }

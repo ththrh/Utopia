@@ -61,7 +61,7 @@ public class MOVE : MonoBehaviour
     {
         Speed = stat.speed;
         Speed2 = stat.dash;
-        if (!isDash && !manager.isAction && !isAttack)
+        if (!isDash && !manager.isAction)
         {
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
@@ -73,22 +73,22 @@ public class MOVE : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.D) && !isAttack)
+        if(Input.GetKeyDown(KeyCode.D))
         {
             dirVec = Vector3.right;
             dir = Dir.right;
         }
-        else if(Input.GetKeyDown(KeyCode.A) && !isAttack)
+        else if(Input.GetKeyDown(KeyCode.A))
         {
             dirVec = Vector3.left;
             dir = Dir.left;
         }
-        else if (Input.GetKeyDown(KeyCode.W) && !isAttack)
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             dirVec = Vector3.up;
             dir = Dir.up;
         }
-        else if (Input.GetKeyDown(KeyCode.S) && !isAttack)
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             dirVec = Vector3.down;
             dir = Dir.down;
