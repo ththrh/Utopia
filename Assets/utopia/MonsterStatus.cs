@@ -7,10 +7,13 @@ public class MonsterDeath : MonoBehaviour
     public int HP=3;
     Animator anim;
     SpriteRenderer rend;
-    public GameObject Player;
+    GameObject Player;
+    public float deathDelay = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
     }
@@ -22,7 +25,7 @@ public class MonsterDeath : MonoBehaviour
         {
             anim.Play("Death");
 
-            Destroy(gameObject, 0.7f);
+            Destroy(gameObject, deathDelay);
         }
     }
 
