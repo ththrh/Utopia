@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5331185394126121776}
   - component: {fileID: 9164592228924565619}
   - component: {fileID: 2678094080520169463}
-  - component: {fileID: 8474099030440887188}
+  - component: {fileID: 1127977492587852926}
+  - component: {fileID: 6651757152472562267}
   m_Layer: 0
   m_Name: NormalBullet
   m_TagString: Untagged
@@ -131,7 +132,26 @@ EdgeCollider2D:
   - {x: 0.15362835, y: -0.026107788}
   - {x: 0.124558926, y: 0.092853546}
   - {x: 0.023112655, y: 0.14553833}
---- !u!114 &8474099030440887188
+--- !u!253 &1127977492587852926
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526081328499704025}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0
+  m_Density: 2
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
+--- !u!114 &6651757152472562267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8526081328499704025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55be8df2e78ca40459a0b9ad4b962488, type: 3}
+  m_Script: {fileID: 11500000, guid: 88ac8a0b8b4b4a54581176e01ab39718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3

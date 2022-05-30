@@ -624,8 +624,9 @@ GameObject:
   - component: {fileID: 5121472149309716713}
   - component: {fileID: 2048794651003580266}
   - component: {fileID: 4327489555104547672}
-  - component: {fileID: 333040410111770240}
   - component: {fileID: 4226218066411397837}
+  - component: {fileID: 6101111045308515959}
+  - component: {fileID: 5404664368690150451}
   m_Layer: 0
   m_Name: Wasp
   m_TagString: Enemy
@@ -754,24 +755,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.5123198, y: 2.9384053}
   m_Size: {x: 2.7782607, y: 2.876811}
   m_Direction: 0
---- !u!114 &333040410111770240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6245107320073372499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 795dd36b6407d554c9fa99e53e45f423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2.7
-  lineOfSite: 7
-  shootingRange: 4
-  fireRate: 1
-  bullet: {fileID: 8526081328499704025, guid: d5f497059d66c304e9e5fb0eb75f32bb, type: 3}
-  bulletParent: {fileID: 5875341030847743152}
 --- !u!50 &4226218066411397837
 Rigidbody2D:
   serializedVersion: 4
@@ -793,6 +776,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6101111045308515959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6245107320073372499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5cbcd53bb313f24dba255858bebf660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  lineOfSite: 3
+  shootingRange: 4
+  fireRate: 1
+  bullet: {fileID: 8526081328499704025, guid: d5f497059d66c304e9e5fb0eb75f32bb, type: 3}
+  bulletParent: {fileID: 2361254868821660460}
+--- !u!114 &5404664368690150451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6245107320073372499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085c35b0a11c99e4d8aef1fd86d4af27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  lineOfSite: 3
 --- !u!1 &6343509621303638032
 GameObject:
   m_ObjectHideFlags: 0
