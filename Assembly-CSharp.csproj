@@ -129,7 +129,7 @@
      <Compile Include="Assets\utopia\QuestManager.cs" />
      <Compile Include="Assets\utopia\SimpleTrap.cs" />
      <Compile Include="Assets\utopia\TalkManager.cs" />
-     <Compile Include="Assets\utopia\bullet.cs" />
+     <Compile Include="Assets\utopia\bulletoriginal.cs" />
      <Compile Include="Assets\utopia\camera.cs" />
      <Compile Include="Assets\utopia\click_skill.cs" />
      <Compile Include="Assets\utopia\cooltimer_shift.cs" />

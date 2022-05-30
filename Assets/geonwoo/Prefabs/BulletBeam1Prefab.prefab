@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 411204}
-  - component: {fileID: 11493650}
   - component: {fileID: 21291314}
   - component: {fileID: 6168668}
   - component: {fileID: 5029902}
+  - component: {fileID: 6762352618438605936}
   m_Layer: 8
   m_Name: BulletBeam1Prefab
   m_TagString: Untagged
@@ -34,29 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11493650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c04d5e59a05111e4ab247bb0b2420625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  bulletSpriteRenderer: {fileID: 0}
-  directionAngle: 0
-  directionDegrees: 0
-  newDirection: {x: 0, y: 0, z: 0}
-  bulletXPosition: 0
-  bulletYPosition: 0
-  ricochetChancePercent: 0
-  canRichochet: 0
-  useHitEffects: 0
-  bloodEffectTriggerTag: Enemy
 --- !u!212 &21291314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -96,12 +73,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: 21300016, guid: f68941927ff4e60418e5a79ea6dac27a, type: 3}
+  m_Sprite: {fileID: -5887574851830874244, guid: 0d4e6de81ff2eab4dad893041430f58a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.33, y: 0.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -117,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -125,7 +103,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.33, y: 0.17}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.33, y: 0.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -154,3 +132,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6762352618438605936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a9ba02ddcbedd4abf06dcfcd597ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  bulletSpriteRenderer: {fileID: 0}
+  directionAngle: 0
+  directionDegrees: 0
+  newDirection: {x: 0, y: 0, z: 0}
+  bulletXPosition: 0
+  bulletYPosition: 0
+  ricochetChancePercent: 0
+  canRichochet: 0
+  useHitEffects: 0
+  bloodEffectTriggerTag: 
