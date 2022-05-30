@@ -204,12 +204,12 @@ PrefabInstance:
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.5
+      value: -13.88
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -181.3
+      value: -113.05
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
@@ -6858,6 +6858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259167040649502444, guid: 05b5cd8446466d2489e8d5c73379565e,
+        type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5591109056153396642, guid: 05b5cd8446466d2489e8d5c73379565e,
         type: 3}
@@ -34138,7 +34143,7 @@ MonoBehaviour:
   magazineRemainingBullets: 0
   targetToTrack: {fileID: 2078563460}
   trackingTurnRate: 4.35
-  lerpTurnRate: 1
+  lerpTurnRate: 0
   bulletColour: {r: 1, g: 1, b: 1, a: 1}
   weaponIcon: {fileID: 0}
   autoFire: 1
@@ -34160,7 +34165,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 1534484553}
-  bulletOptionType: 4
+  bulletOptionType: 8
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &1542748597
@@ -37890,23 +37895,25 @@ MonoBehaviour:
   sphereBulletPrefab: {fileID: 0}
   sparkPrefab: {fileID: 0}
   bloodPrefab: {fileID: 0}
-  beam1Prefab: {fileID: 0}
+  beam1Prefab: {fileID: 138198, guid: ae399c588cb7c1d4782451ee6631bf1a, type: 3}
   beam2Prefab: {fileID: 102326, guid: 97bc2b310ebf2e14ab94315b9e400af9, type: 3}
-  beam3Prefab: {fileID: 0}
-  beam4Prefab: {fileID: 0}
-  beam5Prefab: {fileID: 0}
-  beam6Prefab: {fileID: 0}
+  beam3Prefab: {fileID: 151332, guid: dae055185dbb6e043ab7ac90638a6ebd, type: 3}
+  beam4Prefab: {fileID: 158064, guid: 3f68fe6ee7cbc8b4f9bb2536631bc730, type: 3}
+  beam5Prefab: {fileID: 1000014001245468, guid: c49a4556dbe084e45bac007ec55a634a,
+    type: 3}
+  beam6Prefab: {fileID: 1000012460921194, guid: d11cdc20bbc968242960f1474a2db3ec,
+    type: 3}
   numStandardHorizonalBulletsToSpawn: 0
   numSphereBulletsToSpawn: 0
   numSparksToSpawn: 0
   numBloodParticleToSpawn: 0
   numTurretBulletsToSpawn: 0
-  numBeam1BulletsToSpawn: 0
+  numBeam1BulletsToSpawn: 350
   numBeam2BulletsToSpawn: 350
-  numBeam3BulletsToSpawn: 0
-  numBeam4BulletsToSpawn: 0
-  numBeam5BulletsToSpawn: 0
-  numBeam6BulletsToSpawn: 0
+  numBeam3BulletsToSpawn: 350
+  numBeam4BulletsToSpawn: 350
+  numBeam5BulletsToSpawn: 350
+  numBeam6BulletsToSpawn: 350
   tagAsTurretBullets: 1
   pooledObjectFolderName: InitialPooledObjects
 --- !u!4 &1951792375
