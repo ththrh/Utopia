@@ -26,6 +26,7 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void makedata()
     {
+        questlist.Add(0, new QuestData("여기는 어디?", new int[] { 500 }));
         questlist.Add(10, new QuestData("마을사람 만나기", new int[] { 200,300,400}));
         questlist.Add(20, new QuestData("마을의 맷돼지 문제", new int[] { 200, 400, 9999, 400 }));
         questlist.Add(30, new QuestData("수상한 야생동물", new int[] { 400, 300, 9999, 300 }));

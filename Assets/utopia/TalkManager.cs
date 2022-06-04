@@ -23,6 +23,7 @@ public class TalkManager : MonoBehaviour
 
 
 
+        talkData.Add(0+400, new string[] { "이 마을은 평화로워 보이지만 기운이 이상해","무슨 일이 있는건가?","저 앞에 사람에게 물어봐야겠군" });
         talkData.Add(10 + 200, new string[] { "처음보는 사람이로군", "마을사람들을 만나보겠나?", "사무라이부터 만나고 오게" });
         talkData.Add(11 + 300, new string[] { "촌장이 보냈다고?", "반갑군", "흑마법사를 만나보는게 어때?" });
         talkData.Add(12 + 200, new string[] { "아직 마을 사람들을 다 만나지 못 한 모양이군", "흑마법사는 남쪽에 있다네" });
