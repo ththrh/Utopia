@@ -267,7 +267,9 @@ GameObject:
   - component: {fileID: 2022371875403197654}
   - component: {fileID: 5146823450509540181}
   - component: {fileID: 7425771246898698087}
-  - component: {fileID: -3968365335482073011}
+  - component: {fileID: 279765223804996235}
+  - component: {fileID: 5315111877467369486}
+  - component: {fileID: 3617483921579135840}
   m_Layer: 0
   m_Name: DreadEye
   m_TagString: Enemy
@@ -288,7 +290,7 @@ Transform:
   m_Children:
   - {fileID: 4383501881829372611}
   - {fileID: 1832301366206878773}
-  - {fileID: 6889598361015976757}
+  - {fileID: 8841931265937291780}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -396,7 +398,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 4}
   m_Size: {x: 5, y: 4}
   m_Direction: 1
---- !u!114 &-3968365335482073011
+--- !u!50 &279765223804996235
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984286436463662956}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5315111877467369486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,15 +428,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 984286436463662956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 795dd36b6407d554c9fa99e53e45f423, type: 3}
+  m_Script: {fileID: 11500000, guid: 013be0a1c1751c24dbd07a5bb98114f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  lineOfSite: 7
-  shootingRange: 4
-  fireRate: 0.4
-  bullet: {fileID: 8526081328499704025, guid: d5f497059d66c304e9e5fb0eb75f32bb, type: 3}
-  bulletParent: {fileID: 759578643259822223}
+  speed: 1
+  lineOfSite: 5
+--- !u!114 &3617483921579135840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984286436463662956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006dfa4e475661342b69d36ad0752eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 3
+  deathDelay: 0
 --- !u!1 &1166745715485779836
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,36 +587,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4383501881829372611}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6889598361015976758
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6889598361015976757}
-  m_Layer: 0
-  m_Name: BulletParent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6889598361015976757
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6889598361015976758}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3617941181176622661}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7990702935375585921
 GameObject:
@@ -749,6 +752,94 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8751268285165338103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8841931265937291780}
+  - component: {fileID: 5853421964893237868}
+  m_Layer: 0
+  m_Name: GunPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8841931265937291780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751268285165338103}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3617941181176622661}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5853421964893237868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8751268285165338103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ea664ca0e6f84d8942fc020272dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  bulletSpread: 1.73
+  bulletSpreadPingPongMax: 3.05
+  bulletSpreadPingPongMin: 1.41
+  spreadPingPongSpeed: 1.11
+  bulletSpacing: 0.9
+  bulletCount: 1
+  bulletRandomness: 0
+  bulletSpeed: 6.4
+  weaponFireRate: 1
+  weaponXOffset: 0
+  weaponYOffset: 0
+  ricochetChancePercent: 0
+  magazineChangeDelay: 0.86
+  magazineSize: 0
+  startingAmmo: 0
+  ammoUsed: 0
+  magazineRemainingBullets: 0
+  targetToTrack: {fileID: 0}
+  trackingTurnRate: 6.2
+  lerpTurnRate: 0
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 0}
+  autoFire: 1
+  pingPongSpread: 1
+  circularFireMode: 0
+  circularFireRotationRate: 240
+  richochetsEnabled: 1
+  hitEffectEnabled: 0
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 1
+  playReloadingSfx: 0
+  playEmptySfx: 0
+  weaponRelativeToComponent: 0
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  aimAngle: 0
+  reloadSfxClip: {fileID: 0}
+  emptySfxClip: {fileID: 0}
+  shotFiredClip: {fileID: 8300000, guid: c7af63eab518c01468d7ac5e9cf92625, type: 3}
+  gunPoint: {fileID: 8841931265937291780}
+  bulletOptionType: 3
+  shooterDirectionType: 3
+  _weaponConfigs: []
 --- !u!1 &8782435311561145846
 GameObject:
   m_ObjectHideFlags: 0

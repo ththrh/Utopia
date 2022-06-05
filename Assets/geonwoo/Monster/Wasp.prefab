@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 5145470634010133526}
   - component: {fileID: 7424449467674355748}
   - component: {fileID: 7034674665698298289}
-  - component: {fileID: 1155063616883758927}
   - component: {fileID: -8652506878402654561}
   - component: {fileID: 6422061055353578803}
   m_Layer: 0
@@ -289,20 +288,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1155063616883758927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985639210683951151}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085c35b0a11c99e4d8aef1fd86d4af27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  lineOfSite: 5
 --- !u!114 &-8652506878402654561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +591,7 @@ MonoBehaviour:
   aimAngle: 0
   reloadSfxClip: {fileID: 0}
   emptySfxClip: {fileID: 0}
-  shotFiredClip: {fileID: 0}
+  shotFiredClip: {fileID: 8300000, guid: c7af63eab518c01468d7ac5e9cf92625, type: 3}
   gunPoint: {fileID: 7100718300236579793}
   bulletOptionType: 3
   shooterDirectionType: 3
