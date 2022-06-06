@@ -87,6 +87,17 @@ public class Status : MonoBehaviour
             StaminaRestore = 5.0f;
             Stamina += 1;
         }
+
+        if (Input.GetKey(KeyCode.P))
+        {
+            if (Input.GetKey(KeyCode.O))
+            {
+                if (Input.GetKey(KeyCode.I))
+                {
+                    Cheat();
+                }
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -125,5 +136,19 @@ public class Status : MonoBehaviour
         }
         rend.color = new Color32(255, 255, 255, 255);
         yield return null;
+    }
+
+    private void Cheat()
+    {
+        MaxHp = 1000000000;
+        hp = 100000000;
+        MaxStamina = 10000000;
+        Stamina = 100000;
+        MaxMp = 100000;
+        Mp = 100000;
+        atk = 1000;
+        speed = 15;
+        dash = 60;
+
     }
 }

@@ -33,7 +33,7 @@ public class WaspFollowPlayer : MonoBehaviour
         if (distanceFromPlayer < lineOfSite)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-         
+            
         }
    
         if (player.position.x > transform.position.x && facingLeft == true)

@@ -431,7 +431,7 @@ public class WeaponSystem : MonoBehaviour
 
         maxWeaponIndex = weaponConfigs.Count - 1;
         EquipWeaponConfiguration(0); // Equip the first weapon configuration if possible.
-
+        targetToTrack = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     /// <summary>
