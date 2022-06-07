@@ -262,7 +262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836813682074039564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -3.883, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 836813683195210693}
@@ -280,7 +280,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7698310a5bd58f242b9b2cbe350e81dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrow: {fileID: 0}
   bullet: {fileID: 6510050970605055380, guid: a667fb558d9ab5045a167b7e53ccfb17, type: 3}
+  bomb: {fileID: 0}
+  UCB: {fileID: 0}
+  SA: {fileID: 0}
   ShotSpeed: 3
   shotTime: 0
 --- !u!82 &836813682074039561
@@ -504,11 +508,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
-  Speed: 2
-  Speed2: 8
   timer: 0.2
   isAttack: 0
   atktimer: 0.5
+  shield_cooltimer: 8
+  shield: {fileID: 0}
+  darksight_cooltimer: 6
+  heal_cooltimer: 10
+  wall_cooltimer: 15
+  wall: {fileID: 0}
 --- !u!95 &836813683195210692
 Animator:
   serializedVersion: 3
@@ -585,5 +593,33 @@ MonoBehaviour:
   Stamina: 0
   MaxMp: 5
   Mp: 0
+  atk: 1
+  speed: 2
+  dash: 8
   isDamage: 0
   Dtimer: 1
+  SkillPoint: 0
+  click_islearnskill_1: 0
+  click_islearnskill_2: 0
+  click_islearnskill_3: 0
+  click_islearnskill_4: 0
+  shift_islearnskill_1: 0
+  shift_islearnskill_2: 0
+  shift_islearnskill_3: 0
+  shift_islearnskill_4: 0
+  q_islearnskill_1: 0
+  q_islearnskill_2: 0
+  q_islearnskill_3: 0
+  q_islearnskill_4: 0
+  click_isactiveskill_1: 0
+  click_isactiveskill_2: 0
+  click_isactiveskill_3: 0
+  click_isactiveskill_4: 0
+  shift_isactiveskill_1: 0
+  shift_isactiveskill_2: 0
+  shift_isactiveskill_3: 0
+  shift_isactiveskill_4: 0
+  q_isactiveskill_1: 0
+  q_isactiveskill_2: 0
+  q_isactiveskill_3: 0
+  q_isactiveskill_4: 0
