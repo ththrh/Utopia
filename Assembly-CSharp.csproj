@@ -113,6 +113,7 @@
      <Compile Include="Assets\geonwoo\Script\WaspFollowPlayer.cs" />
      <Compile Include="Assets\geonwoo\Script\WeaponSystem.cs" />
      <Compile Include="Assets\geonwoo\Script\WeaponSystemConfiguration.cs" />
+     <Compile Include="Assets\jiwon\MinimapUI.cs" />
      <Compile Include="Assets\jiwon\Teleport.cs" />
      <Compile Include="Assets\maps\MOVE.cs" />
      <Compile Include="Assets\maps\PlayerAnimation.cs" />
