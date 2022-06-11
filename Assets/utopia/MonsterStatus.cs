@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterDeath : MonoBehaviour
+public class MonsterStatus : MonoBehaviour
 {
     public int HP=3;
     Animator anim;
     SpriteRenderer rend;
     GameObject Player;
     public float deathDelay = 0f;
+    public GameObject EnemyDestroyEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,8 @@ public class MonsterDeath : MonoBehaviour
     {
         if (HP <= 0)
         {
-            anim.Play("Death");
-
+            Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
+          
             Destroy(gameObject, deathDelay);
         }
     }
@@ -36,4 +37,11 @@ public class MonsterDeath : MonoBehaviour
             HP -= Player.GetComponent<Status>().atk;
         }
     }
+
+    
+
+   
+
+
+
 }
