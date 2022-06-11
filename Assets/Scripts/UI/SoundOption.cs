@@ -20,7 +20,15 @@ public class SoundOption : MonoBehaviour
 
     public void OpenOption()
     {
-        Menu.SetActive(false);
-        SoundOpt.SetActive(true);
+        if (Menu.activeSelf)
+        {
+            Menu.SetActive(false);
+            SoundOpt.SetActive(true);
+        }
+        else
+        {
+            Menu.SetActive(true);
+            SoundOpt.SetActive(false);
+        }
     }
 }
