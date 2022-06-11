@@ -14,6 +14,8 @@ public class QuestManager : MonoBehaviour
     public int wolf_death_count;
     public int bear_death_count;
 
+    public int temp_death_count;
+
     Dictionary<int, QuestData> questlist;
     // Start is called before the first frame update
     void Awake()
@@ -26,7 +28,7 @@ public class QuestManager : MonoBehaviour
     // Update is called once per frame
     void makedata()
     {
-        questlist.Add(0, new QuestData("여기는 어디?", new int[] { 500 }));
+
         questlist.Add(10, new QuestData("마을사람 만나기", new int[] { 200,300,400}));
         questlist.Add(20, new QuestData("마을의 맷돼지 문제", new int[] { 200, 400, 9999, 400 }));
         questlist.Add(30, new QuestData("수상한 야생동물", new int[] { 400, 300, 9999, 300 }));
@@ -49,6 +51,7 @@ public class QuestManager : MonoBehaviour
         {
             questActionIndex++;
         }
+        /*
         if(questid == 20)
             if (questActionIndex == 2)
                 if (pig_death_count == 5)
@@ -65,8 +68,24 @@ public class QuestManager : MonoBehaviour
             if (questActionIndex == 1)
                  if (wolf_death_count == 9)
                     questActionIndex++;
+        */
 
-
+        if (questid == 20)
+            if (questActionIndex == 2)
+                if (temp_death_count == 5)
+                    questActionIndex++;
+        if (questid == 30)
+            if (questActionIndex == 2)
+                if (temp_death_count == 13)
+                    questActionIndex++;
+        if (questid == 40)
+            if (questActionIndex == 3)
+                if (temp_death_count == 22)
+                    questActionIndex++;
+        if (questid == 50)
+            if (questActionIndex == 1)
+                if (temp_death_count == 31)
+                    questActionIndex++;
 
         //controlobj();
 

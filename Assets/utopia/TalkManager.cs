@@ -19,11 +19,13 @@ public class TalkManager : MonoBehaviour
         talkData.Add(200, new string[] { "나는 촌장이네", "우리 마을에 온 것을 환영하네" });
         talkData.Add(300, new string[] { "바람이...부는 군...", "춥다..." });
         talkData.Add(400, new string[] { "어둡다..." });
+        talkData.Add(500, new string[] { "자네는 처음보는 사람이로군" });
+        talkData.Add(600, new string[] { "마을에 안 좋은 일이 너무 많이 일어나고 있어" });
+        talkData.Add(700, new string[] { "이 밖은 위험하니 조심해" });
 
 
 
 
-        talkData.Add(0+400, new string[] { "이 마을은 평화로워 보이지만 기운이 이상해","무슨 일이 있는건가?","저 앞에 사람에게 물어봐야겠군" });
         talkData.Add(10 + 200, new string[] { "처음보는 사람이로군", "마을사람들을 만나보겠나?", "사무라이부터 만나고 오게" });
         talkData.Add(11 + 300, new string[] { "촌장이 보냈다고?", "반갑군", "흑마법사를 만나보는게 어때?" });
         talkData.Add(12 + 200, new string[] { "아직 마을 사람들을 다 만나지 못 한 모양이군", "흑마법사는 남쪽에 있다네" });

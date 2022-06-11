@@ -10,6 +10,7 @@ public class MonsterStatus : MonoBehaviour
     GameObject Player;
     public float deathDelay = 0f;
     public GameObject EnemyDestroyEffect;
+    public QuestManager questManager;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class MonsterStatus : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class MonsterStatus : MonoBehaviour
     {
         if (HP <= 0)
         {
+            questManager.temp_death_count++;
             Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
           
             Destroy(gameObject, deathDelay);
