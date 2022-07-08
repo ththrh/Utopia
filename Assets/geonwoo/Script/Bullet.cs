@@ -139,32 +139,32 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if (useHitEffects)
-        {
-            if (coll.gameObject.tag == bloodEffectTriggerTag && bulletOwner == BulletOwner.Player)
-            {
-                // Fetch a blood splatter particle effect from our object pool to use for the bullet impact effect if enabled.
-                var blood = ObjectPoolManager.instance.GetUsableBloodSplatterParticleEffect();
+        //if (useHitEffects)
+        //{
+        //    if (coll.gameObject.tag == bloodEffectTriggerTag && bulletOwner == BulletOwner.Player)
+        //    {
+        //        // Fetch a blood splatter particle effect from our object pool to use for the bullet impact effect if enabled.
+        //        var blood = ObjectPoolManager.instance.GetUsableBloodSplatterParticleEffect();
 
-                if (blood != null)
-                {
-                    blood.transform.position = coll.gameObject.transform.position;
-                    blood.transform.eulerAngles = new Vector3(-currentBulletEuler.z, blood.transform.eulerAngles.y, blood.transform.eulerAngles.z);
-                    blood.SetActive(true);
-                }
-            }
-            else
-            {
-                // Fetch a hit effect spark from our object pool to use for the bullet impact effect if enabled.
-                var spark = ObjectPoolManager.instance.GetUsableSparkParticle();
+        //        if (blood != null)
+        //        {
+        //            blood.transform.position = coll.gameObject.transform.position;
+        //            blood.transform.eulerAngles = new Vector3(-currentBulletEuler.z, blood.transform.eulerAngles.y, blood.transform.eulerAngles.z);
+        //            blood.SetActive(true);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        // Fetch a hit effect spark from our object pool to use for the bullet impact effect if enabled.
+        //        var spark = ObjectPoolManager.instance.GetUsableSparkParticle();
 
-                if (spark != null)
-                {
-                    spark.transform.position = transform.position;
-                    spark.SetActive(true);
-                }
-            }
-        }
+        //        if (spark != null)
+        //        {
+        //            spark.transform.position = transform.position;
+        //            spark.SetActive(true);
+        //        }
+        //    }
+        //}
     }
 
     // Update is called once per frame

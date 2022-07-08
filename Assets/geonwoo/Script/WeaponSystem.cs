@@ -1040,9 +1040,9 @@ public class WeaponSystem : MonoBehaviour
                 bullet = ObjectPoolManager.instance.GetUsableStandardHorizontalBullet();
                 break;
 
-            case BulletOption.TurretHorizontal:
-                bullet = ObjectPoolManager.instance.GetUsableTurretBullet();
-                break;
+            //case BulletOption.TurretHorizontal:
+            //    bullet = ObjectPoolManager.instance.GetUsableTurretBullet();
+            //    break;
 
             case BulletOption.Beam1:
                 bullet = ObjectPoolManager.instance.GetUsableBeam1Bullet();

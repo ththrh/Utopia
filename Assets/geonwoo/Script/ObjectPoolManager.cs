@@ -65,18 +65,18 @@ public class ObjectPoolManager : MonoBehaviour
         }
 
         // turret bullet object pool
-        turretBulletObjectPool = new List<GameObject>();
+     //   turretBulletObjectPool = new List<GameObject>();
 
-        for (var i = 1; i <= numTurretBulletsToSpawn; i++)
-        {
-            var turretBullet = (GameObject)Instantiate(standardHorizonalBulletPrefab);
+        //for (var i = 1; i <= numTurretBulletsToSpawn; i++)
+        //{
+        //    var turretBullet = (GameObject)Instantiate(standardHorizonalBulletPrefab);
 
-            SetParentTransform(turretBullet);
+        //    SetParentTransform(turretBullet);
 
-            turretBullet.SetActive(false);
-            if (tagAsTurretBullets) turretBullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
-            turretBulletObjectPool.Add(turretBullet);
-        }
+        //    turretBullet.SetActive(false);
+        //    if (tagAsTurretBullets) turretBullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+        //    turretBulletObjectPool.Add(turretBullet);
+        //}
 
         // beam1 bullet object pool
         beam1Pool = new List<GameObject>();
@@ -88,7 +88,7 @@ public class ObjectPoolManager : MonoBehaviour
             SetParentTransform(beam1Bullet);
 
             beam1Bullet.SetActive(false);
-            if (tagAsTurretBullets) beam1Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+            //if (tagAsTurretBullets) beam1Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
             beam1Pool.Add(beam1Bullet);
         }
 
@@ -102,7 +102,7 @@ public class ObjectPoolManager : MonoBehaviour
             SetParentTransform(beam2Bullet);
 
             beam2Bullet.SetActive(false);
-            if (tagAsTurretBullets) beam2Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+            //if (tagAsTurretBullets) beam2Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
             beam2Pool.Add(beam2Bullet);
         }
 
@@ -116,7 +116,7 @@ public class ObjectPoolManager : MonoBehaviour
             SetParentTransform(beam3Bullet);
 
             beam3Bullet.SetActive(false);
-            if (tagAsTurretBullets) beam3Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+            //if (tagAsTurretBullets) beam3Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
             beam3Pool.Add(beam3Bullet);
         }
 
@@ -130,7 +130,7 @@ public class ObjectPoolManager : MonoBehaviour
             SetParentTransform(beam4Bullet);
 
             beam4Bullet.SetActive(false);
-            if (tagAsTurretBullets) beam4Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+            //if (tagAsTurretBullets) beam4Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
             beam4Pool.Add(beam4Bullet);
         }
 
@@ -144,7 +144,7 @@ public class ObjectPoolManager : MonoBehaviour
             SetParentTransform(beam5Bullet);
 
             beam5Bullet.SetActive(false);
-            if (tagAsTurretBullets) beam5Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+            //if (tagAsTurretBullets) beam5Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
             beam5Pool.Add(beam5Bullet);
         }
 
@@ -158,35 +158,35 @@ public class ObjectPoolManager : MonoBehaviour
             SetParentTransform(beam6Bullet);
 
             beam6Bullet.SetActive(false);
-            if (tagAsTurretBullets) beam6Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+            //if (tagAsTurretBullets) beam6Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
             beam6Pool.Add(beam6Bullet);
         }
 
         // Spark object pool
-        sparkObjectPool = new List<GameObject>();
+        //sparkObjectPool = new List<GameObject>();
 
-        for (var i = 1; i <= numSparksToSpawn; i++)
-        {
-            var spark = (GameObject)Instantiate(sparkPrefab);
+        //for (var i = 1; i <= numSparksToSpawn; i++)
+        //{
+        //    var spark = (GameObject)Instantiate(sparkPrefab);
 
-            SetParentTransform(spark);
+        //    SetParentTransform(spark);
 
-            spark.SetActive(false);
-            sparkObjectPool.Add(spark);
-        }
+        //    spark.SetActive(false);
+        //    sparkObjectPool.Add(spark);
+        //}
 
-        // Blood object pool
-        bloodObjectPool = new List<GameObject>();
+        //// Blood object pool
+        //bloodObjectPool = new List<GameObject>();
 
-        for (var i = 1; i <= numBloodParticleToSpawn; i++)
-        {
-            var bloodObject = (GameObject)Instantiate(bloodPrefab);
+        //for (var i = 1; i <= numBloodParticleToSpawn; i++)
+        //{
+        //    var bloodObject = (GameObject)Instantiate(bloodPrefab);
 
-            SetParentTransform(bloodObject);
+        //    SetParentTransform(bloodObject);
 
-            bloodObject.SetActive(false);
-            bloodObjectPool.Add(bloodObject);
-        }
+        //    bloodObject.SetActive(false);
+        //    bloodObjectPool.Add(bloodObject);
+        //}
     }
 
     private void SetParentTransform(GameObject gameObjectRef)
@@ -241,29 +241,29 @@ public class ObjectPoolManager : MonoBehaviour
         return sphereBullet;
     }
 
-    public GameObject GetUsableTurretBullet()
-    {
-        var obj = (from item in turretBulletObjectPool
-                   where item.activeSelf == false
-                   select item).FirstOrDefault();
+    //public GameObject GetUsableTurretBullet()
+    //{
+    //    var obj = (from item in turretBulletObjectPool
+    //               where item.activeSelf == false
+    //               select item).FirstOrDefault();
 
-        if (obj != null)
-        {
-            return obj;
-        }
+    //    if (obj != null)
+    //    {
+    //        return obj;
+    //    }
 
-        Debug.Log("<color=orange>WARNING: Ran out of reusable turret bullet objects! Now instantiating a new one</color>");
-        var turretBullet = (GameObject)Instantiate(instance.standardHorizonalBulletPrefab);
+    //    Debug.Log("<color=orange>WARNING: Ran out of reusable turret bullet objects! Now instantiating a new one</color>");
+    //    var turretBullet = (GameObject)Instantiate(instance.standardHorizonalBulletPrefab);
 
-        SetParentTransform(turretBullet);
+    //    SetParentTransform(turretBullet);
 
-        turretBullet.SetActive(false);
-        standardHorizontalBulletObjectPool.Add(turretBullet);
+    //    turretBullet.SetActive(false);
+    //    standardHorizontalBulletObjectPool.Add(turretBullet);
 
-        if (tagAsTurretBullets) turretBullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+    //    if (tagAsTurretBullets) turretBullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
 
-        return turretBullet;
-    }
+    //    return turretBullet;
+    //}
 
     public GameObject GetUsableBeam1Bullet()
     {
@@ -284,7 +284,7 @@ public class ObjectPoolManager : MonoBehaviour
         beam1Bullet.SetActive(false);
         beam1Pool.Add(beam1Bullet);
 
-        if (tagAsTurretBullets) beam1Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+        //if (tagAsTurretBullets) beam1Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
 
         return beam1Bullet;
     }
@@ -308,7 +308,7 @@ public class ObjectPoolManager : MonoBehaviour
         beam2Bullet.SetActive(false);
         beam2Pool.Add(beam2Bullet);
 
-        if (tagAsTurretBullets) beam2Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+        //if (tagAsTurretBullets) beam2Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
 
         return beam2Bullet;
     }
@@ -332,7 +332,7 @@ public class ObjectPoolManager : MonoBehaviour
         beam3Bullet.SetActive(false);
         beam3Pool.Add(beam3Bullet);
 
-        if (tagAsTurretBullets) beam3Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+        //if (tagAsTurretBullets) beam3Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
 
         return beam3Bullet;
     }
@@ -355,8 +355,8 @@ public class ObjectPoolManager : MonoBehaviour
 
         beam4Bullet.SetActive(false);
         beam4Pool.Add(beam4Bullet);
-
-        if (tagAsTurretBullets) beam4Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+        
+        //if (tagAsTurretBullets) beam4Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
 
         return beam4Bullet;
     }
@@ -380,7 +380,7 @@ public class ObjectPoolManager : MonoBehaviour
         beam5Bullet.SetActive(false);
         beam4Pool.Add(beam5Bullet);
 
-        if (tagAsTurretBullets) beam5Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+        //if (tagAsTurretBullets) beam5Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
 
         return beam5Bullet;
     }
@@ -404,52 +404,52 @@ public class ObjectPoolManager : MonoBehaviour
         beam6Bullet.SetActive(false);
         beam4Pool.Add(beam6Bullet);
 
-        if (tagAsTurretBullets) beam6Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
+        //if (tagAsTurretBullets) beam6Bullet.layer = LayerMask.NameToLayer("TurretWeaponSystemBullets");
 
         return beam6Bullet;
     }
 
-    public GameObject GetUsableSparkParticle()
-    {
-        var obj = (from item in sparkObjectPool
-                   where item.activeSelf == false
-                   select item).FirstOrDefault();
+    //public GameObject GetUsableSparkParticle()
+    //{
+    //    var obj = (from item in sparkObjectPool
+    //               where item.activeSelf == false
+    //               select item).FirstOrDefault();
 
-        if (obj != null)
-        {
-            return obj;
-        }
+    //    if (obj != null)
+    //    {
+    //        return obj;
+    //    }
 
-        Debug.Log("<color=orange>WARNING: Ran out of reusable spark objects! Now instantiating a new one</color>");
-        var sparkParticle = (GameObject)Instantiate(instance.sparkPrefab);
+    //    Debug.Log("<color=orange>WARNING: Ran out of reusable spark objects! Now instantiating a new one</color>");
+    //    var sparkParticle = (GameObject)Instantiate(instance.sparkPrefab);
 
-        SetParentTransform(sparkParticle);
+    //    SetParentTransform(sparkParticle);
 
-        sparkParticle.SetActive(false);
-        sparkObjectPool.Add(sparkParticle);
+    //    sparkParticle.SetActive(false);
+    //    sparkObjectPool.Add(sparkParticle);
 
-        return sparkParticle;
-    }
+    //    return sparkParticle;
+    //}
 
-    public GameObject GetUsableBloodSplatterParticleEffect()
-    {
-        var obj = (from item in bloodObjectPool
-                   where item.activeSelf == false
-                   select item).FirstOrDefault();
+    //public GameObject GetUsableBloodSplatterParticleEffect()
+    //{
+    //    var obj = (from item in bloodObjectPool
+    //               where item.activeSelf == false
+    //               select item).FirstOrDefault();
 
-        if (obj != null)
-        {
-            return obj;
-        }
+    //    if (obj != null)
+    //    {
+    //        return obj;
+    //    }
 
-        Debug.Log("<color=orange>WARNING: Ran out of reusable blood particle objects! Now instantiating a new one</color>");
-        var bloodEffectParticleGo = (GameObject)Instantiate(instance.bloodPrefab);
+    //    Debug.Log("<color=orange>WARNING: Ran out of reusable blood particle objects! Now instantiating a new one</color>");
+    //    var bloodEffectParticleGo = (GameObject)Instantiate(instance.bloodPrefab);
 
-        SetParentTransform(bloodEffectParticleGo);
+    //    SetParentTransform(bloodEffectParticleGo);
 
-        bloodEffectParticleGo.SetActive(false);
-        bloodObjectPool.Add(bloodEffectParticleGo);
+    //    bloodEffectParticleGo.SetActive(false);
+    //    bloodObjectPool.Add(bloodEffectParticleGo);
 
-        return bloodEffectParticleGo;
-    }
+    //    return bloodEffectParticleGo;
+    //}
 }
