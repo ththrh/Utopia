@@ -11,9 +11,9 @@ public class EnemyFollowPlayer : MonoBehaviour
     private Transform player;
     bool facingLeft = true;
     Animator anim;
-   
 
-
+    public MOVE Player;
+    
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -29,25 +29,29 @@ public class EnemyFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlayer < lineOfSite)
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<MOVE>().isdarksight == false)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-            anim.SetBool("Running", true);
-        }
-        else
-        {
-            anim.SetBool("Running", false);
+            float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+            if (distanceFromPlayer < lineOfSite)
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+                anim.SetBool("Running", true);
+            }
+            else
+            {
+                anim.SetBool("Running", false);
+            }
+
+            if (player.position.x > transform.position.x && facingLeft == true)
+            {
+                flip();
+            }
+            if (player.position.x < transform.position.x && facingLeft == false)
+            {
+                flip();
+            }
         }
 
-        if(player.position.x>transform.position.x&&facingLeft==true)
-        {
-            flip();
-        }
-        if(player.position.x < transform.position.x && facingLeft == false)
-        {
-            flip();
-        }
 
     }
 

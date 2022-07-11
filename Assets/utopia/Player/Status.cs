@@ -17,6 +17,7 @@ public class Status : MonoBehaviour
     public float Dtimer=1.0f;
     float timer;
     SpriteRenderer rend;
+    MOVE move;
     float StaminaRestore = 5.0f;
 
     public int SkillPoint;
@@ -61,6 +62,7 @@ public class Status : MonoBehaviour
     {
         timer = Dtimer;
         rend = GetComponent<SpriteRenderer>();
+        move = GetComponent<MOVE>();
         hp = MaxHp;
         Stamina = MaxStamina;
         Mp = MaxMp;
@@ -101,21 +103,18 @@ public class Status : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") && !isDamage)
+        if (collision.CompareTag("Enemy") && !isDamage && !move.isshield)
         {
             isDamage = true;
             hp -= 1;
         }
-        if(collision.CompareTag("Bullet") && !isDamage)
+        if(collision.CompareTag("Bullet") && !isDamage && !move.isshield)
         {
             isDamage = true;
             hp -= 1;
             StartCoroutine(UnBeatTime());
         }
-        if (collision.CompareTag("Bullet"))
-        {
-            Destroy(collision.gameObject);
-        }
+
     }
 
     IEnumerator UnBeatTime()

@@ -12,7 +12,7 @@ public class WaspFollowPlayer : MonoBehaviour
     bool facingLeft = true;
     Animator anim;
 
-
+    MOVE Player;
 
     void Awake()
     {
@@ -29,21 +29,26 @@ public class WaspFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlayer < lineOfSite)
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<MOVE>().isdarksight == false)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
             
+            float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+            if (distanceFromPlayer < lineOfSite)
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+
+            }
+
+            if (player.position.x > transform.position.x && facingLeft == true)
+            {
+                flip();
+            }
+            if (player.position.x < transform.position.x && facingLeft == false)
+            {
+                flip();
+            }
         }
-   
-        if (player.position.x > transform.position.x && facingLeft == true)
-        {
-            flip();
-        }
-        if (player.position.x < transform.position.x && facingLeft == false)
-        {
-            flip();
-        }
+
 
     }
 

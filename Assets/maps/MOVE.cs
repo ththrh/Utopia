@@ -34,10 +34,10 @@ public class MOVE : MonoBehaviour
 
     public float shield_cooltimer = 8;
     public GameObject shield;
-    bool isshield = false;
+    public bool isshield = false;
 
     public float darksight_cooltimer = 6;
-    bool isdarksight = false;
+    public bool isdarksight = false;
     SpriteRenderer sprite;
 
     public float heal_cooltimer = 10;
@@ -52,7 +52,6 @@ public class MOVE : MonoBehaviour
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
         stat = GetComponent<Status>();
-
         sprite = GetComponent<SpriteRenderer>();
     }
 
@@ -155,7 +154,7 @@ public class MOVE : MonoBehaviour
                 if(heal_cooltimer == 10)
                 {
                     isheal = true;
-                    heal_effect();
+                    stat.hp += 1;
                     Debug.Log("쉬프트 스킬사용1");
                 }
                 else
@@ -181,7 +180,12 @@ public class MOVE : MonoBehaviour
                 if (wall_cooltimer == 15)
                 {
                     iswall = true;
-                    Instantiate(wall,player.transform.position, Quaternion.identity);
+                    if(dir == Dir.left || dir == Dir.right)
+                    {
+                        Instantiate(wall, player.transform.position, Quaternion.identity);
+                    }
+                    else
+                        Instantiate(wall,player.transform.position, Quaternion.Euler(0, 0, 90));
                     Debug.Log("쉬프트 스킬사용3");
                 }
                 else
@@ -263,10 +267,7 @@ public class MOVE : MonoBehaviour
     }
 
 
-    void heal_effect()
-    {
-        GetComponent<ParticleSystem>().Play();
-    }
+
 
     void FixedUpdate()
     {

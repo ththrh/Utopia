@@ -13,6 +13,7 @@ public class EnemyFollowBite : MonoBehaviour
     Animator anim;
     UnityEngine.AI.NavMeshAgent nav;
 
+    MOVE Player;
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -23,38 +24,42 @@ public class EnemyFollowBite : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-       if (distanceFromPlayer < lineOfSite)
-         {
-             transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-             anim.SetBool("Running", true);
-         }
-         else
-         {
-             anim.SetBool("Running", false);
-         }
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<MOVE>().isdarksight == false)
+        {
+            float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
+            if (distanceFromPlayer < lineOfSite)
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
+                anim.SetBool("Running", true);
+            }
+            else
+            {
+                anim.SetBool("Running", false);
+            }
 
-        if (player.position.x > transform.position.x && facingLeft == true)
-        {
-            flip();
-        }
-        if (player.position.x < transform.position.x && facingLeft == false)
-        {
-            flip();
+            if (player.position.x > transform.position.x && facingLeft == true)
+            {
+                flip();
+            }
+            if (player.position.x < transform.position.x && facingLeft == false)
+            {
+                flip();
+            }
+
+            if (distanceFromPlayer < AttackRange)
+            {
+                anim.SetTrigger("Attack");
+            }
+
         }
 
-        if (distanceFromPlayer < AttackRange)
-        {
-            anim.SetTrigger("Attack");
-        }
-        
-       
+
     }
 
     private void OnDrawGizmosSelected()
