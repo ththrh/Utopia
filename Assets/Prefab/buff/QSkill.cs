@@ -7,6 +7,7 @@ public class QSkill : MonoBehaviour
     Status stat;
     float regenTime = 0;
     bool speedUp = false;
+    bool qCool = false;
 
     public ParticleSystem ManaHeal;
 
@@ -23,23 +24,23 @@ public class QSkill : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (stat.q_isactiveskill_1)
+            if (stat.q_isactiveskill_1 && !qCool)
             {
+                qCool = true;
+                StartCoroutine(qCooldown(20f));
                 stat.Mp = stat.MaxMp;
                 ManaHeal.Play();
             }
-            else if (stat.q_isactiveskill_2)
+            else if (stat.q_isactiveskill_2 && !qCool)
             {
+                qCool = true;
                 StartCoroutine("Atkup");
 
             }
-            else if (stat.q_isactiveskill_3)
+            else if (stat.q_isactiveskill_3 && !qCool)
             {
-                if (!speedUp)
-                {
-                    speedUp = true;
-                    StartCoroutine("Speedup");
-                }
+                qCool = true;
+                StartCoroutine("Speedup");
             }
         }
         if (stat.q_isactiveskill_4)
@@ -60,14 +61,20 @@ public class QSkill : MonoBehaviour
     {
         stat.speed += 2;
         yield return new WaitForSeconds(5f);
-        speedUp = false;
+        qCool = false;
         stat.speed -= 2;
     }
     IEnumerator Atkup()
     {
         stat.atk += 1;
         yield return new WaitForSeconds(3f);
+        qCool = false;
         stat.atk -= 1;
     }
 
+    IEnumerator qCooldown(float f)
+    {
+        yield return new WaitForSeconds(f);
+        qCool = false;
+    }
 }
