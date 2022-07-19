@@ -1285,7 +1285,7 @@ public class WeaponSystem : MonoBehaviour
         }
         else
         {
-            if (autoFire)
+            if (autoFire&& GameObject.FindGameObjectWithTag("Player").GetComponent<MOVE>().isdarksight == false)
             {
                 if (isReloading) return;
                 ShootWithCoolDown();

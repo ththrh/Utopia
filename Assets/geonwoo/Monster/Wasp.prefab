@@ -315,7 +315,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3
-  deathDelay: 0
 --- !u!1 &1413526470935002630
 GameObject:
   m_ObjectHideFlags: 0
