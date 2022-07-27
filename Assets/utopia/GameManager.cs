@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
 
     public GameObject skillpanel;
+    public GameObject startui;
 
     public skill1 skill;
     public Status stat;
@@ -90,7 +91,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(startui);
+        }
         if (Input.GetButtonDown("Cancel"))
         {
             if (menuset.activeSelf)
