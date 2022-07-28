@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     public Image q_skillimage;
 
     public bool death = false;
+
+
     void Start()
     {
         click_skillname = 0;
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         q_skillname = 0;
         GameLoad();
         questtalk.text = QuestManager.checkquest();
+
     }
 
     void Awake()
@@ -91,10 +94,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Destroy(startui);
-        }
+
         if (Input.GetButtonDown("Cancel"))
         {
             if (menuset.activeSelf)
@@ -234,4 +234,5 @@ public class GameManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+
 }

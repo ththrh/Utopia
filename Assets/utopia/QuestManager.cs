@@ -16,8 +16,14 @@ public class QuestManager : MonoBehaviour
 
     public int temp_death_count;
 
+    GameObject Player;
+
     Dictionary<int, QuestData> questlist;
     // Start is called before the first frame update
+    void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
     void Awake()
     {
         questlist = new Dictionary<int, QuestData>();
@@ -114,9 +120,19 @@ public class QuestManager : MonoBehaviour
         {
             case 20:
                 Debug.Log("보상1");
+                Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint+1;
                 break;
             case 30:
-                Debug.Log("보상2");
+                Debug.Log("보상1");
+                Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint + 1;
+                break;
+            case 40:
+                Debug.Log("보상1");
+                Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint + 1;
+                break;
+            case 50:
+                Debug.Log("보상1");
+                Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint + 1;
                 break;
 
         }

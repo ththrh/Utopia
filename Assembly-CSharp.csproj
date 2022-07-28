@@ -131,6 +131,7 @@
      <Compile Include="Assets\utopia\QuestData.cs" />
      <Compile Include="Assets\utopia\QuestManager.cs" />
      <Compile Include="Assets\utopia\SimpleTrap.cs" />
+     <Compile Include="Assets\utopia\Startui_manager.cs" />
      <Compile Include="Assets\utopia\TalkManager.cs" />
      <Compile Include="Assets\utopia\bulletoriginal.cs" />
      <Compile Include="Assets\utopia\camera.cs" />

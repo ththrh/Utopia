@@ -7,9 +7,14 @@ public class cooltimer_shift : MonoBehaviour
 {
     public Text cooltimertxt;
     public MOVE move;
-    public Status stat;
 
-    
+    public Status stat;
+    public Text q_cooltimertxt;
+    public Text click_cooltimertxt;
+
+
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,9 +25,9 @@ public class cooltimer_shift : MonoBehaviour
     void Update()
     {
 
-        if(stat.shift_isactiveskill_1)
+        if (stat.shift_isactiveskill_1)
         {
-            if(move.heal_cooltimer >= 10)
+            if (move.heal_cooltimer >= 10)
             {
                 cooltimertxt.text = ("");
             }
@@ -61,4 +66,5 @@ public class cooltimer_shift : MonoBehaviour
             cooltimertxt.text = ("");
         }
     }
+
 }
