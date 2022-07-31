@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2501761475392005119}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4382003896740449664}
   - component: {fileID: 4427029119182992864}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 7034674665698298289}
   - component: {fileID: -8652506878402654561}
   - component: {fileID: 6422061055353578803}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wasp
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985639210683951151}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -325,7 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830984334666689398}
   - component: {fileID: 6393011169578395039}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7241660537638948894}
   - component: {fileID: 2627653970816563471}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WingUpL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6652221232466725205}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7100718300236579793}
   - component: {fileID: 820637180123310972}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GunPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ MonoBehaviour:
   aimAngle: 0
   reloadSfxClip: {fileID: 0}
   emptySfxClip: {fileID: 0}
-  shotFiredClip: {fileID: 8300000, guid: c7af63eab518c01468d7ac5e9cf92625, type: 3}
+  shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 7100718300236579793}
   bulletOptionType: 3
   shooterDirectionType: 3
@@ -605,7 +605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4649990267950694348}
   - component: {fileID: 955271778043948606}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WingDownL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 246386111000757660}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7992946117394476836}
   - component: {fileID: 5787688424644040862}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242366648657215578}
   - component: {fileID: 7115094441807926883}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WingUpR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 747858896652085393}
   - component: {fileID: 2007394408077740522}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WingDownR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
