@@ -6,6 +6,7 @@ public class q_skill : MonoBehaviour
 {
     public Status stat;
     public tooltip_manager tooltip_;
+    public QSkill QQ;
 
 
     public GameObject learn_mark_1;
@@ -14,7 +15,7 @@ public class q_skill : MonoBehaviour
     public GameObject learn_mark_4;
     public void Learn_q_Skill_1()
     {
-        if (!stat.q_islearnskill_1)
+        if (!stat.q_islearnskill_1&&!QQ.qCool)
 
 
         {
@@ -43,7 +44,7 @@ public class q_skill : MonoBehaviour
 
     public void Learn_q_Skill_2()
     {
-        if (!stat.q_islearnskill_2)
+        if (!stat.q_islearnskill_2 && !QQ.qCool)
 
 
         {
@@ -71,7 +72,7 @@ public class q_skill : MonoBehaviour
     }
     public void Learn_q_Skill_3()
     {
-        if (!stat.q_islearnskill_3)
+        if (!stat.q_islearnskill_3 && !QQ.qCool)
 
 
         {
@@ -99,7 +100,7 @@ public class q_skill : MonoBehaviour
     }
     public void Learn_q_Skill_4()
     {
-        if (!stat.q_islearnskill_4)
+        if (!stat.q_islearnskill_4 && !QQ.qCool)
 
 
         {

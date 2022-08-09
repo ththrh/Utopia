@@ -7,12 +7,9 @@ public class cooltimer_shift : MonoBehaviour
 {
     public Text cooltimertxt;
     public MOVE move;
+    
 
     public Status stat;
-    public Text q_cooltimertxt;
-    public Text click_cooltimertxt;
-
-
 
 
     // Start is called before the first frame update
@@ -65,6 +62,8 @@ public class cooltimer_shift : MonoBehaviour
         {
             cooltimertxt.text = ("");
         }
+
+
     }
 
 }

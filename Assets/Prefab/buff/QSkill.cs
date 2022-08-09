@@ -7,7 +7,7 @@ public class QSkill : MonoBehaviour
     Status stat;
     float regenTime = 0;
     bool speedUp = false;
-    bool qCool = false;
+    public bool qCool = false;
     public float qCoolDown_1;
     public float qCoolDown_2;
     public float qCoolDown_3;
