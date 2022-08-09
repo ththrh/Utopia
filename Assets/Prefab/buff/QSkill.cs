@@ -8,7 +8,9 @@ public class QSkill : MonoBehaviour
     float regenTime = 0;
     bool speedUp = false;
     bool qCool = false;
-
+    public float qCoolDown_1;
+    public float qCoolDown_2;
+    public float qCoolDown_3;
     public ParticleSystem ManaHeal;
 
 

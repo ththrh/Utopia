@@ -48276,6 +48276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5570f31f6f76870448dbde13115fc773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  qCoolDown_1: 20
+  qCoolDown_2: 3
+  qCoolDown_3: 5
   ManaHeal: {fileID: 1959242104}
 --- !u!198 &1959242104 stripped
 ParticleSystem:
@@ -49431,6 +49434,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: facdc8124f5f2304d87fd100bc97d870, type: 3}
   - {fileID: 8300000, guid: c6993f8a76aabef45afd35b392cc5e1d, type: 3}
   - {fileID: 8300000, guid: a3de8673cc220764e9635f197ede65fc, type: 3}
+  qs: {fileID: 1959242102}
+  ass: {fileID: 0}
 --- !u!82 &2082059208
 AudioSource:
   m_ObjectHideFlags: 0

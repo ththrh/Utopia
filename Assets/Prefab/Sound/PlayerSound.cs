@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerSound : MonoBehaviour
 {
     public List<AudioClip> audioClips = new List<AudioClip>();
+    public QSkill qs;
     AudioSource audio;
     Status stat;
     bool qCool = false;
     bool sCool = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class PlayerSound : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && !qCool)
             {
                 qCool = true;
-                StartCoroutine(qCooldown(3f));
+                StartCoroutine(qCooldown(qs.qCoolDown_1));
                 audio.clip = audioClips[0];
                 audio.Play();
             }
@@ -34,7 +36,7 @@ public class PlayerSound : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && !qCool)
             {
                 qCool = true;
-                StartCoroutine(qCooldown(3f));
+                StartCoroutine(qCooldown(qs.qCoolDown_2));
                 audio.clip = audioClips[1];
                 audio.Play();
             }
@@ -44,7 +46,7 @@ public class PlayerSound : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q) && !qCool)
             {
                 qCool = true;
-                StartCoroutine(qCooldown(3f));
+                StartCoroutine(qCooldown(qs.qCoolDown_3));
                 audio.clip = audioClips[2];
                 audio.Play();
             }
