@@ -10,7 +10,7 @@ public class destroyEx : MonoBehaviour
     {
         audio = GetComponent<AudioSource>();
         audio.Play();
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.66f);
     }
 
     // Update is called once per frame

@@ -14,10 +14,12 @@ public class PlayerBullet : MonoBehaviour
     public float shotTime;
     Status stat;
     bool isAttack = false;
+    int dir2;
 
     void Start()
     {
         stat = GetComponentInParent<Status>();
+        dir2 = GetComponentInParent<MOVE>().dir;
     }
 
     // Update is called once per frame
@@ -48,7 +50,24 @@ public class PlayerBullet : MonoBehaviour
             else if (stat.click_isactiveskill_3)
             {
                 stat.Mp -= 1;
-                Instantiate(UCB, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.AngleAxis(0, Vector3.forward));
+                dir2 = GetComponentInParent<MOVE>().dir;
+                switch (dir2)
+                {
+                    case 1:
+                        Instantiate(UCB, new Vector3(transform.position.x +0.45f, transform.position.y + 2.5f, transform.position.z), Quaternion.Euler(new Vector3(0, 0, 90f)));
+                        break;
+                    case 2:
+                        Instantiate(UCB, new Vector3(transform.position.x - 0.5f, transform.position.y -2.7f, transform.position.z), Quaternion.Euler(new Vector3(0, 0, -90f)));
+                        break;
+                    case 3:
+                        Instantiate(UCB, new Vector3(transform.position.x - 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(new Vector3(0, 0, 180f)));
+                        break;
+                    case 4:
+                        Instantiate(UCB, new Vector3(transform.position.x + 2.5f, transform.position.y, transform.position.z), Quaternion.Euler(new Vector3(0, 0, 0f)));
+                        break;
+                    default:
+                        break;
+                }
                 GetComponent<AudioSource>().Play();
             }
         }

@@ -24,7 +24,7 @@ public class MOVE : MonoBehaviour
     public bool isAttack = false;
     bool isDash = false;
     public float atktimer = 0.7f;
-    int dir = 2;
+    public int dir = 2;
     Rigidbody2D rigid;
     float h;
     float v;
@@ -64,7 +64,7 @@ public class MOVE : MonoBehaviour
         {
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
-            rigid.velocity = new Vector2(h, v) * Speed;
+            transform.Translate(new Vector3(h, v, 0) * Speed * Time.deltaTime) ;
         }
         else
         {
