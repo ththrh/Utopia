@@ -89,9 +89,9 @@ public class shift_skill : MonoBehaviour
         }
         else if (stat.shift_islearnskill_3)
         {
-            stat.shift_isactiveskill_1 = true;
+            stat.shift_isactiveskill_1 = false;
             stat.shift_isactiveskill_2 = false;
-            stat.shift_isactiveskill_3 = false;
+            stat.shift_isactiveskill_3 = true;
             stat.shift_isactiveskill_4 = false;
         }
 

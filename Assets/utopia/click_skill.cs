@@ -89,9 +89,9 @@ public class click_skill : MonoBehaviour
         }
         else if (stat.click_islearnskill_3)
         {
-            stat.click_isactiveskill_1 = true;
+            stat.click_isactiveskill_1 = false;
             stat.click_isactiveskill_2 = false;
-            stat.click_isactiveskill_3 = false;
+            stat.click_isactiveskill_3 = true;
             stat.click_isactiveskill_4 = false;
         }
         else
