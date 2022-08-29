@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : MonoBehaviour
 {
-    public float speed;
-    public float lineOfSite;
+
     private Transform player;
-    bool facingLeft = true;
+
     Animator anim;
 
     public MOVE Player;
@@ -32,40 +31,10 @@ public class EnemyFollowPlayer : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<MOVE>().isdarksight == false)
         {
             float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-            if (distanceFromPlayer < lineOfSite)
-            {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-                anim.SetBool("Running", true);
-            }
-            else
-            {
-                anim.SetBool("Running", false);
-            }
-
-            if (player.position.x > transform.position.x && facingLeft == true)
-            {
-                flip();
-            }
-            if (player.position.x < transform.position.x && facingLeft == false)
-            {
-                flip();
-            }
+          
         }
 
 
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, lineOfSite);
-    }
-
-
-    void flip()
-    {
-        facingLeft = !facingLeft;
-        transform.Rotate(0, 180, 0);
     }
 
 }

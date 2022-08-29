@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class EnemyFollowBite : MonoBehaviour
 {
-    public float speed;
-    public float lineOfSite;
     public float AttackRange;
     private Transform player;
     bool facingLeft = true;
@@ -33,24 +31,8 @@ public class EnemyFollowBite : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<MOVE>().isdarksight == false)
         {
             float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-            if (distanceFromPlayer < lineOfSite)
-            {
-                transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-                anim.SetBool("Running", true);
-            }
-            else
-            {
-                anim.SetBool("Running", false);
-            }
 
-            if (player.position.x > transform.position.x && facingLeft == true)
-            {
-                flip();
-            }
-            if (player.position.x < transform.position.x && facingLeft == false)
-            {
-                flip();
-            }
+            anim.SetBool("Running", true);
 
             if (distanceFromPlayer < AttackRange)
             {
@@ -65,14 +47,7 @@ public class EnemyFollowBite : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, lineOfSite);
         Gizmos.DrawWireSphere(transform.position, AttackRange);
     }
 
-
-    void flip()
-    {
-        facingLeft = !facingLeft;
-        transform.Rotate(0, 180, 0);
-    }
 }
