@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a9ba02ddcbedd4abf06dcfcd597ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   bulletSpriteRenderer: {fileID: 0}
   directionAngle: 0
   directionDegrees: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   ricochetChancePercent: 0
   canRichochet: 0
   useHitEffects: 0
-  bloodEffectTriggerTag: Enemy
+  bloodEffectTriggerTag: 
 --- !u!212 &21280232
 SpriteRenderer:
   m_ObjectHideFlags: 0
