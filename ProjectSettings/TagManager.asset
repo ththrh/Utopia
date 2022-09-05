@@ -11,6 +11,7 @@ TagManager:
   - Bug
   - MiniMap
   - PlayerAtk
+  - Teleporter
   layers:
   - Default
   - TransparentFX
