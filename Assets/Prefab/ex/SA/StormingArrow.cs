@@ -9,13 +9,15 @@ public class StormingArrow : MonoBehaviour
     [SerializeField] [Header("파동빈도")] [Range(1f, 40f)] float frequency = 5f;
     [SerializeField] [Header("파동높이")] [Range(0.2f, 4f)] float waveHeight = 5f;
     AudioSource audio;
-
+    
     Vector3 pos, localScale;
+    int atk;
     bool dirright = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        atk = GameObject.FindWithTag("Player").GetComponent<Status>().atk;
         audio = GetComponent<AudioSource>();
         pos = transform.position;
         localScale = transform.localScale;
@@ -35,6 +37,7 @@ public class StormingArrow : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            collision.gameObject.GetComponent<MonsterStatus>().HP -= (atk + 1) ;
             Debug.Log(1);
             transform.position = new Vector3(-124121, 123155, 0);
             Destroy(gameObject);

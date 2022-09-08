@@ -6,9 +6,12 @@ public class tang : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
+    int atk;
     // Start is called before the first frame update
     void Start()
     {
+
+        atk = GameObject.FindWithTag("Player").GetComponent<Status>().atk;
         transform.Rotate(0, 0, 90);
         Destroy(gameObject, lifeTime);
     }
@@ -20,6 +23,9 @@ public class tang : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<MonsterStatus>().HP -= (atk);
+        }
     }
 }

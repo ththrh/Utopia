@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+/*using UnityEngine;
 
 public enum BossState { MoveToAppearPoint = 0, Phase01,}
 
@@ -52,3 +52,4 @@ public class Boss : MonoBehaviour
         }
     }
 }
+*/
