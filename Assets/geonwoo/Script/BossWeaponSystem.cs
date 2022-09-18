@@ -1109,47 +1109,47 @@ public class BossWeaponSystem : MonoBehaviour
         // Handle switching weapons with scroll wheel
         
         
-            // Return if we don't have any configurations setup.
-            if (_weaponConfigs.Count <= 0) return;
+            // // Return if we don't have any configurations setup.
+            // if (_weaponConfigs.Count <= 0) return;
 
-            // Save our current weapon's used ammo property as well as magazine usage if applicable. We also store whether the weapon has been equipped for the first time or not
-            StoreCurrentWeaponIndexAmmoUsedValue();
-            StoreCurrentWeaponIndexMagazineUsage();
-            StoreFirstEquippedStatus();
+            // // Save our current weapon's used ammo property as well as magazine usage if applicable. We also store whether the weapon has been equipped for the first time or not
+            // StoreCurrentWeaponIndexAmmoUsedValue();
+            // StoreCurrentWeaponIndexMagazineUsage();
+            // StoreFirstEquippedStatus();
 
-            if (selectedWeaponIndex < maxWeaponIndex)
-            {
-                selectedWeaponIndex = (selectedWeaponIndex + 1);
-            }
-            else
-            {
-                // rollover to the first weapon index
-                selectedWeaponIndex = 0;
-            }
+            // if (selectedWeaponIndex < maxWeaponIndex)
+            // {
+            //     selectedWeaponIndex = (selectedWeaponIndex + 1);
+            // }
+            // else
+            // {
+            //     // rollover to the first weapon index
+            //     selectedWeaponIndex = 0;
+            // }
 
-            // Equip the selected weapon configuration
-            EquipWeaponConfiguration(selectedWeaponIndex);
+            // // Equip the selected weapon configuration
+            // EquipWeaponConfiguration(selectedWeaponIndex);
        
-            // Return if we don't have any configurations setup.
-            if (_weaponConfigs.Count <= 0) return;
+            // // Return if we don't have any configurations setup.
+            // if (_weaponConfigs.Count <= 0) return;
 
-            // Save our current weapon's used ammo property, as well as magazine usage if applicable. We also store whether the weapon has been equipped for the first time or not
-            StoreCurrentWeaponIndexAmmoUsedValue();
-            StoreCurrentWeaponIndexMagazineUsage();
-            StoreFirstEquippedStatus();
+            // // Save our current weapon's used ammo property, as well as magazine usage if applicable. We also store whether the weapon has been equipped for the first time or not
+            // StoreCurrentWeaponIndexAmmoUsedValue();
+            // StoreCurrentWeaponIndexMagazineUsage();
+            // StoreFirstEquippedStatus();
 
-            if (selectedWeaponIndex >= 1)
-            {
-                selectedWeaponIndex = (selectedWeaponIndex - 1);
-            }
-            else
-            {
-                // rollback to the last weapon index
-                selectedWeaponIndex = maxWeaponIndex;
-            }
+            // if (selectedWeaponIndex >= 1)
+            // {
+            //     selectedWeaponIndex = (selectedWeaponIndex - 1);
+            // }
+            // else
+            // {
+            //     // rollback to the last weapon index
+            //     selectedWeaponIndex = maxWeaponIndex;
+            // }
 
-            // Equip the selected weapon configuration
-            EquipWeaponConfiguration(selectedWeaponIndex);
+            // // Equip the selected weapon configuration
+            // EquipWeaponConfiguration(selectedWeaponIndex);
         
 
         var facingDirection = Vector2.zero;
@@ -1362,7 +1362,7 @@ public class BossWeaponSystem : MonoBehaviour
         StoreCurrentWeaponIndexAmmoUsedValue();
         StoreCurrentWeaponIndexMagazineUsage();
         StoreFirstEquippedStatus();
-        selectedWeaponIndex = 1;
+        selectedWeaponIndex = 0;
         EquipWeaponConfiguration(selectedWeaponIndex);
         yield return null;
     }

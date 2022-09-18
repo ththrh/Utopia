@@ -440,12 +440,12 @@ PrefabInstance:
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.75
+      value: -26.67
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -186.61
+      value: -272.08
       objectReference: {fileID: 0}
     - target: {fileID: 2663529367350407419, guid: e271195c00c0551449c7ddd69b542606,
         type: 3}
@@ -46735,6 +46735,121 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletOptionType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].autoFire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].autoFire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].weaponName
+      value: CircleShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].weaponName
+      value: Shower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].ShooterType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].bulletCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].ShooterType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].bulletCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].bulletSpread
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].isFirstEquip
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].bulletSpread
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].isFirstEquip
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].targetToTrack
+      value: 
+      objectReference: {fileID: 2078563460}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].bulletSpacing
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].targetToTrack
+      value: 
+      objectReference: {fileID: 2078563460}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].weaponFireRate
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].weaponFireRate
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].BulletOptionType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].BulletOptionType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].bulletRandomness
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871070120719414862, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].spreadPingPongSpeed
+      value: 21.8
       objectReference: {fileID: 0}
     - target: {fileID: 5292118462115792126, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
         type: 3}

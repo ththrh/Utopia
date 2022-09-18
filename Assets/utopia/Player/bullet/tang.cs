@@ -27,5 +27,6 @@ public class tang : MonoBehaviour
         {
             collision.gameObject.GetComponent<MonsterStatus>().HP -= (atk);
         }
+       
     }
 }

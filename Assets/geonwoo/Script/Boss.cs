@@ -8,7 +8,6 @@ public class Boss : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private float bossApperPoint = 2.5f;
     private BossState bossState = BossState.Phase01;
 
     private BossWeaponSystem bossWeapon;
