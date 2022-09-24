@@ -51,6 +51,7 @@ public class Weapon : MonoBehaviour
                     case 1:
                         anim.Play("sword_up");
                         rend.sortingOrder = 8;
+                        
                         break;
                     case 2:
                         anim.Play("sword_down");

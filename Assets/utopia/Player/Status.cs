@@ -103,12 +103,12 @@ public class Status : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") && !isDamage && !move.isshield)
+        if (collision.CompareTag("Enemy") && !isDamage && !move.isshield && !move.isDash)
         {
             isDamage = true;
             hp -= 1;
         }
-        if(collision.CompareTag("Bullet") && !isDamage && !move.isshield)
+        if(collision.CompareTag("Bullet") && !isDamage && !move.isshield && !move.isDash)
         {
             isDamage = true;
             hp -= 1;

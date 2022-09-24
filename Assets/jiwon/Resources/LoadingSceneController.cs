@@ -21,7 +21,7 @@ public  class LoadingSceneController : MonoBehaviour
                 }
                 else
                 {
-                    instance = Create();
+                    //instance = Create();
                 }
             }
             return  instance;

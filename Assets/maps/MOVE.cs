@@ -22,7 +22,7 @@ public class MOVE : MonoBehaviour
     public float timer = 0.5f;
 
     public bool isAttack = false;
-    bool isDash = false;
+    public bool isDash = false;
     public float atktimer = 0.7f;
     public int dir = 2;
     Rigidbody2D rigid;
