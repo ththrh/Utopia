@@ -99,15 +99,15 @@ GameObject:
   - component: {fileID: 2021244205677968320}
   - component: {fileID: 2024135338444751481}
   - component: {fileID: 2024135338444751480}
-  - component: {fileID: 996275923966584729}
   - component: {fileID: 7436150685926663726}
   - component: {fileID: 8183561544332545769}
   - component: {fileID: 6055798628934945633}
   - component: {fileID: 3935689861579502816}
   - component: {fileID: 5637015850819560783}
+  - component: {fileID: 8972856527695838478}
   m_Layer: 0
   m_Name: Bear
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,19 +306,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &996275923966584729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45514612601327825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 006dfa4e475661342b69d36ad0752eee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 3000
 --- !u!114 &7436150685926663726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +415,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee84e9fad328b04da723a747d9261f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossState: 1
+  bossState: 0
+--- !u!114 &8972856527695838478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45514612601327825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a373ddb004901d4f983495dafc2fe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 1000
 --- !u!1 &45514612667845023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1177,7 @@ MonoBehaviour:
     hitEffectEnabled: 0
     limitedAmmo: 0
     usesMagazines: 0
-    isFirstEquip: 0
+    isFirstEquip: 1
     mirrorX: 0
     bulletCountsAsAmmo: 0
     playReloadingSfx: 0

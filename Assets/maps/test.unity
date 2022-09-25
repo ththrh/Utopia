@@ -48766,6 +48766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear
       objectReference: {fileID: 0}
+    - target: {fileID: 45514612601327825, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 45514612601327827, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
         type: 3}
       propertyPath: m_RootOrder
@@ -48840,6 +48845,46 @@ PrefabInstance:
         type: 3}
       propertyPath: enableRotation
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327305098879259521, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].isFirstEquip
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327305098879259521, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].targetToTrack
+      value: 
+      objectReference: {fileID: 2078563460}
+    - target: {fileID: 8327305098879259521, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].targetToTrack
+      value: 
+      objectReference: {fileID: 2078563460}
+    - target: {fileID: 8327305098879259521, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].pingPongSpread
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327305098879259521, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].pingPongSpread
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327305098879259521, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[0].richochetsEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327305098879259521, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: _weaponConfigs.Array.data[1].richochetsEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972856527695838478, guid: 0dcce911224c48c4ea9c1c0446c3fbc4,
+        type: 3}
+      propertyPath: maxHP
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dcce911224c48c4ea9c1c0446c3fbc4, type: 3}

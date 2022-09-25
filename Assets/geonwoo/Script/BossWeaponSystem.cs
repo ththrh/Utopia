@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 /// The meat of the asset, the WeaponSystem component is used to hold weapon configurations, and bullet pattern setups as well as handling the logic for firing the bullets and setting bullet properties up based on the configuration.
 /// </summary>
 
-public enum AttackType {CircleFire = 0,}
+public enum AttackType {CircleFire = 0,Shower = 1}
 
 public class BossWeaponSystem : MonoBehaviour
 {
@@ -1363,6 +1363,16 @@ public class BossWeaponSystem : MonoBehaviour
         StoreCurrentWeaponIndexMagazineUsage();
         StoreFirstEquippedStatus();
         selectedWeaponIndex = 0;
+        EquipWeaponConfiguration(selectedWeaponIndex);
+        yield return null;
+    }
+
+    private IEnumerator Shower()
+    {
+        StoreCurrentWeaponIndexAmmoUsedValue();
+        StoreCurrentWeaponIndexMagazineUsage();
+        StoreFirstEquippedStatus();
+        selectedWeaponIndex = 1;
         EquipWeaponConfiguration(selectedWeaponIndex);
         yield return null;
     }

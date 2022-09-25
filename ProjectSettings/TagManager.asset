@@ -12,6 +12,7 @@ TagManager:
   - MiniMap
   - PlayerAtk
   - Teleporter
+  - Boss
   layers:
   - Default
   - TransparentFX
