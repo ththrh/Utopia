@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BossState { MoveToAppearPoint = 0, Phase01,}
+public enum BossState { Phase01}
 
 public class Boss : MonoBehaviour
 {

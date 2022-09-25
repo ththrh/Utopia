@@ -99,9 +99,12 @@ GameObject:
   - component: {fileID: 2021244205677968320}
   - component: {fileID: 2024135338444751481}
   - component: {fileID: 2024135338444751480}
-  - component: {fileID: 2024135338444751473}
-  - component: {fileID: 2024135338444751478}
   - component: {fileID: 996275923966584729}
+  - component: {fileID: 7436150685926663726}
+  - component: {fileID: 8183561544332545769}
+  - component: {fileID: 6055798628934945633}
+  - component: {fileID: 3935689861579502816}
+  - component: {fileID: 5637015850819560783}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Enemy
@@ -252,7 +255,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!212 &2024135338444751480
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -303,35 +306,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2024135338444751473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45514612601327825}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae2ee63c71347a449825f7923fce148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  canDash: 1
---- !u!114 &2024135338444751478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45514612601327825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00efd33c8fee284dbcf054b02d5f2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
-  lineOfSite: 6
-  AttackRange: 2
 --- !u!114 &996275923966584729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +319,116 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3000
+--- !u!114 &7436150685926663726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45514612601327825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &8183561544332545769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45514612601327825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+  radius: 4
+  height: 2
+  canMove: 1
+  maxSpeed: 2
+  gravity: {x: 0, y: 0, z: 0}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  repathRateCompatibility: NaN
+  canSearchCompability: 0
+  orientation: 1
+  enableRotation: 0
+  autoRepath:
+    mode: 2
+    interval: 0.5
+    sensitivity: 10
+    maximumInterval: 2
+    visualizeSensitivity: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: -2.5
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 0
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!114 &6055798628934945633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45514612601327825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 0}
+--- !u!114 &3935689861579502816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45514612601327825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fd487fd6edeb146919e093dc555efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: 8183561544332545769}
+--- !u!114 &5637015850819560783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45514612601327825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee84e9fad328b04da723a747d9261f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossState: 1
 --- !u!1 &45514612667845023
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +1029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4586131736465986295}
-  - component: {fileID: 2871070120719414862}
+  - component: {fileID: 8327305098879259521}
   m_Layer: 0
   m_Name: GunPoint
   m_TagString: Untagged
@@ -967,7 +1051,7 @@ Transform:
   m_Father: {fileID: 45514612601327827}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2871070120719414862
+--- !u!114 &8327305098879259521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -976,19 +1060,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2382966269638472638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828ea664ca0e6f84d8942fc020272dd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 83ae83f53c80c3f49b849bcaa129d24f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: 
   bulletSpread: 0
-  bulletSpreadPingPongMax: 3.4
-  bulletSpreadPingPongMin: 0.99
-  spreadPingPongSpeed: 1.15
-  bulletSpacing: 0.23
-  bulletCount: 5
-  bulletRandomness: 0.51
-  bulletSpeed: 5.2
-  weaponFireRate: 0.7
+  bulletSpreadPingPongMax: 0
+  bulletSpreadPingPongMin: 0
+  spreadPingPongSpeed: 1
+  bulletSpacing: 0
+  bulletCount: 0
+  bulletRandomness: 0
+  bulletSpeed: 0
+  weaponFireRate: 0
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0
@@ -1002,15 +1086,15 @@ MonoBehaviour:
   lerpTurnRate: 0
   bulletColour: {r: 1, g: 1, b: 1, a: 1}
   weaponIcon: {fileID: 0}
-  autoFire: 1
-  pingPongSpread: 1
+  autoFire: 0
+  pingPongSpread: 0
   circularFireMode: 0
   circularFireRotationRate: 240
-  richochetsEnabled: 1
+  richochetsEnabled: 0
   hitEffectEnabled: 0
   limitedAmmo: 0
   usesMagazines: 0
-  isFirstEquip: 1
+  isFirstEquip: 0
   playReloadingSfx: 0
   playEmptySfx: 0
   weaponRelativeToComponent: 0
@@ -1020,10 +1104,96 @@ MonoBehaviour:
   reloadSfxClip: {fileID: 0}
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
-  gunPoint: {fileID: 4586131736465986295}
-  bulletOptionType: 7
-  shooterDirectionType: 3
-  _weaponConfigs: []
+  gunPoint: {fileID: 0}
+  bulletOptionType: 0
+  shooterDirectionType: 0
+  _weaponConfigs:
+  - weaponName: Circle
+    bulletSpread: 5
+    bulletSpreadPingPongMax: 0
+    bulletSpreadPingPongMin: 0
+    spreadPingPongSpeed: 0
+    bulletSpacing: 0
+    bulletCount: 20
+    bulletRandomness: 0
+    bulletSpeed: 5
+    weaponFireRate: 0.19
+    weaponXOffset: 0
+    weaponYOffset: 0
+    ricochetChancePercent: 0
+    magazineChangeDelay: 0
+    bulletColour: {r: 0, g: 0, b: 0, a: 0}
+    weaponIcon: {fileID: 0}
+    magazineSize: 0
+    magazineRemainingBullets: 0
+    ammoAvailable: 0
+    ammoUsed: 0
+    autoFire: 1
+    pingPongSpread: 0
+    richochetsEnabled: 0
+    hitEffectEnabled: 0
+    limitedAmmo: 0
+    usesMagazines: 0
+    isFirstEquip: 1
+    mirrorX: 0
+    bulletCountsAsAmmo: 0
+    playReloadingSfx: 0
+    playEmptySfx: 0
+    weaponRelativeToComponent: 0
+    trackingTurnRate: 0
+    lerpTurnRate: 0
+    circularFireRotationRate: 0
+    circularFireMode: 0
+    targetToTrack: {fileID: 0}
+    reloadSfxClip: {fileID: 0}
+    emptySfxClip: {fileID: 0}
+    shotFiredClip: {fileID: 0}
+    gunPoint: {fileID: 4586131736465986295}
+    ShooterType: 3
+    BulletOptionType: 3
+  - weaponName: Shower
+    bulletSpread: 0.7
+    bulletSpreadPingPongMax: 0
+    bulletSpreadPingPongMin: 0
+    spreadPingPongSpeed: 0
+    bulletSpacing: 0.05
+    bulletCount: 9
+    bulletRandomness: 0.19
+    bulletSpeed: 21.8
+    weaponFireRate: 0.02
+    weaponXOffset: 0
+    weaponYOffset: 0
+    ricochetChancePercent: 0
+    magazineChangeDelay: 0
+    bulletColour: {r: 0, g: 0, b: 0, a: 0}
+    weaponIcon: {fileID: 0}
+    magazineSize: 0
+    magazineRemainingBullets: 0
+    ammoAvailable: 0
+    ammoUsed: 0
+    autoFire: 1
+    pingPongSpread: 0
+    richochetsEnabled: 0
+    hitEffectEnabled: 0
+    limitedAmmo: 0
+    usesMagazines: 0
+    isFirstEquip: 0
+    mirrorX: 0
+    bulletCountsAsAmmo: 0
+    playReloadingSfx: 0
+    playEmptySfx: 0
+    weaponRelativeToComponent: 0
+    trackingTurnRate: 0
+    lerpTurnRate: 0
+    circularFireRotationRate: 0
+    circularFireMode: 0
+    targetToTrack: {fileID: 0}
+    reloadSfxClip: {fileID: 0}
+    emptySfxClip: {fileID: 0}
+    shotFiredClip: {fileID: 0}
+    gunPoint: {fileID: 4586131736465986295}
+    ShooterType: 3
+    BulletOptionType: 4
 --- !u!1 &5292118462115792126
 GameObject:
   m_ObjectHideFlags: 0
