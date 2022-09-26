@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45514612597552732}
   - component: {fileID: 45514612597552733}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3935689861579502816}
   - component: {fileID: 5637015850819560783}
   - component: {fileID: 8972856527695838478}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bear
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -126,6 +126,7 @@ Transform:
   - {fileID: 45514612667845016}
   - {fileID: 327161935709468476}
   - {fileID: 4586131736465986295}
+  - {fileID: 8615335931130819970}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -415,7 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee84e9fad328b04da723a747d9261f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossState: 0
+  gunpoint1: {fileID: 2382966269638472638}
+  gunpoint2: {fileID: 7894621544350110425}
 --- !u!114 &8972856527695838478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,7 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45514612667845016}
   - component: {fileID: 45514612667845017}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45514613023355501}
   - component: {fileID: 45514613023355502}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegBackL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45514613132740737}
   - component: {fileID: 45514613132740738}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45514613445863875}
   - component: {fileID: 45514613445863884}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegBackR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,7 +777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45514613887228410}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45514614419022304}
   - component: {fileID: 45514614419022305}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegFrontL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45514614440103997}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45514614485584151}
   - component: {fileID: 45514614485584144}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegFrontR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +1001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9214660514162322940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,8 +1031,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4586131736465986295}
-  - component: {fileID: 8327305098879259521}
-  m_Layer: 0
+  - component: {fileID: 6595460344684940370}
+  m_Layer: 11
   m_Name: GunPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1053,7 @@ Transform:
   m_Father: {fileID: 45514612601327827}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8327305098879259521
+--- !u!114 &6595460344684940370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1060,19 +1062,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2382966269638472638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ae83f53c80c3f49b849bcaa129d24f, type: 3}
+  m_Script: {fileID: 11500000, guid: 828ea664ca0e6f84d8942fc020272dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: 
   bulletSpread: 0
-  bulletSpreadPingPongMax: 0
-  bulletSpreadPingPongMin: 0
-  spreadPingPongSpeed: 1
-  bulletSpacing: 0
-  bulletCount: 0
-  bulletRandomness: 0
-  bulletSpeed: 0
-  weaponFireRate: 0
+  bulletSpreadPingPongMax: 3.4
+  bulletSpreadPingPongMin: 0.99
+  spreadPingPongSpeed: 1.15
+  bulletSpacing: 0.23
+  bulletCount: 5
+  bulletRandomness: 0.51
+  bulletSpeed: 5.2
+  weaponFireRate: 0.7
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0
@@ -1086,15 +1088,15 @@ MonoBehaviour:
   lerpTurnRate: 0
   bulletColour: {r: 1, g: 1, b: 1, a: 1}
   weaponIcon: {fileID: 0}
-  autoFire: 0
-  pingPongSpread: 0
+  autoFire: 1
+  pingPongSpread: 1
   circularFireMode: 0
   circularFireRotationRate: 240
-  richochetsEnabled: 0
+  richochetsEnabled: 1
   hitEffectEnabled: 0
   limitedAmmo: 0
   usesMagazines: 0
-  isFirstEquip: 0
+  isFirstEquip: 1
   playReloadingSfx: 0
   playEmptySfx: 0
   weaponRelativeToComponent: 0
@@ -1104,96 +1106,10 @@ MonoBehaviour:
   reloadSfxClip: {fileID: 0}
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
-  gunPoint: {fileID: 0}
-  bulletOptionType: 0
-  shooterDirectionType: 0
-  _weaponConfigs:
-  - weaponName: Circle
-    bulletSpread: 5
-    bulletSpreadPingPongMax: 0
-    bulletSpreadPingPongMin: 0
-    spreadPingPongSpeed: 0
-    bulletSpacing: 0
-    bulletCount: 20
-    bulletRandomness: 0
-    bulletSpeed: 5
-    weaponFireRate: 0.19
-    weaponXOffset: 0
-    weaponYOffset: 0
-    ricochetChancePercent: 0
-    magazineChangeDelay: 0
-    bulletColour: {r: 0, g: 0, b: 0, a: 0}
-    weaponIcon: {fileID: 0}
-    magazineSize: 0
-    magazineRemainingBullets: 0
-    ammoAvailable: 0
-    ammoUsed: 0
-    autoFire: 1
-    pingPongSpread: 0
-    richochetsEnabled: 0
-    hitEffectEnabled: 0
-    limitedAmmo: 0
-    usesMagazines: 0
-    isFirstEquip: 1
-    mirrorX: 0
-    bulletCountsAsAmmo: 0
-    playReloadingSfx: 0
-    playEmptySfx: 0
-    weaponRelativeToComponent: 0
-    trackingTurnRate: 0
-    lerpTurnRate: 0
-    circularFireRotationRate: 0
-    circularFireMode: 0
-    targetToTrack: {fileID: 0}
-    reloadSfxClip: {fileID: 0}
-    emptySfxClip: {fileID: 0}
-    shotFiredClip: {fileID: 0}
-    gunPoint: {fileID: 4586131736465986295}
-    ShooterType: 3
-    BulletOptionType: 3
-  - weaponName: Shower
-    bulletSpread: 0.7
-    bulletSpreadPingPongMax: 0
-    bulletSpreadPingPongMin: 0
-    spreadPingPongSpeed: 0
-    bulletSpacing: 0.05
-    bulletCount: 9
-    bulletRandomness: 0.19
-    bulletSpeed: 21.8
-    weaponFireRate: 0.02
-    weaponXOffset: 0
-    weaponYOffset: 0
-    ricochetChancePercent: 0
-    magazineChangeDelay: 0
-    bulletColour: {r: 0, g: 0, b: 0, a: 0}
-    weaponIcon: {fileID: 0}
-    magazineSize: 0
-    magazineRemainingBullets: 0
-    ammoAvailable: 0
-    ammoUsed: 0
-    autoFire: 1
-    pingPongSpread: 0
-    richochetsEnabled: 0
-    hitEffectEnabled: 0
-    limitedAmmo: 0
-    usesMagazines: 0
-    isFirstEquip: 1
-    mirrorX: 0
-    bulletCountsAsAmmo: 0
-    playReloadingSfx: 0
-    playEmptySfx: 0
-    weaponRelativeToComponent: 0
-    trackingTurnRate: 0
-    lerpTurnRate: 0
-    circularFireRotationRate: 0
-    circularFireMode: 0
-    targetToTrack: {fileID: 0}
-    reloadSfxClip: {fileID: 0}
-    emptySfxClip: {fileID: 0}
-    shotFiredClip: {fileID: 0}
-    gunPoint: {fileID: 4586131736465986295}
-    ShooterType: 3
-    BulletOptionType: 4
+  gunPoint: {fileID: 4586131736465986295}
+  bulletOptionType: 3
+  shooterDirectionType: 3
+  _weaponConfigs: []
 --- !u!1 &5292118462115792126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327161935709468476}
   - component: {fileID: 3370787278157200847}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1275,3 +1191,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7894621544350110425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8615335931130819970}
+  - component: {fileID: 3904775595720509015}
+  m_Layer: 11
+  m_Name: GunPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8615335931130819970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894621544350110425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 45514612601327827}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3904775595720509015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894621544350110425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828ea664ca0e6f84d8942fc020272dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: 
+  bulletSpread: 0
+  bulletSpreadPingPongMax: 3.4
+  bulletSpreadPingPongMin: 0.99
+  spreadPingPongSpeed: 1.15
+  bulletSpacing: 0.23
+  bulletCount: 5
+  bulletRandomness: 0.51
+  bulletSpeed: 5.2
+  weaponFireRate: 0.7
+  weaponXOffset: 0
+  weaponYOffset: 0
+  ricochetChancePercent: 0
+  magazineChangeDelay: 0
+  magazineSize: 0
+  startingAmmo: 0
+  ammoUsed: 0
+  magazineRemainingBullets: 0
+  targetToTrack: {fileID: 0}
+  trackingTurnRate: 0
+  lerpTurnRate: 0
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 0}
+  autoFire: 1
+  pingPongSpread: 1
+  circularFireMode: 0
+  circularFireRotationRate: 240
+  richochetsEnabled: 1
+  hitEffectEnabled: 0
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 1
+  playReloadingSfx: 0
+  playEmptySfx: 0
+  weaponRelativeToComponent: 0
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  aimAngle: 0
+  reloadSfxClip: {fileID: 0}
+  emptySfxClip: {fileID: 0}
+  shotFiredClip: {fileID: 0}
+  gunPoint: {fileID: 8615335931130819970}
+  bulletOptionType: 4
+  shooterDirectionType: 3
+  _weaponConfigs: []

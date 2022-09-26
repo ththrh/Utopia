@@ -1346,38 +1346,5 @@ public class BossWeaponSystem : MonoBehaviour
         }
     }
 
-    public void StartFiring(AttackType attackType)
-    {
-        StartCoroutine(attackType.ToString());
-    }
-
-
-    public void StopFiring(AttackType attackType)
-    {
-        StopCoroutine(attackType.ToString());
-    }
-
-    private IEnumerator CircleFire()
-    {
-        StoreCurrentWeaponIndexAmmoUsedValue();
-        StoreCurrentWeaponIndexMagazineUsage();
-        StoreFirstEquippedStatus();
-        selectedWeaponIndex = 0;
-        EquipWeaponConfiguration(selectedWeaponIndex);
-        yield return null;
-    }
-
-    private IEnumerator Shower()
-    {
-        StoreCurrentWeaponIndexAmmoUsedValue();
-        StoreCurrentWeaponIndexMagazineUsage();
-        StoreFirstEquippedStatus();
-        selectedWeaponIndex = 1;
-        EquipWeaponConfiguration(selectedWeaponIndex);
-        yield return null;
-    }
-
-
-
 
 }
