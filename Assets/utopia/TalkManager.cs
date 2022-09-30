@@ -49,9 +49,7 @@ public class TalkManager : MonoBehaviour
 
         talkData.Add(50 + 200, new string[] { "거대한 마법을 쓰는 곰이 나타났다는 소식이야","녀석을 헤치우지 못하면 우리 마을으 끝장일세","염치없지만...처리를 부탁해도 되겠나?" });
         talkData.Add(51 + 200, new string[] { "신이시여 우리 마을을 구원하소서..."});
-        talkData.Add(52 + 200, new string[] { "정말인가?","정말 대단하군! 우리 마을은 자네를 영웅으로 기억할 것이야!" });
-
-
+        talkData.Add(52 + 200, new string[] { "정말인가?","정말 대단하군! 우리 마을은 자네를 영웅으로 기억할 것이야!", "유토피아 섬의 이야기는 현재 여기까지 입니다.", "다음 이야기는 추후 공개될 예정입니다." });
     }
 
     public string GetTalk(int id, int talkIndex)  //토크의 순서 index

@@ -123,15 +123,15 @@ public class QuestManager : MonoBehaviour
                 Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint+1;
                 break;
             case 30:
-                Debug.Log("보상1");
+                Debug.Log("보상2");
                 Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint + 1;
                 break;
             case 40:
-                Debug.Log("보상1");
+                Debug.Log("보상3");
                 Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint + 1;
                 break;
             case 50:
-                Debug.Log("보상1");
+                Debug.Log("보상4");
                 Player.GetComponent<Status>().SkillPoint = Player.GetComponent<Status>().SkillPoint + 1;
                 break;
 
