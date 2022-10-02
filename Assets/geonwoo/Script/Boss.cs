@@ -11,6 +11,9 @@ public class Boss : MonoBehaviour
     private GameObject gunpoint1;
     [SerializeField]
     private GameObject gunpoint2;
+    [SerializeField]
+    private GameObject gunpoint3;
+
 
     private void Awake() 
     {
@@ -28,6 +31,11 @@ public class Boss : MonoBehaviour
         {
             gunpoint1.SetActive(false);
             gunpoint2.SetActive(true);
+        }
+        if(bossHP.CurrentHP<= bossHP.MaxHP * 0.3f)
+        {
+            gunpoint2.SetActive(false);
+            gunpoint3.SetActive(true);
         }
 
     }
