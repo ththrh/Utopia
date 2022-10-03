@@ -50088,6 +50088,21 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1274435952}
+    - target: {fileID: 3715729970641219107, guid: b92d2443f6c7bf1458a868f82167d00c,
+        type: 3}
+      propertyPath: Mp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715729970641219107, guid: b92d2443f6c7bf1458a868f82167d00c,
+        type: 3}
+      propertyPath: dash
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715729970641219107, guid: b92d2443f6c7bf1458a868f82167d00c,
+        type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3715729970641219109, guid: b92d2443f6c7bf1458a868f82167d00c,
         type: 3}
       propertyPath: m_Name

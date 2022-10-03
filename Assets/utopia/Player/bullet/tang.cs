@@ -26,9 +26,11 @@ public class tang : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<MonsterStatus>().HP -= (atk);
+            Destroy(gameObject);
         }
         else if(collision.gameObject.CompareTag("Boss")){
             collision.gameObject.GetComponent<BossHP>().TakeDamage(atk);
+            Destroy(gameObject);
         }
     }
 }

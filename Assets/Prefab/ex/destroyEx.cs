@@ -13,7 +13,10 @@ public class destroyEx : MonoBehaviour
     {
         atk = GameObject.FindWithTag("Player").GetComponent<Status>().atk;
         audio = GetComponent<AudioSource>();
-        audio.Play();
+        if(audio != null)
+        {
+            audio.Play();
+        }
         Destroy(gameObject, lifetime);
     }
 
