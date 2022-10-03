@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossHP : MonoBehaviour
+public class EnemyHP : MonoBehaviour
 {
 
 
     [SerializeField]
     private float maxHP = 1000;
     private float currentHP;
+    public float deathDelay = 0f;
+    Animator anim;
     private SpriteRenderer spriteRenderer;
+    public GameObject EnemyDestroyEffect;
 
     public float MaxHP => maxHP;
     public float CurrentHP => currentHP;
@@ -17,6 +20,7 @@ public class BossHP : MonoBehaviour
     private void Awake(){
         currentHP = maxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     public void TakeDamage(float damage)
@@ -26,7 +30,10 @@ public class BossHP : MonoBehaviour
         StartCoroutine("HitColorAnimation");
         if(currentHP<=0)
         {
-            Destroy(gameObject);
+            GameObject.Find("QuestManager").GetComponent<QuestManager>().temp_death_count += 1;
+            Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
+          
+            Destroy(gameObject, deathDelay);
         }
     }
 

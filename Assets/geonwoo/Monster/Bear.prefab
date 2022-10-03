@@ -433,6 +433,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 1000
+  deathDelay: 0
+  EnemyDestroyEffect: {fileID: 0}
 --- !u!1 &45514612667845023
 GameObject:
   m_ObjectHideFlags: 0

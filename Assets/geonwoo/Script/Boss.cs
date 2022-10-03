@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     // Start is called before the first frame update
-    private BossHP bossHP;
+    private EnemyHP enemyHP;
 
     [SerializeField]
     private GameObject gunpoint1;
@@ -17,7 +17,7 @@ public class Boss : MonoBehaviour
 
     private void Awake() 
     {
-        bossHP = GetComponent<BossHP>();
+        enemyHP = GetComponent<EnemyHP>();
     }
 
     private void Start()
@@ -27,12 +27,12 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
-        if(bossHP.CurrentHP<= bossHP.MaxHP * 0.7f)
+        if(enemyHP.CurrentHP<= enemyHP.MaxHP * 0.7f)
         {
             gunpoint1.SetActive(false);
             gunpoint2.SetActive(true);
         }
-        if(bossHP.CurrentHP<= bossHP.MaxHP * 0.3f)
+        if(enemyHP.CurrentHP<= enemyHP.MaxHP * 0.3f)
         {
             gunpoint2.SetActive(false);
             gunpoint3.SetActive(true);
