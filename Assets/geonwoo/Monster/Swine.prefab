@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4751279006544236510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5188296252675528009}
   - component: {fileID: 7824586694190685200}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegBackR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4114409119976487192}
   - component: {fileID: 3311920337469914057}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegFrontR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6283127603490882858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3672801089004039264}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BulletParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6653015265083054584}
   - component: {fileID: 4724739324425675031}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegBackL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4724739324604291829}
   - component: {fileID: 4724739324604291828}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,8 @@ GameObject:
   - component: {fileID: 4724739324867625556}
   - component: {fileID: 4724739324867625555}
   - component: {fileID: 7704066268104271300}
-  m_Layer: 0
+  - component: {fileID: 557790307140007039}
+  m_Layer: 11
   m_Name: Swine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,6 +562,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 1.4999999}
   m_Size: {x: 5, y: 4}
   m_Direction: 1
+--- !u!114 &557790307140007039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724739324867625558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c567c26c5060748ba37e4c1ff7e624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodPos: []
+  speed: 5
 --- !u!1 &4724739325560570953
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4172974627792912311}
   - component: {fileID: 4724739325560570935}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7495390382663870128}
   - component: {fileID: 4724739325615091192}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LegFrontL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1267792920384654188}
   - component: {fileID: 4724739325863285883}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3913119900335470214}
   - component: {fileID: 1802916543343678704}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GunPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +881,7 @@ MonoBehaviour:
   bulletCount: 1
   bulletRandomness: 0
   bulletSpeed: 4.4
-  weaponFireRate: 0.84
+  weaponFireRate: 0.11
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0
@@ -911,7 +926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1244930828212979671}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AnchorBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
