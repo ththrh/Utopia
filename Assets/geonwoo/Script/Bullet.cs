@@ -137,6 +137,7 @@ public class Bullet : MonoBehaviour
         {
             // If the bullet cannot ricochet, then disable it to send it back to the bullet object pool.
             gameObject.SetActive(false);
+            
         }
 
         //if (useHitEffects)
@@ -166,6 +167,11 @@ public class Bullet : MonoBehaviour
         //    }
         //}
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        gameObject.SetActive(false);
+    }
+
 
     // Update is called once per frame
     void Update()
