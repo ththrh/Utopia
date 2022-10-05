@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Status : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Status : MonoBehaviour
     float timer;
     SpriteRenderer rend;
     MOVE move;
+    Vector2 deadPos;
     float StaminaRestore = 5.0f;
 
     public int SkillPoint;
@@ -53,7 +55,7 @@ public class Status : MonoBehaviour
     public bool q_isactiveskill_3;
     public bool q_isactiveskill_4;
 
-
+    public Image youdie;
 
 
 
@@ -100,6 +102,11 @@ public class Status : MonoBehaviour
                 }
             }
         }
+        if (hp <= 0)
+        {
+            hp = MaxHp;
+            StartCoroutine("youDie");
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -114,7 +121,10 @@ public class Status : MonoBehaviour
             hp -= 1;
             StartCoroutine(UnBeatTime());
         }
-
+        if (collision.CompareTag("Teleporter"))
+        {
+            deadPos = transform.position;
+        }
     }
 
     IEnumerator UnBeatTime()
@@ -135,6 +145,16 @@ public class Status : MonoBehaviour
         }
         rend.color = new Color32(255, 255, 255, 255);
         yield return null;
+    }
+
+    IEnumerator youDie()
+    {
+        youdie.enabled = true;
+        transform.position = deadPos;
+        Time.timeScale = 0;
+        yield return new WaitForSeconds(3f);
+        Time.timeScale = 1;
+        youdie.enabled = false;
     }
 
     private void Cheat()

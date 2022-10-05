@@ -6,11 +6,15 @@ using UnityEngine.UI;
 
 public class SceneMove : MonoBehaviour
 {
-    public int SceneCode;
+    public static int nextScene;
+
+    [SerializeField]
+    Image progressBar;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+                
     }
 
     // Update is called once per frame
@@ -20,6 +24,8 @@ public class SceneMove : MonoBehaviour
     }
     public void SceneChange()
     {
-        SceneManager.LoadScene("test");
+        LoadingSceneManager.LoadScene(2);
     }
+
+
 }
