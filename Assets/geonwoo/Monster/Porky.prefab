@@ -304,8 +304,8 @@ MonoBehaviour:
   bulletSpacing: 0.5
   bulletCount: 4
   bulletRandomness: 0.65
-  bulletSpeed: 7
-  weaponFireRate: 0.5
+  bulletSpeed: 2.5
+  weaponFireRate: 1.5
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0
@@ -360,6 +360,8 @@ GameObject:
   - component: {fileID: -7988644465518877668}
   - component: {fileID: 2864552833095747703}
   - component: {fileID: -8475361220764433863}
+  - component: {fileID: -8609513282873285659}
+  - component: {fileID: 7230702903769562918}
   m_Layer: 11
   m_Name: Porky
   m_TagString: Enemy
@@ -579,13 +581,50 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 2
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 6
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+--- !u!114 &-8609513282873285659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839321117785989668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39e5aa0a5f0b684daf056f4461aa14f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 3
+  deathDelay: 0
+  EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
+    type: 3}
+--- !u!50 &7230702903769562918
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839321117785989668}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &7839321117929095515
 GameObject:
   m_ObjectHideFlags: 0

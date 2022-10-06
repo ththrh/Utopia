@@ -49,10 +49,10 @@ MonoBehaviour:
   bulletSpreadPingPongMin: 0.23
   spreadPingPongSpeed: 1.144
   bulletSpacing: 0.37
-  bulletCount: 16
+  bulletCount: 8
   bulletRandomness: 0
-  bulletSpeed: 5
-  weaponFireRate: 0.284
+  bulletSpeed: 2.5
+  weaponFireRate: 1.5
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0

@@ -363,7 +363,7 @@ public class ObjectPoolManager : MonoBehaviour
 
     public GameObject GetUsableBeam5Bullet()
     {
-        var obj = (from item in beam4Pool
+        var obj = (from item in beam5Pool
                    where item.activeSelf == false
                    select item).FirstOrDefault();
 
@@ -387,7 +387,7 @@ public class ObjectPoolManager : MonoBehaviour
 
     public GameObject GetUsableBeam6Bullet()
     {
-        var obj = (from item in beam4Pool
+        var obj = (from item in beam6Pool
                    where item.activeSelf == false
                    select item).FirstOrDefault();
 
