@@ -848,9 +848,9 @@ MonoBehaviour:
   bulletSpreadPingPongMin: 0
   spreadPingPongSpeed: 1.15
   bulletSpacing: 0.5
-  bulletCount: 4
+  bulletCount: 3
   bulletRandomness: 0.65
-  bulletSpeed: 7
+  bulletSpeed: 6
   weaponFireRate: 0.5
   weaponXOffset: 0
   weaponYOffset: 0
@@ -1038,7 +1038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8670744872243667100}
-  - component: {fileID: 3385303291988887964}
+  - component: {fileID: 3474226999548223880}
   m_Layer: 11
   m_Name: GunPoint
   m_TagString: Untagged
@@ -1060,7 +1060,7 @@ Transform:
   m_Father: {fileID: 3881950433012995593}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3385303291988887964
+--- !u!114 &3474226999548223880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1073,15 +1073,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: 
-  bulletSpread: 0
-  bulletSpreadPingPongMax: 3.4
-  bulletSpreadPingPongMin: 0.99
-  spreadPingPongSpeed: 1.15
-  bulletSpacing: 0.23
-  bulletCount: 5
-  bulletRandomness: 0.51
-  bulletSpeed: 5.2
-  weaponFireRate: 0.7
+  bulletSpread: 5
+  bulletSpreadPingPongMax: 1.53
+  bulletSpreadPingPongMin: 0.23
+  spreadPingPongSpeed: 1.144
+  bulletSpacing: 0.37
+  bulletCount: 12
+  bulletRandomness: 0
+  bulletSpeed: 4
+  weaponFireRate: 1.5
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0
@@ -1096,10 +1096,10 @@ MonoBehaviour:
   bulletColour: {r: 1, g: 1, b: 1, a: 1}
   weaponIcon: {fileID: 0}
   autoFire: 1
-  pingPongSpread: 1
+  pingPongSpread: 0
   circularFireMode: 0
   circularFireRotationRate: 240
-  richochetsEnabled: 1
+  richochetsEnabled: 0
   hitEffectEnabled: 0
   limitedAmmo: 0
   usesMagazines: 0
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 8670744872243667100}
-  bulletOptionType: 3
+  bulletOptionType: 4
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &7100097932223908314
@@ -1247,10 +1247,10 @@ MonoBehaviour:
   bulletSpreadPingPongMin: 0
   spreadPingPongSpeed: 2.5
   bulletSpacing: 0.08
-  bulletCount: 4
-  bulletRandomness: 0.08
-  bulletSpeed: 5
-  weaponFireRate: 0.21
+  bulletCount: 1
+  bulletRandomness: 0
+  bulletSpeed: 6
+  weaponFireRate: 0.5
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0

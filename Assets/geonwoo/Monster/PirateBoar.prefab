@@ -401,7 +401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064979439223084170}
-  - component: {fileID: 2730274790415680856}
+  - component: {fileID: 6751902079663824353}
   m_Layer: 11
   m_Name: GunPoint2
   m_TagString: Untagged
@@ -423,7 +423,7 @@ Transform:
   m_Father: {fileID: 5805405802375325909}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2730274790415680856
+--- !u!114 &6751902079663824353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -441,9 +441,9 @@ MonoBehaviour:
   bulletSpreadPingPongMin: 0
   spreadPingPongSpeed: 1.15
   bulletSpacing: 0.5
-  bulletCount: 4
+  bulletCount: 3
   bulletRandomness: 0.65
-  bulletSpeed: 7
+  bulletSpeed: 6
   weaponFireRate: 0.5
   weaponXOffset: 0
   weaponYOffset: 0
@@ -653,7 +653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920416501767093687}
-  - component: {fileID: 3703649125235023086}
+  - component: {fileID: 7388780574998712210}
   m_Layer: 11
   m_Name: GunPoint
   m_TagString: Untagged
@@ -675,7 +675,7 @@ Transform:
   m_Father: {fileID: 5805405802375325909}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3703649125235023086
+--- !u!114 &7388780574998712210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -688,15 +688,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: 
-  bulletSpread: 0
-  bulletSpreadPingPongMax: 3.4
-  bulletSpreadPingPongMin: 0.99
-  spreadPingPongSpeed: 1.15
-  bulletSpacing: 0.23
-  bulletCount: 5
-  bulletRandomness: 0.51
-  bulletSpeed: 5.2
-  weaponFireRate: 0.7
+  bulletSpread: 5
+  bulletSpreadPingPongMax: 1.53
+  bulletSpreadPingPongMin: 0.23
+  spreadPingPongSpeed: 1.144
+  bulletSpacing: 0.37
+  bulletCount: 12
+  bulletRandomness: 0
+  bulletSpeed: 2.5
+  weaponFireRate: 1.5
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0
@@ -711,10 +711,10 @@ MonoBehaviour:
   bulletColour: {r: 1, g: 1, b: 1, a: 1}
   weaponIcon: {fileID: 0}
   autoFire: 1
-  pingPongSpread: 1
+  pingPongSpread: 0
   circularFireMode: 0
   circularFireRotationRate: 240
-  richochetsEnabled: 1
+  richochetsEnabled: 0
   hitEffectEnabled: 0
   limitedAmmo: 0
   usesMagazines: 0
@@ -729,7 +729,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 920416501767093687}
-  bulletOptionType: 3
+  bulletOptionType: 4
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &5308805512870307908
@@ -1660,7 +1660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185456739888336931}
-  - component: {fileID: 8515718265085616547}
+  - component: {fileID: 5697972265380581161}
   m_Layer: 11
   m_Name: GunPoint3
   m_TagString: Untagged
@@ -1682,7 +1682,7 @@ Transform:
   m_Father: {fileID: 5805405802375325909}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8515718265085616547
+--- !u!114 &5697972265380581161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1700,10 +1700,10 @@ MonoBehaviour:
   bulletSpreadPingPongMin: 0
   spreadPingPongSpeed: 2.5
   bulletSpacing: 0.08
-  bulletCount: 4
-  bulletRandomness: 0.08
-  bulletSpeed: 5
-  weaponFireRate: 0.21
+  bulletCount: 1
+  bulletRandomness: 0
+  bulletSpeed: 6
+  weaponFireRate: 0.5
   weaponXOffset: 0
   weaponYOffset: 0
   ricochetChancePercent: 0
