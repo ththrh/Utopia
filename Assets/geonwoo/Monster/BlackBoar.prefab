@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 6188664869550795786}
   - component: {fileID: 4584823159329540404}
   - component: {fileID: 3436035485438162126}
+  - component: {fileID: 4917088591164632188}
   m_Layer: 11
   m_Name: BlackBoar
   m_TagString: Enemy
@@ -748,6 +749,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 6188664869550795786}
+--- !u!114 &4917088591164632188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689267095715888146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a373ddb004901d4f983495dafc2fe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  deathDelay: 0
+  EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
+    type: 3}
 --- !u!1 &3340400714138080486
 GameObject:
   m_ObjectHideFlags: 0

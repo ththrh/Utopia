@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 4724739324867625556}
   - component: {fileID: 4724739324867625555}
   - component: {fileID: 7704066268104271300}
-  - component: {fileID: 557790307140007039}
+  - component: {fileID: 2476431969205638569}
   m_Layer: 11
   m_Name: Swine
   m_TagString: Untagged
@@ -562,7 +562,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 1.4999999}
   m_Size: {x: 5, y: 4}
   m_Direction: 1
---- !u!114 &557790307140007039
+--- !u!114 &2476431969205638569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -571,11 +571,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4724739324867625558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81c567c26c5060748ba37e4c1ff7e624, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a373ddb004901d4f983495dafc2fe3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPos: []
-  speed: 5
+  maxHP: 10
+  deathDelay: 0
+  EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
+    type: 3}
 --- !u!1 &4724739325560570953
 GameObject:
   m_ObjectHideFlags: 0
