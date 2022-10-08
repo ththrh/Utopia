@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 2476431969205638569}
   m_Layer: 11
   m_Name: Swine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -882,7 +882,7 @@ MonoBehaviour:
   bulletSpacing: 0.23
   bulletCount: 1
   bulletRandomness: 0
-  bulletSpeed: 4.4
+  bulletSpeed: 2
   weaponFireRate: 0.11
   weaponXOffset: 0
   weaponYOffset: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 3913119900335470214}
-  bulletOptionType: 7
+  bulletOptionType: 5
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &5375305152883206818

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Boss : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -22,22 +23,41 @@ public class Boss : MonoBehaviour
 
     private void Start()
     {
-        
+        StartCoroutine("attackPattern");
     }
 
     private void Update()
     {
-        if(enemyHP.CurrentHP<= enemyHP.MaxHP * 0.7f)
-        {
-            gunpoint1.SetActive(false);
-            gunpoint2.SetActive(true);
-        }
-        if(enemyHP.CurrentHP<= enemyHP.MaxHP * 0.3f)
-        {
-            gunpoint2.SetActive(false);
-            gunpoint3.SetActive(true);
-        }
 
+
+    }
+
+    IEnumerator  attackPattern()
+    {
+        while(true)
+        {
+            int result = Random.Range(1,4);
+            if(result == 1)
+            {
+                gunpoint1.SetActive(true);
+                gunpoint2.SetActive(false);
+                gunpoint3.SetActive(false);
+            }
+            else if(result == 2)
+            {
+                gunpoint1.SetActive(false);
+                gunpoint2.SetActive(true);
+                gunpoint3.SetActive(false);
+            }
+            else if(result == 3)
+            {
+                gunpoint1.SetActive(false);
+                gunpoint2.SetActive(false);
+                gunpoint3.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(3.0f);
+        }
     }
     
     

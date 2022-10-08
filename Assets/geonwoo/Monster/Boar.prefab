@@ -442,7 +442,7 @@ MonoBehaviour:
   foodPos:
   - {fileID: 0}
   - {fileID: 0}
-  speed: 5
+  speed: 2
 --- !u!114 &-5520382339604285262
 MonoBehaviour:
   m_ObjectHideFlags: 0

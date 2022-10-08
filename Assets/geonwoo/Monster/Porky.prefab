@@ -301,7 +301,7 @@ MonoBehaviour:
   bulletSpreadPingPongMax: 0
   bulletSpreadPingPongMin: 0
   spreadPingPongSpeed: 1.15
-  bulletSpacing: 0.5
+  bulletSpacing: 2.7
   bulletCount: 4
   bulletRandomness: 0.65
   bulletSpeed: 2.5
