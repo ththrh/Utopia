@@ -267,12 +267,14 @@ public class MOVE : MonoBehaviour
     }
 
 
-
+    
 
     void FixedUpdate()
     {
-        Debug.DrawRay(rigid.position, dirVec * 1f, new Color(0,1,0));
-        RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, dirVec, 1f,LayerMask.GetMask("obj" ));
+        
+        Vector2 NEWV = new Vector2(rigid.position.x, rigid.position.y + 0.5f);
+        Debug.DrawRay(NEWV, dirVec * 1f, new Color(0, 1, 0));
+        RaycastHit2D rayHit = Physics2D.Raycast(NEWV, dirVec, 1f,LayerMask.GetMask("obj" ));
 
         if (rayHit.collider != null)
         {
