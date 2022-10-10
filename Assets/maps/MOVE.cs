@@ -115,7 +115,7 @@ public class MOVE : MonoBehaviour
             isDash = false;
         }
 
-        if ((Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) && !manager.isAction)
+        if ((Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) && !manager.isAction && !isAttack)
         {
             isAttack = true;
         }

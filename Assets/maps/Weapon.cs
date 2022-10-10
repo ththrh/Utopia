@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public int dir=2;
     public float timer = 0.5f;
+    public float atkTimer = 1f;
     public bool isHead;
     SpriteRenderer rend;
     Animator anim;
@@ -42,8 +43,9 @@ public class Weapon : MonoBehaviour
                 dir = 2;
                 rend.flipX = false;
             }
-            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+            if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && atkTimer == 1f)
             {
+                atkTimer -= Time.deltaTime;
                 timer = 0.5f;
                 rend.color = new Color(0.75f, 0.75f, 0.75f, 1f);
                 switch (dir)
@@ -68,7 +70,14 @@ public class Weapon : MonoBehaviour
             {
                 rend.color = new Color(0.75f, 0.75f, 0.75f, 0f);
             }
-
+            if(atkTimer !=1)
+            {
+                atkTimer -= Time.deltaTime;
+            }
+            if (atkTimer < 0)
+            {
+                atkTimer = 1f;
+            }
         }
         else
         {
@@ -80,9 +89,10 @@ public class Weapon : MonoBehaviour
             {
                 dir = 2;
             }
-            if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(1))
+            if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(1)) && atkTimer == 1f)
             {
                 timer = 0.5f;
+                atkTimer -= Time.deltaTime;
                 if (dir == 2)
                 {
                     rend.color = new Color(1f, 1f, 1f, 1f);
@@ -92,6 +102,14 @@ public class Weapon : MonoBehaviour
             if (timer <= 0)
             {
                 rend.color = new Color(0.75f, 0.75f, 0.75f, 0f);
+            }
+            if(atkTimer !=1)
+            {
+                atkTimer -= Time.deltaTime;
+            }
+            if (atkTimer < 0)
+            {
+                atkTimer = 1f;
             }
         }
 

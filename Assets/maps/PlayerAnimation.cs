@@ -6,6 +6,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     Animator anim;
     SpriteRenderer rend;
+    float atkTimer = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -57,8 +58,10 @@ public class PlayerAnimation : MonoBehaviour
         }
 
         //Attack Animation
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) && atkTimer == 1)
         {
+            atkTimer -= Time.deltaTime;
+            Debug.Log("bow animation");
             switch (anim.GetInteger("Dir"))
             {
                 case 0:
@@ -71,6 +74,14 @@ public class PlayerAnimation : MonoBehaviour
                     anim.Play("sword_up");
                     break;
             }
+        }
+        if(atkTimer != 1)
+        {
+            atkTimer -= Time.deltaTime;
+        }
+        if(atkTimer < 0)
+        {
+            atkTimer = 1f;
         }
     }
 }

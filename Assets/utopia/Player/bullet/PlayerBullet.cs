@@ -34,8 +34,9 @@ public class PlayerBullet : MonoBehaviour
         {
             if (stat.click_isactiveskill_1)
             {
-                if (Time.time >= shotTime)
+                if (shotTime == 1)
                 {
+                    shotTime -= Time.deltaTime;
                     stat.Mp -= 1;
                     Instantiate(bullet, transform.position, Quaternion.AngleAxis(angle - 90, Vector3.forward));
                     GetComponent<AudioSource>().Play();
@@ -88,11 +89,21 @@ public class PlayerBullet : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (Time.time >= shotTime)
+            if (shotTime == 1)
             {
+                Debug.Log(shotTime);
+                shotTime -= Time.deltaTime;
                 Instantiate(arrow, transform.position, Quaternion.AngleAxis(angle-90, Vector3.forward));
                 GetComponent<AudioSource>().Play();
             }
+        }
+        if(shotTime != 1)
+        {
+            shotTime -= Time.deltaTime;
+        }
+        if(shotTime < 0)
+        {
+            shotTime = 1;
         }
     }
 
