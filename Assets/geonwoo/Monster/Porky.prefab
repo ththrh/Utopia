@@ -360,8 +360,8 @@ GameObject:
   - component: {fileID: -7988644465518877668}
   - component: {fileID: 2864552833095747703}
   - component: {fileID: -8475361220764433863}
-  - component: {fileID: -8609513282873285659}
   - component: {fileID: 7230702903769562918}
+  - component: {fileID: -8680241912068025557}
   m_Layer: 11
   m_Name: Porky
   m_TagString: Enemy
@@ -588,22 +588,6 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &-8609513282873285659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7839321117785989668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c39e5aa0a5f0b684daf056f4461aa14f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 3
-  deathDelay: 0
-  EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
-    type: 3}
 --- !u!50 &7230702903769562918
 Rigidbody2D:
   serializedVersion: 4
@@ -625,6 +609,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-8680241912068025557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839321117785989668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a373ddb004901d4f983495dafc2fe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 1000
+  deathDelay: 0
+  EnemyDestroyEffect: {fileID: 0}
 --- !u!1 &7839321117929095515
 GameObject:
   m_ObjectHideFlags: 0

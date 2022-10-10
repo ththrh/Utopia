@@ -18,11 +18,28 @@ public class QuestManager : MonoBehaviour
 
     GameObject Player;
 
+    bool ST1C = false;
+    bool ST2C = false;
+    bool ST3C = false;
+    bool ST4C = false;
+    bool ST5C = false;
+
+    [SerializeField]
+    GameObject ST1;
+    [SerializeField]
+    GameObject ST2;
+    [SerializeField]
+    GameObject ST3;
+    [SerializeField]
+    GameObject ST4;
+    [SerializeField]
+    GameObject ST5;
     Dictionary<int, QuestData> questlist;
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        
     }
     void Awake()
     {
@@ -157,5 +174,36 @@ public class QuestManager : MonoBehaviour
     public void compensation()
     {
 
+    }
+
+    public void Killtrigger()
+    {
+        Debug.Log(ST1.transform.childCount);
+        if (ST1.transform.childCount <= 1 && ST1C == false)
+        {
+            
+            questActionIndex++;
+            ST1C = true;
+        }
+        if (ST2.transform.childCount <= 1 && ST2C == false)
+        {
+            questActionIndex++;
+            ST2C = true;
+        }
+        if (ST3.transform.childCount <= 1 && ST3C == false)
+        {
+            questActionIndex++;
+            ST3C = true;
+        }
+        if (ST4.transform.childCount <= 1 && ST4C == false)
+        {
+            questActionIndex++;
+            ST4C = true;
+        }
+        if (ST5.transform.childCount <= 1 && ST5C == false)
+        {
+            questActionIndex++;
+            ST5C = true;
+        }
     }
 }

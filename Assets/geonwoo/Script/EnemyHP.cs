@@ -14,6 +14,8 @@ public class EnemyHP : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public GameObject EnemyDestroyEffect;
 
+
+
     public float MaxHP => maxHP;
     public float CurrentHP => currentHP;
 
@@ -30,10 +32,11 @@ public class EnemyHP : MonoBehaviour
         StartCoroutine("HitColorAnimation");
         if(currentHP<=0)
         {
-            GameObject.Find("QuestManager").GetComponent<QuestManager>().temp_death_count += 1;
+
             Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
           
             Destroy(gameObject, deathDelay);
+            GameObject.Find("QuestManager").GetComponent<QuestManager>().Killtrigger();
         }
     }
 
