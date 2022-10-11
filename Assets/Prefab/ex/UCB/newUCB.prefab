@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: -522080017407641081}
   - component: {fileID: 5604183493876407845}
   - component: {fileID: 8410419501353887316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: newUCB
-  m_TagString: Untagged
+  m_TagString: PlayerAtk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

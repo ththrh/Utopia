@@ -25,7 +25,7 @@ public class ArrowSkill : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         { 
             Instantiate(explosion, transform.position, transform.rotation);
-            collision.gameObject.GetComponent<MonsterStatus>().HP -= (atk*2);
+            collision.gameObject.GetComponent<EnemyHP>().TakeDamage(atk*2);
             audio.Play();
             transform.position = new Vector3(-128442, 124124, 1231);
             Debug.Log("펑");

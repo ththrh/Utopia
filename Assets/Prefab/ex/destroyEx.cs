@@ -30,7 +30,7 @@ public class destroyEx : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<MonsterStatus>().HP -= (atk+skillAtk);
+            collision.gameObject.GetComponent<EnemyHP>().TakeDamage(atk+skillAtk);
         }
     }
 

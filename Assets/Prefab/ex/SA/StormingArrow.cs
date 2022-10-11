@@ -37,7 +37,7 @@ public class StormingArrow : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<MonsterStatus>().HP -= (atk + 1) ;
+            collision.gameObject.GetComponent<EnemyHP>().TakeDamage(atk+1);
             Debug.Log(1);
             transform.position = new Vector3(-124121, 123155, 0);
             Destroy(gameObject);

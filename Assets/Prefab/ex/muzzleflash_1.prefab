@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2034326148}
   - component: {fileID: -4108289968619297169}
   - component: {fileID: -1856858226955068445}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: muzzleflash_1
   m_TagString: PlayerAtk
   m_Icon: {fileID: 0}
