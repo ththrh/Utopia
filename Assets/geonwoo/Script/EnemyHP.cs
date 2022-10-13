@@ -11,9 +11,10 @@ public class EnemyHP : MonoBehaviour
     private float currentHP;
     public float deathDelay = 0f;
     Animator anim;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] allChildren;
     public GameObject EnemyDestroyEffect;
-
+    public Material flashWhite;
+    private Material defaultMaterial;
 
 
     public float MaxHP => maxHP;
@@ -21,7 +22,8 @@ public class EnemyHP : MonoBehaviour
 
     private void Awake(){
         currentHP = maxHP;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        allChildren = GetComponentsInChildren<SpriteRenderer>();
+        defaultMaterial = allChildren[0].material;
         anim = GetComponent<Animator>();
     }
 
@@ -42,10 +44,26 @@ public class EnemyHP : MonoBehaviour
 
     private IEnumerator HitColorAnimation()
     {
-        spriteRenderer.color = Color.red;
-
+        foreach(SpriteRenderer child in allChildren)
+        {
+            if(child!= null)
+            {
+                child.material = flashWhite;
+            }
+            yield return null;
+            
+        }
         yield return new WaitForSeconds(0.05f);
+        foreach(SpriteRenderer child in allChildren)
+        {
+            if(child!= null)
+            {
+                child.material = defaultMaterial;
+            }
+            yield return null;
+            
+        }
 
-        spriteRenderer.color = Color.white;
+       
     }
 }
