@@ -405,6 +405,7 @@ MonoBehaviour:
   deathDelay: 0
   EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
     type: 3}
+  flashWhite: {fileID: 2100000, guid: ba70f8f0cfbbcb1479333c5f0d9e05ac, type: 2}
 --- !u!212 &4983906089362481249
 SpriteRenderer:
   m_ObjectHideFlags: 0
