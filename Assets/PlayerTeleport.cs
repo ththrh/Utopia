@@ -20,7 +20,7 @@ public class PlayerTeleport : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Teleporter"))
+        if(collision.CompareTag("Teleporter") || collision.CompareTag("ExitTeleporter"))
         {
             currentTeleporter = collision.gameObject;
         }
@@ -28,7 +28,7 @@ public class PlayerTeleport : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Teleporter"))
+        if (collision.CompareTag("Teleporter") || collision.CompareTag("ExitTeleporter"))
         {
             if (collision.gameObject == currentTeleporter)
             {
