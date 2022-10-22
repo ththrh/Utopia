@@ -16,6 +16,8 @@ public class QuestManager : MonoBehaviour
 
     public int temp_death_count;
 
+    [SerializeField]
+    GameObject Ltp;
     GameObject Player;
 
     bool ST1C = false;
@@ -203,6 +205,7 @@ public class QuestManager : MonoBehaviour
         if (ST5.transform.childCount <= 1 && ST5C == false)
         {
             questActionIndex++;
+            Ltp.SetActive(true);
             ST5C = true;
         }
     }

@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public GameObject death_panel;
     public skill_image_manager skill_Image_Manager;
 
+    public GameObject Blur;
+
 
     public GameObject skillpanel;
     public GameObject startui;
@@ -235,4 +237,9 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
+    public void ContinueGame()
+    {
+        Time.timeScale = 1;
+        Blur.SetActive(false);
+    }
 }

@@ -16,6 +16,7 @@ public class Status : MonoBehaviour
     public int dash = 8;
     public bool isDamage;
     public float Dtimer=1.0f;
+    public GameObject DeadUI;
     float timer;
     SpriteRenderer rend;
     MOVE move;
@@ -149,12 +150,11 @@ public class Status : MonoBehaviour
 
     IEnumerator youDie()
     {
-        youdie.enabled = true;
+        DeadUI.SetActive(true);
         transform.position = deadPos;
         Time.timeScale = 0;
-        yield return new WaitForSeconds(3f);
-        Time.timeScale = 1;
-        youdie.enabled = false;
+        Mp = MaxMp;
+        yield return null;
     }
 
     private void Cheat()

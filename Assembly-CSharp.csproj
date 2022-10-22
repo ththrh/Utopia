@@ -94,6 +94,7 @@
     <Compile Include="Assets\Prefab\ex\Bomb.cs" />
     <Compile Include="Assets\Prefab\ex\SA\StormingArrow.cs" />
     <Compile Include="Assets\Prefab\ex\destroyEx.cs" />
+    <Compile Include="Assets\Scripts\Continue.cs" />
     <Compile Include="Assets\Scripts\LoadingSceneManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
@@ -169,8 +170,10 @@
     <Compile Include="Assets\utopia\stop.cs" />
     <Compile Include="Assets\utopia\tooltip_manager.cs" />
     <None Include="Assets\jiwon\grass\Info.txt" />
+    <None Include="Assets\geonwoo\Monster\NewUnlitShader.shader" />
     <None Include="Assets\2D Hand Painted Tilesets\Readme.txt" />
     <None Include="Assets\File\Sprites\Info.txt" />
+    <None Include="Assets\Prefab\BlurShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

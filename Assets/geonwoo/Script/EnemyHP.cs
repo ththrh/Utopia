@@ -30,8 +30,10 @@ public class EnemyHP : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHP -=damage;
-        StopCoroutine("HitColorAnimation");
-        StartCoroutine("HitColorAnimation");
+        foreach(SpriteRenderer child in allChildren)
+        {
+            StartCoroutine("HitColorAnimation", child);
+        }
         if(currentHP<=0)
         {
 
@@ -42,26 +44,16 @@ public class EnemyHP : MonoBehaviour
         }
     }
 
-    private IEnumerator HitColorAnimation()
+    private IEnumerator HitColorAnimation(SpriteRenderer sr)
     {
-        foreach(SpriteRenderer child in allChildren)
+        if(sr!= null)
         {
-            if(child!= null)
-            {
-                child.material = flashWhite;
-            }
-            yield return null;
-            
+            sr.material = flashWhite;
         }
         yield return new WaitForSeconds(0.05f);
-        foreach(SpriteRenderer child in allChildren)
+        if(sr!= null)
         {
-            if(child!= null)
-            {
-                child.material = defaultMaterial;
-            }
-            yield return null;
-            
+            sr.material = defaultMaterial;
         }
 
        
