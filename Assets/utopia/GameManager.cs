@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject menuset;
     public Text questtalk;
     public GameObject Player;
-    public GameObject death_panel;
+
     public skill_image_manager skill_Image_Manager;
 
     public GameObject Blur;
@@ -183,16 +183,7 @@ public class GameManager : MonoBehaviour
 
         skillport(click_skillname, shift_skillname, q_skillname);
 
-        if (death)
-        {
-            death_panel.SetActive(true);
-            Time.timeScale = 0;
-        }
-        else
-        {
-            death_panel.SetActive(false);
-            Time.timeScale = 1;
-        }
+
     }
     void skillport(int click_skillindex, int shift_skillinedx, int q_skillindex)
     {

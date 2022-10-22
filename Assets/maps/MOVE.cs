@@ -177,15 +177,17 @@ public class MOVE : MonoBehaviour
             else if (stat.shift_isactiveskill_3)
             {
                 GameObject player = GameObject.Find("TestPlayer");
+                Vector2 vec = new Vector2(player.transform.position.x , player.transform.position.y);
                 if (wall_cooltimer == 15)
                 {
                     iswall = true;
-                    if(dir == Dir.left || dir == Dir.right)
+                    if (dir == Dir.left || dir == Dir.right)
                     {
                         Instantiate(wall, player.transform.position, Quaternion.identity);
                     }
                     else
-                        Instantiate(wall,player.transform.position, Quaternion.Euler(0, 0, 90));
+                        
+                        Instantiate(wall, vec, Quaternion.Euler(0, 0, 90));
                     Debug.Log("쉬프트 스킬사용3");
                 }
                 else
