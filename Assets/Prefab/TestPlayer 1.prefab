@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dir: 0
   timer: 0.5
+  atkTimer: 1
   isHead: 0
 --- !u!95 &3715729970376144205
 Animator:
@@ -282,7 +283,6 @@ GameObject:
   - component: {fileID: 3715729970641219106}
   - component: {fileID: 3715729970641219292}
   - component: {fileID: 3715729970641219295}
-  - component: {fileID: 3715729970641219294}
   - component: {fileID: 3715729970641219107}
   - component: {fileID: 3715729970641219105}
   - component: {fileID: 3715729970641219289}
@@ -457,19 +457,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1825304, y: 1.5473955}
   m_EdgeRadius: 0
---- !u!114 &3715729970641219294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3715729970641219109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccebb70d0e5f63549b082dca37d04ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
 --- !u!114 &3715729970641219107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +480,7 @@ MonoBehaviour:
   dash: 8
   isDamage: 0
   Dtimer: 1
+  DeadUI: {fileID: 0}
   SkillPoint: 30
   click_islearnskill_1: 0
   click_islearnskill_2: 0
@@ -518,6 +506,7 @@ MonoBehaviour:
   q_isactiveskill_2: 0
   q_isactiveskill_3: 0
   q_isactiveskill_4: 0
+  youdie: {fileID: 0}
 --- !u!114 &3715729970641219105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,23 +547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa74a05936b017644a7f21bbf88206fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3715729970726984488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5378214638317519517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5570f31f6f76870448dbde13115fc773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  qCool: 0
-  qCoolDown_1: 20
-  qCoolDown_2: 3
-  qCoolDown_3: 5
-  ManaHeal: {fileID: 5378214638317519519}
 --- !u!1 &3715729970969517114
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +874,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dir: 0
   timer: 0.5
+  atkTimer: 1
   isHead: 1
+--- !u!114 &3715729970726984488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5378214638317519517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5570f31f6f76870448dbde13115fc773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qCool: 0
+  qCoolDown_1: 20
+  qCoolDown_2: 3
+  qCoolDown_3: 5
+  ManaHeal: {fileID: 5378214638317519519}
 --- !u!1001 &3715729970150523782
 PrefabInstance:
   m_ObjectHideFlags: 0
