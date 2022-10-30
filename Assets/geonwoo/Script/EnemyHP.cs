@@ -40,7 +40,7 @@ public class EnemyHP : MonoBehaviour
             Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
 
             gameObject.transform.position = new Vector2(100000, 100000);
-            GameObject.Find("QuestManager").GetComponent<QuestManager>().Killtrigger();
+            
         }
     }
 

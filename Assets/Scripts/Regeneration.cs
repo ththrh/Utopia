@@ -9,6 +9,9 @@ public class Regeneration : MonoBehaviour
     public GameObject Player;
     public int cnt = 0;
     public GameObject fence;
+    public GameObject fence1;
+
+
     private void Awake()
     {
 
@@ -42,11 +45,23 @@ public class Regeneration : MonoBehaviour
             foreach(GameObject child in mychildren)
             {
                 Destroy(child);
+                GameObject.Find("QuestManager").GetComponent<QuestManager>().Killtrigger();
             }
         }
     }
     public void destroyFence()
     {
+
         Destroy(fence);
+        Debug.Log("삭제완료");
+      
+    }
+
+    public void destroyFence1()
+    {
+
+        Destroy(fence1);
+        Debug.Log("삭제완료");
+
     }
 }

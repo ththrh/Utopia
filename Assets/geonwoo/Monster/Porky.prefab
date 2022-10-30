@@ -357,11 +357,11 @@ GameObject:
   - component: {fileID: 7839321117785989665}
   - component: {fileID: 399964310930320704}
   - component: {fileID: -8735280865626849465}
-  - component: {fileID: -7988644465518877668}
   - component: {fileID: 2864552833095747703}
   - component: {fileID: -8475361220764433863}
   - component: {fileID: 7230702903769562918}
   - component: {fileID: -8680241912068025557}
+  - component: {fileID: 5829195627920542891}
   m_Layer: 11
   m_Name: Porky
   m_TagString: Enemy
@@ -505,19 +505,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &-7988644465518877668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7839321117785989668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20fd487fd6edeb146919e093dc555efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aiPath: {fileID: -8475361220764433863}
 --- !u!114 &2864552833095747703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,6 +613,19 @@ MonoBehaviour:
   EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
     type: 3}
   flashWhite: {fileID: 2100000, guid: ba70f8f0cfbbcb1479333c5f0d9e05ac, type: 2}
+--- !u!114 &5829195627920542891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839321117785989668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3125d1d17bb2844aaa3077257c939b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: -8475361220764433863}
 --- !u!1 &7839321117929095515
 GameObject:
   m_ObjectHideFlags: 0

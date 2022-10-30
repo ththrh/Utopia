@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class QuestManager : MonoBehaviour
 {
 
@@ -14,7 +15,8 @@ public class QuestManager : MonoBehaviour
     public int wolf_death_count;
     public int bear_death_count;
 
-    public int temp_death_count;
+    public GameObject text;
+
 
     [SerializeField]
     GameObject Ltp;
@@ -58,8 +60,9 @@ public class QuestManager : MonoBehaviour
         questlist.Add(20, new QuestData("마을의 맷돼지 문제", new int[] { 200, 400, 9999, 400 }));
         questlist.Add(30, new QuestData("수상한 야생동물", new int[] { 400, 300, 9999, 300 }));
         questlist.Add(40, new QuestData("사건의 원인을 찾아서", new int[] { 300, 400, 200, 9999, 200 }));
-        questlist.Add(50, new QuestData("거대 곰 처치하기", new int[] { 200, 9999, 200 }));
-        questlist.Add(60, new QuestData("엔드퀘스트", new int[] { 0 }));
+        questlist.Add(50, new QuestData("마물의소굴", new int[] { 200, 9999, 200 }));
+        questlist.Add(60, new QuestData("거대 마물 처치하기", new int[] { 200, 9999, 200 }));
+        questlist.Add(70, new QuestData("엔드퀘스트", new int[] { 0 }));
 
     }
 
@@ -75,42 +78,36 @@ public class QuestManager : MonoBehaviour
         if (id == questlist[questid].npcId[questActionIndex])
         {
             questActionIndex++;
-        }
-        /*
-        if(questid == 20)
-            if (questActionIndex == 2)
-                if (pig_death_count == 5)
-                    questActionIndex++;
-        if (questid == 30)
-            if (questActionIndex == 2)
-                if (bee_death_count == 8)
-                    questActionIndex++;
-        if (questid == 40)
-            if (questActionIndex == 3)
-                 if (wolf_death_count == 9)
-                      questActionIndex++;
-        if (questid == 50)
-            if (questActionIndex == 1)
-                 if (wolf_death_count == 9)
-                    questActionIndex++;
-        */
 
-        if (questid == 20)
-            if (questActionIndex == 2)
-                if (temp_death_count == 5)
-                    questActionIndex++;
-        if (questid == 30)
-            if (questActionIndex == 2)
-                if (temp_death_count == 13)
-                    questActionIndex++;
-        if (questid == 40)
-            if (questActionIndex == 3)
-                if (temp_death_count == 22)
-                    questActionIndex++;
-        if (questid == 50)
-            if (questActionIndex == 1)
-                if (temp_death_count == 31)
-                    questActionIndex++;
+
+
+            if (questid + questActionIndex == 22)
+            {
+                ST1.GetComponent<Regeneration>().destroyFence1();
+                Debug.Log("삭제함수 호출");
+            }
+            if (questid + questActionIndex == 32)
+            {
+                ST1.GetComponent<Regeneration>().destroyFence();
+                Debug.Log("삭제함수 호출");
+            }
+            if (questid + questActionIndex == 43)
+            {
+                ST2.GetComponent<Regeneration>().destroyFence();
+                Debug.Log("삭제함수 호출");
+            }
+            if (questid + questActionIndex == 51)
+            {
+                ST3.GetComponent<Regeneration>().destroyFence();
+                Debug.Log("삭제함수 호출");
+            }
+            if (questid + questActionIndex == 61)
+            {
+                ST4.GetComponent<Regeneration>().destroyFence();
+                Debug.Log("삭제함수 호출");
+            }
+        }
+
 
         //controlobj();
 
@@ -183,30 +180,35 @@ public class QuestManager : MonoBehaviour
         Debug.Log(ST1.transform.childCount);
         if (ST1.transform.childCount <= 1 && ST1C == false)
         {
-            
             questActionIndex++;
             ST1C = true;
+            text.SetActive(true);
         }
+
         if (ST2.transform.childCount <= 1 && ST2C == false)
         {
             questActionIndex++;
             ST2C = true;
+            text.SetActive(true);
         }
         if (ST3.transform.childCount <= 1 && ST3C == false)
         {
             questActionIndex++;
             ST3C = true;
+            text.SetActive(true);
         }
         if (ST4.transform.childCount <= 1 && ST4C == false)
         {
             questActionIndex++;
             ST4C = true;
+            text.SetActive(true);
         }
         if (ST5.transform.childCount <= 1 && ST5C == false)
         {
             questActionIndex++;
             Ltp.SetActive(true);
             ST5C = true;
+            text.SetActive(true);
         }
     }
 }

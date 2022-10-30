@@ -26,7 +26,7 @@ public class MonsterStatus : MonoBehaviour
     {
         if (HP <= 0)
         {
-            GameObject.Find("QuestManager").GetComponent<QuestManager>().temp_death_count += 1;
+
             Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
           
             Destroy(gameObject, deathDelay);

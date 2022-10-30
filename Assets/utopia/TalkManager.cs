@@ -47,9 +47,12 @@ public class TalkManager : MonoBehaviour
         talkData.Add(43 + 200, new string[] { "이게 대체 무슨 일일꼬..." });
         talkData.Add(44 + 200, new string[] { "정말 감사하네.","그런데 마을 정찰대에게서 안 좋은 소식이 들려왔다네" });
 
-        talkData.Add(50 + 200, new string[] { "거대한 마법을 쓰는 곰이 나타났다는 소식이야","녀석을 헤치우지 못하면 우리 마을으 끝장일세","염치없지만...처리를 부탁해도 되겠나?" });
-        talkData.Add(51 + 200, new string[] { "신이시여 우리 마을을 구원하소서..."});
-        talkData.Add(52 + 200, new string[] { "정말인가?","정말 대단하군! 우리 마을은 자네를 영웅으로 기억할 것이야!", "유토피아 섬의 이야기는 현재 여기까지 입니다.", "다음 이야기는 추후 공개될 예정입니다." });
+        talkData.Add(50 + 200, new string[] { "자네가 쓰러트린 마물들이 깊은 숲에서 떼로 나타난 모양이네!", "이대로라면 우리 마을은 끝장이야!"});
+        talkData.Add(52 + 200, new string[] { "자네덕이 수는 제법 줄은 모양이야 그런데 이게 무슨!"});
+
+        talkData.Add(60 + 200, new string[] { "거대한 마법을 쓰는 돼지가 나타났다는 소식이야","녀석을 헤치우지 못하면 우리 마을을 끝장일세","염치없지만...처리를 부탁해도 되겠나?" });
+        talkData.Add(61 + 200, new string[] { "신이시여 우리 마을을 구원하소서..."});
+        talkData.Add(62 + 200, new string[] { "정말인가?","정말 대단하군! 우리 마을은 자네를 영웅으로 기억할 것이야!", "유토피아 섬의 이야기는 현재 여기까지 입니다.", "다음 이야기는 추후 공개될 예정입니다." });
     }
 
     public string GetTalk(int id, int talkIndex)  //토크의 순서 index

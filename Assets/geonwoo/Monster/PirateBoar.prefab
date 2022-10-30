@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 6369675475715062359}
   - component: {fileID: 6395896979057905441}
   - component: {fileID: 2370775564806625114}
-  - component: {fileID: 4449377349477176985}
+  - component: {fileID: 1946732855388590371}
   m_Layer: 11
   m_Name: PirateBoar
   m_TagString: Enemy
@@ -1272,7 +1272,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4449377349477176985
+--- !u!114 &1946732855388590371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7179996371437346308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992c78b53e70d2146b92b63b530bce9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e34b40421710764898a61d38377c526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 153782202315269945}

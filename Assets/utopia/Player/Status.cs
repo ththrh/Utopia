@@ -161,7 +161,7 @@ public class Status : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator mpRegneration()
+    IEnumerator mpRegeneration()
     {
         while (true)
         {
