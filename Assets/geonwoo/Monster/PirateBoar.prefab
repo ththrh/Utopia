@@ -477,7 +477,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 1064979439223084170}
-  bulletOptionType: 5
+  bulletOptionType: 3
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &3611091648481207437
@@ -943,11 +943,11 @@ GameObject:
   - component: {fileID: 3713774293413537750}
   - component: {fileID: 8366650211277051798}
   - component: {fileID: 153782202315269945}
-  - component: {fileID: 6352902051674399402}
   - component: {fileID: 4177548301209911855}
   - component: {fileID: 6369675475715062359}
   - component: {fileID: 6395896979057905441}
   - component: {fileID: 2370775564806625114}
+  - component: {fileID: 4449377349477176985}
   m_Layer: 11
   m_Name: PirateBoar
   m_TagString: Enemy
@@ -1169,19 +1169,6 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &6352902051674399402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7179996371437346308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20fd487fd6edeb146919e093dc555efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aiPath: {fileID: 153782202315269945}
 --- !u!114 &4177548301209911855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,6 +1272,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4449377349477176985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179996371437346308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992c78b53e70d2146b92b63b530bce9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: 153782202315269945}
 --- !u!1 &7179996372182708648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1737,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 185456739888336931}
-  bulletOptionType: 8
+  bulletOptionType: 3
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &8787189636091220659

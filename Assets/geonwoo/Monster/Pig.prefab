@@ -1023,7 +1023,7 @@ MonoBehaviour:
   radius: 2.53
   height: 2
   canMove: 1
-  maxSpeed: 4.5
+  maxSpeed: 4
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a373ddb004901d4f983495dafc2fe3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 3
+  maxHP: 5
   deathDelay: 0
   EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
     type: 3}

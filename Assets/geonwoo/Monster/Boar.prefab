@@ -85,7 +85,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 5397589602394859474}
-  bulletOptionType: 7
+  bulletOptionType: 4
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &1568807062921974911

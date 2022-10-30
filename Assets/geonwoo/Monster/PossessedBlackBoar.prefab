@@ -271,11 +271,11 @@ GameObject:
   - component: {fileID: 5251604440995706050}
   - component: {fileID: 4566478522283261674}
   - component: {fileID: 6568543036096666746}
-  - component: {fileID: 5122528319068013382}
   - component: {fileID: 9006579333639994197}
   - component: {fileID: 5370406654725743813}
   - component: {fileID: 3119191656893788290}
   - component: {fileID: 1701701673835090845}
+  - component: {fileID: 3941187173417408317}
   m_Layer: 11
   m_Name: PossessedBlackBoar
   m_TagString: Enemy
@@ -491,19 +491,6 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &5122528319068013382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498769401494282456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20fd487fd6edeb146919e093dc555efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aiPath: {fileID: 6568543036096666746}
 --- !u!114 &9006579333639994197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,6 +594,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3941187173417408317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498769401494282456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992c78b53e70d2146b92b63b530bce9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: 6568543036096666746}
 --- !u!1 &498769401669829543
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +885,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 4858714122887940585}
-  bulletOptionType: 5
+  bulletOptionType: 3
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &4833095966854224411
@@ -1115,7 +1115,7 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 8670744872243667100}
-  bulletOptionType: 4
+  bulletOptionType: 3
   shooterDirectionType: 3
   _weaponConfigs: []
 --- !u!1 &7100097932223908314
@@ -1284,6 +1284,6 @@ MonoBehaviour:
   emptySfxClip: {fileID: 0}
   shotFiredClip: {fileID: 0}
   gunPoint: {fileID: 7537748256320517033}
-  bulletOptionType: 8
+  bulletOptionType: 4
   shooterDirectionType: 3
   _weaponConfigs: []
