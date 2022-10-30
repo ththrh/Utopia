@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 5370406654725743813}
   - component: {fileID: 3119191656893788290}
   - component: {fileID: 1701701673835090845}
-  - component: {fileID: 8325868165862804422}
+  - component: {fileID: 2034727811525585476}
   m_Layer: 11
   m_Name: PossessedBlackBoar
   m_TagString: Enemy
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a373ddb004901d4f983495dafc2fe3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
+  maxHP: 40
   deathDelay: 0
   EnemyDestroyEffect: {fileID: 8130195372647225730, guid: e924ff329c912ff44a4434ee544bb06b,
     type: 3}
@@ -594,7 +594,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8325868165862804422
+--- !u!114 &2034727811525585476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 498769401494282456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e34b40421710764898a61d38377c526, type: 3}
+  m_Script: {fileID: 11500000, guid: 992c78b53e70d2146b92b63b530bce9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 6568543036096666746}

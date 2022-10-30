@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: -4210284360250381071}
   - component: {fileID: 6388765064988530667}
   - component: {fileID: 4983906089362481249}
-  - component: {fileID: 1858236778504257770}
+  - component: {fileID: 3161733408833477160}
   m_Layer: 11
   m_Name: Wasp
   m_TagString: Enemy
@@ -443,7 +443,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1858236778504257770
+--- !u!114 &3161733408833477160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 985639210683951151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb3125d1d17bb2844aaa3077257c939b, type: 3}
+  m_Script: {fileID: 11500000, guid: 20fd487fd6edeb146919e093dc555efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: -5600288392944109647}
