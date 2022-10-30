@@ -154,7 +154,7 @@ public class MOVE : MonoBehaviour
                 if(heal_cooltimer == 10)
                 {
                     isheal = true;
-                    stat.hp += 1;
+                    stat.hp += 3;
                     Debug.Log("쉬프트 스킬사용1");
                 }
                 else

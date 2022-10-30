@@ -36,10 +36,10 @@ public class EnemyHP : MonoBehaviour
         }
         if(currentHP<=0)
         {
-
+            GetComponentInParent<Regeneration>().cnt--;
             Instantiate(EnemyDestroyEffect, transform.position, Quaternion.identity);
-          
-            Destroy(gameObject, deathDelay);
+
+            gameObject.transform.position = new Vector2(100000, 100000);
             GameObject.Find("QuestManager").GetComponent<QuestManager>().Killtrigger();
         }
     }
@@ -57,5 +57,10 @@ public class EnemyHP : MonoBehaviour
         }
 
        
+    }
+
+    public void Regen()
+    {
+        currentHP = MaxHP;
     }
 }

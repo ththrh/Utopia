@@ -21,6 +21,7 @@ public class Status : MonoBehaviour
     SpriteRenderer rend;
     MOVE move;
     Vector2 deadPos;
+    float MpRegen;
     float StaminaRestore = 5.0f;
 
     public int SkillPoint;
@@ -69,6 +70,8 @@ public class Status : MonoBehaviour
         hp = MaxHp;
         Stamina = MaxStamina;
         Mp = MaxMp;
+        StartCoroutine("mpRegeneration");
+
     }
 
     // Update is called once per frame
@@ -108,6 +111,7 @@ public class Status : MonoBehaviour
             hp = MaxHp;
             StartCoroutine("youDie");
         }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -155,6 +159,15 @@ public class Status : MonoBehaviour
         Time.timeScale = 0;
         Mp = MaxMp;
         yield return null;
+    }
+
+    IEnumerator mpRegneration()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(5f);
+            Mp += 2;
+        }
     }
 
     private void Cheat()
