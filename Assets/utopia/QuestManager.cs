@@ -17,6 +17,7 @@ public class QuestManager : MonoBehaviour
 
     public GameObject text;
 
+    public GameObject[] tps;
 
     [SerializeField]
     GameObject Ltp;
@@ -181,25 +182,29 @@ public class QuestManager : MonoBehaviour
         if (ST1.transform.childCount <= 1 && ST1C == false)
         {
             questActionIndex++;
+            tps[0].SetActive(true);
             ST1C = true;
             text.SetActive(true);
         }
 
         if (ST2.transform.childCount <= 1 && ST2C == false)
         {
-            questActionIndex++;
+            questActionIndex++; ;
+            tps[1].SetActive(true);
             ST2C = true;
             text.SetActive(true);
         }
         if (ST3.transform.childCount <= 1 && ST3C == false)
         {
-            questActionIndex++;
+            questActionIndex++; ;
+            tps[2].SetActive(true);
             ST3C = true;
             text.SetActive(true);
         }
         if (ST4.transform.childCount <= 1 && ST4C == false)
         {
-            questActionIndex++;
+            questActionIndex++; ;
+            tps[3].SetActive(true);
             ST4C = true;
             text.SetActive(true);
         }

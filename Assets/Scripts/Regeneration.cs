@@ -7,6 +7,7 @@ public class Regeneration : MonoBehaviour
     public GameObject[] mychildren;
     public Vector3[] cPosition;
     public GameObject Player;
+    public int startCnt;
     public int cnt = 0;
     public GameObject fence;
     public GameObject fence1;
@@ -26,6 +27,7 @@ public class Regeneration : MonoBehaviour
             i++;
         }
         cnt = mychildren.Length;
+        startCnt = cnt;
     }
 
     // Update is called once per frame
@@ -37,6 +39,8 @@ public class Regeneration : MonoBehaviour
             foreach (GameObject child in mychildren)
             {
                 child.transform.position = cPosition[i];
+                child.GetComponent<EnemyHP>().Regen();
+                cnt = startCnt;
                 i++;
             }
         }
