@@ -208,7 +208,6 @@ public class QuestManager : MonoBehaviour
             questActionIndex++;
             Ltp.SetActive(true);
             ST5C = true;
-            text.SetActive(true);
         }
     }
 }

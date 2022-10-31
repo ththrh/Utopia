@@ -167,6 +167,7 @@ public class Status : MonoBehaviour
         {
             yield return new WaitForSeconds(5f);
             Mp += 2;
+            if (Mp > MaxMp) Mp = MaxMp;
         }
     }
 
