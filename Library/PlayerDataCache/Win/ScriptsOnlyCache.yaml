@@ -887,7 +887,7 @@ ScriptsOnlyBuild:
     className: stop
   - hash:
       serializedVersion: 2
-      Hash: 37f4355434ab02f223ed40ffe8619013
+      Hash: a4d30e83321f3c57b02eeeb1f374f84c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuestManager
@@ -1103,7 +1103,7 @@ ScriptsOnlyBuild:
     className: RaycastModifier
   - hash:
       serializedVersion: 2
-      Hash: 3dbe6bdb6ecd9ba57ccb2e9a6ac590fb
+      Hash: f5dbc7bcab2ccd6dd59b6eaad0682b7d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Regeneration
@@ -1598,4 +1598,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/LoadingScene.unity
   - Assets/maps/test.unity
-  playerPath: "C:/Users/\uBC15\uC9C0\uD6C8/Desktop/Unity/\uC0C8 \uD3F4\uB354 (6)/Utopia_Project.exe"
+  playerPath: "C:/Users/\uBC15\uC9C0\uD6C8/Desktop/Unity/\uC0C8 \uD3F4\uB354 (7)/Utopia_Project.exe"
