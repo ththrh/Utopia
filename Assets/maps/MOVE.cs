@@ -62,6 +62,7 @@ public class MOVE : MonoBehaviour
         Speed2 = stat.dash;
         if (!isDash && !manager.isAction)
         {
+            
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
             transform.Translate(new Vector3(h, v, 0) * Speed * Time.deltaTime) ;
@@ -93,7 +94,7 @@ public class MOVE : MonoBehaviour
             dir = Dir.down;
         }
         //대쉬
-        if (Input.GetKeyDown(KeyCode.Space) && !isAttack && stat.Stamina > 0)
+        if (Input.GetButtonDown("Dash") && !isAttack && stat.Stamina > 0)
         {
             if (!isDash && timer == 0.5f)
             {
@@ -115,7 +116,7 @@ public class MOVE : MonoBehaviour
             isDash = false;
         }
 
-        if ((Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) && !manager.isAction && !isAttack)
+        if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) && !manager.isAction && !isAttack)
         {
             isAttack = true;
         }
@@ -129,7 +130,7 @@ public class MOVE : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.E)&&scanobj!=null)
+        if(Input.GetButtonDown("Interaction")&&scanobj!=null)
         {
             manager.Action(scanobj);
         }
@@ -147,7 +148,7 @@ public class MOVE : MonoBehaviour
                 Debug.Log("클릭 스킬사용4");
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetButtonDown("Fire3"))
         {
             if (stat.shift_isactiveskill_1)
             {

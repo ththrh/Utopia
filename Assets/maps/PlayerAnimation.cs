@@ -19,7 +19,7 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         //Run Animation
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetButton("Horizontal"))
         {
             if (Input.GetKey(KeyCode.A))
             {

@@ -14,23 +14,42 @@ public class PlayerBullet : MonoBehaviour
     public float shotTime;
     Status stat;
     bool isAttack = false;
-    int dir2;
+    public int dir2= 2;
 
     void Start()
     {
         stat = GetComponentInParent<Status>();
-        dir2 = GetComponentInParent<MOVE>().dir;
     }
 
     // Update is called once per frame
     void Update()
     {
+        dir2 = GetComponentInParent<MOVE>().dir;
         Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        if(Input.GetJoystickNames().Length != 0)
+        {
+            Debug.Log("123123123");
+            switch (dir2)
+            {
+            case 1:
+                dir = new Vector2(0, 1);
+                break;
+            case 2:
+                dir = new Vector2(0, -1);
+                break;
+            case 3:
+                dir = new Vector2(-1, 0);
+                break;
+            case 4:
+                dir = new Vector2(1, 0);
+                break;
+            }
+        }
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = rot;
-
-        if (Input.GetMouseButtonDown(1) && stat.Mp > 0)
+        
+        if (Input.GetButtonDown("Fire2") && stat.Mp > 0)
         {
             if (stat.click_isactiveskill_1)
             {
@@ -74,7 +93,7 @@ public class PlayerBullet : MonoBehaviour
         }
         if (stat.click_isactiveskill_4)
         {
-            if (Input.GetMouseButton(1) && stat.Mp>0)
+            if (Input.GetButtonDown("Fire2") && stat.Mp>0)
             {
                 if (!isAttack)
                 {
@@ -87,7 +106,7 @@ public class PlayerBullet : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (shotTime == 1)
             {

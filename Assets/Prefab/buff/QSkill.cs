@@ -24,7 +24,7 @@ public class QSkill : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetButtonDown("Fire4"))
         {
             if (stat.q_isactiveskill_1 && !qCool)
             {

@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\Regeneration.cs" />
+    <Compile Include="Assets\Scripts\SelectButton.cs" />
     <Compile Include="Assets\Scripts\StageActivate.cs" />
     <Compile Include="Assets\Scripts\UI\AStarSearching.cs" />
     <Compile Include="Assets\Scripts\UI\EndGame.cs" />
